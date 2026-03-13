@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "analisis-mercado-electrico-espana"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "597b5fe9-8c76-45fa-b6e5-4fc6cc38f980"
+  }
+}

@@ -1,0 +1,22 @@
+# Power BI
+*.pbix~
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints
+
+# Notas privadas
+notes_private/
+
+# Descargas temporales
+data/raw/descargas_esios/tmp/
+
+# Variables de entorno
+.env
