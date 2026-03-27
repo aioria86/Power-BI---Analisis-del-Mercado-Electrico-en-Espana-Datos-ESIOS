@@ -1,0 +1,10 @@
+relationship 5464d266-4688-411a-8c1b-202c6e441d91
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_demanda.datetime
+	toColumn: LocalDateTable_78e7f2c7-d29f-4fe4-8070-bdafd8818149.Date
+
+relationship 13d27587-f0fa-440f-b619-c0d21fef02e3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_demanda.fecha
+	toColumn: LocalDateTable_041e166d-e54e-485a-b79a-0ba48cde314d.Date
+
