@@ -68,7 +68,7 @@ def guardar_parquet(df, nombre, año):
 
 if __name__ == "__main__":
 
-    años = list(range(2015, 2026))  # 🔥 2015 → 2025
+    años = list(range(2015, 2026))  # 2015 → 2025
 
     print("🚀 INICIO DESCARGA ESIOS\n")
 
@@ -80,6 +80,13 @@ if __name__ == "__main__":
         print(f"\n📅 Año: {año}")
 
         for nombre, indicador_id in INDICADORES.items():
+
+            # 🔥 NUEVO: evitar descargas duplicadas
+            path = f"data/raw/esios/{nombre}/{nombre}_{año}.parquet"
+
+            if os.path.exists(path):
+                print(f"⏭️ Ya existe, se omite: {nombre} {año}")
+                continue
 
             print(f"⬇️ Descargando: {nombre}")
 
