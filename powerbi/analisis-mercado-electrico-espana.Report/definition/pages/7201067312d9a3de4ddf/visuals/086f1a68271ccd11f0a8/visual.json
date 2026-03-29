@@ -1,0 +1,304 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "086f1a68271ccd11f0a8",
+  "position": {
+    "x": 0,
+    "y": 466.095717884131,
+    "z": 5,
+    "height": 225.79345088161207,
+    "width": 1274.0554156171283,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_energia"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "datetime"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Año"
+                }
+              },
+              "queryRef": "fact_energia.datetime.Variación.Jerarquía de fechas.Año",
+              "nativeQueryRef": "datetime Año"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_energia"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "datetime"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "fact_energia.datetime.Variación.Jerarquía de fechas.Trimestre",
+              "nativeQueryRef": "datetime Trimestre"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_energia"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "datetime"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Mes"
+                }
+              },
+              "queryRef": "fact_energia.datetime.Variación.Jerarquía de fechas.Mes",
+              "nativeQueryRef": "datetime Mes"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "fact_energia"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "datetime"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Día"
+                }
+              },
+              "queryRef": "fact_energia.datetime.Variación.Jerarquía de fechas.Día",
+              "nativeQueryRef": "datetime Día"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_energia"
+                        }
+                      },
+                      "Property": "precio_mercado"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_energia.precio_mercado)",
+              "nativeQueryRef": "Suma de precio_mercado"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_energia"
+                        }
+                      },
+                      "Property": "precio_ajustes"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_energia.precio_ajustes)",
+              "nativeQueryRef": "Suma de precio_ajustes"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "77f192e8dc695ab940b1",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_energia"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "datetime"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ed6cc79c29634f044505",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_energia"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "datetime"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Trimestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4891f634a8a55487e9b6",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_energia"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "datetime"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "45387134c4ddb221cb8a",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_energia"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "datetime"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Día"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2dfd2c156e405edcfbb9",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_energia"
+                  }
+                },
+                "Property": "precio_mercado"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "07e0c1130c961aa15e7c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_energia"
+                  }
+                },
+                "Property": "precio_ajustes"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

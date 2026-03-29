@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "77ca50859e965ed39c14",
+  "position": {
+    "x": 889.57178841309815,
+    "y": 0,
+    "z": 1,
+    "height": 230.32745591939545,
+    "width": 390.8312342569269,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_energia"
+                    }
+                  },
+                  "Property": "hora"
+                }
+              },
+              "queryRef": "fact_energia.hora",
+              "nativeQueryRef": "hora",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_energia"
+                        }
+                      },
+                      "Property": "precio_mercado"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(fact_energia.precio_mercado)",
+              "nativeQueryRef": "Promedio de precio_mercado"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_energia"
+                      }
+                    },
+                    "Property": "precio_mercado"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
