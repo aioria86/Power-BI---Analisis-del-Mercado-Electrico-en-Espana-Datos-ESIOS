@@ -49,11 +49,6 @@ table fact_energia_full_v2
 		summarizeBy: none
 		sourceColumn: fecha
 
-		variation Variación
-			isDefault
-			relationship: bb0397ea-6d36-4ad8-8527-730d5f51fab8
-			defaultHierarchy: LocalDateTable_f3feeb2f-5a4a-4405-a8c7-7b064c1141b8.'Jerarquía de fechas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -62,7 +57,7 @@ table fact_energia_full_v2
 		dataType: int64
 		formatString: 0
 		lineageTag: 361e5564-ca64-4b67-9be5-01971edd0707
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: hora
 
 		annotation SummarizationSetBy = Automatic
@@ -196,6 +191,30 @@ table fact_energia_full_v2
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Tarifa_Energia =
+			
+			VAR Hora = fact_energia_full_v2[hora]
+			VAR TipoDia = RELATED(Dim_Calendario[Tipo Día])
+			RETURN
+			    IF(
+			        TipoDia = "Fin de semana",
+			        "P3",
+			        SWITCH(
+			            TRUE(),
+			            Hora < 8, "P3",
+			            Hora >= 10 && Hora < 14, "P1",
+			            Hora >= 18 && Hora < 22, "P1",
+			            Hora >= 8 && Hora < 10, "P2",
+			            Hora >= 14 && Hora < 18, "P2",
+			            Hora >= 22 && Hora <= 23, "P2",
+			            "P3"
+			        )
+			    )
+		lineageTag: fd5db40a-b694-44dd-b982-311a7ed22437
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
 
 	partition fact_energia_full_v2 = m
 		mode: import

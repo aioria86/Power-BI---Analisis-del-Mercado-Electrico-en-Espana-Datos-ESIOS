@@ -16,10 +16,8 @@ ref table Tabla_Medidas
 ref table fact_energia_full_v2
 ref table DateTableTemplate_a838c4cc-a2ed-48a6-b885-d316cabd455e
 ref table LocalDateTable_9a239cc7-7c95-4d4e-9692-6f932f832ba1
-ref table LocalDateTable_f3feeb2f-5a4a-4405-a8c7-7b064c1141b8
 ref table LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36
 ref table Dim_Calendario
-ref table LocalDateTable_6a3f605d-8557-4d23-b18e-80407ceca597
 ref table Dim_Hora
 
 ref cultureInfo es-ES

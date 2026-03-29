@@ -3,18 +3,16 @@ relationship 2a726c73-3bdf-46e7-a34e-6ee081fff3f7
 	fromColumn: fact_energia_full_v2.datetime
 	toColumn: LocalDateTable_9a239cc7-7c95-4d4e-9692-6f932f832ba1.Date
 
-relationship bb0397ea-6d36-4ad8-8527-730d5f51fab8
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_energia_full_v2.fecha
-	toColumn: LocalDateTable_f3feeb2f-5a4a-4405-a8c7-7b064c1141b8.Date
-
 relationship 0bae476f-b1fb-4482-a2b6-a6326266ad04
 	joinOnDateBehavior: datePartOnly
 	fromColumn: fact_energia_full_v2.datetime_hora
 	toColumn: LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36.Date
 
-relationship 4a6efaf7-68ef-48c5-8f4b-5ca9359904a4
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Dim_Calendario.Fecha
-	toColumn: LocalDateTable_6a3f605d-8557-4d23-b18e-80407ceca597.Date
+relationship 474b1aeb-a6f0-a8e2-2340-fd459a0f0c7a
+	fromColumn: fact_energia_full_v2.fecha
+	toColumn: Dim_Calendario.Fecha
+
+relationship dfe3bde7-9cb7-8631-7d42-c1ec0bb1a788
+	fromColumn: fact_energia_full_v2.hora
+	toColumn: Dim_Hora.hora
 
