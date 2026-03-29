@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "7f67c50763c3341b7ea0",
-  "displayName": "Validacion tabla demanda",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}

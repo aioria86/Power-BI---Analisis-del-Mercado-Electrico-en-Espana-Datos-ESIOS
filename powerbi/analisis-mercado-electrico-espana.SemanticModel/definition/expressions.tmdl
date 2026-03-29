@@ -1,0 +1,33 @@
+expression fact_demanda =
+		let
+		    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_demanda.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+		in
+		    Origen
+	lineageTag: 95ccfc4e-efd3-4ca9-8bd2-0331709198da
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression fact_energia =
+		let
+		    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+		in
+		    Origen
+	lineageTag: d7302daa-cf61-44e0-a52f-018e43e43428
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression fact_energia_full =
+		let
+		    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+		in
+		    Origen
+	lineageTag: f7db7f99-2b7a-4fec-8b5e-0b7dec6887e2
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

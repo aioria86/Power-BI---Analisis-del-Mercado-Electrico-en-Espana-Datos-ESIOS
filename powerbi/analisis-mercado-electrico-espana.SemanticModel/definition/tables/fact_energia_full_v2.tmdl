@@ -1,0 +1,211 @@
+table fact_energia_full_v2
+	lineageTag: 04dac658-7d7f-4749-92ff-ba9e237860d0
+
+	column datetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3b99add2-9fe0-4d1c-afa3-10e9c8991881
+		summarizeBy: none
+		sourceColumn: datetime
+
+		variation Variación
+			isDefault
+			relationship: 2a726c73-3bdf-46e7-a34e-6ee081fff3f7
+			defaultHierarchy: LocalDateTable_9a239cc7-7c95-4d4e-9692-6f932f832ba1.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column demanda_real
+		dataType: double
+		lineageTag: 398f0d4d-0ffb-42ec-9f42-201bfbec5101
+		summarizeBy: sum
+		sourceColumn: demanda_real
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column geo_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d0b78fb5-1cd4-4571-bf05-00a8505cbd9b
+		summarizeBy: sum
+		sourceColumn: geo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column geo_name
+		dataType: string
+		lineageTag: b0c022fd-cd6f-4c32-b4d1-65ee4a1fcfa6
+		summarizeBy: none
+		sourceColumn: geo_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0ca3f584-7051-479c-917d-5f255e869997
+		summarizeBy: none
+		sourceColumn: fecha
+
+		variation Variación
+			isDefault
+			relationship: bb0397ea-6d36-4ad8-8527-730d5f51fab8
+			defaultHierarchy: LocalDateTable_f3feeb2f-5a4a-4405-a8c7-7b064c1141b8.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora
+		dataType: int64
+		formatString: 0
+		lineageTag: 361e5564-ca64-4b67-9be5-01971edd0707
+		summarizeBy: sum
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column año
+		dataType: int64
+		formatString: 0
+		lineageTag: 1ad4aeb8-9020-4d92-8a72-74a446e85766
+		summarizeBy: sum
+		sourceColumn: año
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 4306a6bd-1d51-44c7-b7c9-4cf916694123
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column indicador
+		dataType: string
+		lineageTag: 04bb04c1-aa09-4568-a956-9b69bfbcd9b8
+		summarizeBy: none
+		sourceColumn: indicador
+
+		annotation SummarizationSetBy = Automatic
+
+	column demanda_prevista
+		dataType: double
+		lineageTag: 02097add-d2b9-4ac9-9373-07044825529c
+		summarizeBy: sum
+		sourceColumn: demanda_prevista
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column demanda_programada
+		dataType: double
+		lineageTag: d8894e4d-096c-4b63-a0e8-eb72fc11b63f
+		summarizeBy: sum
+		sourceColumn: demanda_programada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column datetime_hora
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 47abc548-9155-4813-adf0-96856fb6459f
+		summarizeBy: none
+		sourceColumn: datetime_hora
+
+		variation Variación
+			isDefault
+			relationship: 0bae476f-b1fb-4482-a2b6-a6326266ad04
+			defaultHierarchy: LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio_mercado
+		dataType: double
+		lineageTag: 5d257742-4af2-4043-bca2-2dce2c9a694e
+		summarizeBy: sum
+		sourceColumn: precio_mercado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column precio_ajustes
+		dataType: double
+		lineageTag: 590a343b-eea9-435e-a887-170779aafb0a
+		summarizeBy: sum
+		sourceColumn: precio_ajustes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_solar
+		dataType: double
+		lineageTag: 8537bf5d-7708-44a2-96f0-edbe4a48cd24
+		summarizeBy: sum
+		sourceColumn: gen_solar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_eolica
+		dataType: double
+		lineageTag: 43c001af-c22c-4933-879b-3a2b93de644b
+		summarizeBy: sum
+		sourceColumn: gen_eolica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_nuclear
+		dataType: double
+		lineageTag: e53765be-07b7-4442-b4f8-82a771b88786
+		summarizeBy: sum
+		sourceColumn: gen_nuclear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_hidraulica
+		dataType: double
+		lineageTag: 552c425a-1258-4977-8dca-9721c14bde42
+		summarizeBy: sum
+		sourceColumn: gen_hidraulica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_ciclo_combinado
+		dataType: double
+		lineageTag: 566e9ee8-c2b6-4d9e-9c94-eac78f16ddb3
+		summarizeBy: sum
+		sourceColumn: gen_ciclo_combinado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_energia_full_v2 = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full_v2.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
