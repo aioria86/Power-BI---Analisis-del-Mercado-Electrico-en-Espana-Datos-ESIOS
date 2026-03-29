@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["fact_demanda","fact_energia","fact_energia_full","fact_energia_full_v2","Dim_Calendario","Tabla_Medidas"]
+annotation PBI_QueryOrder = ["fact_demanda","fact_energia","fact_energia_full","fact_energia_full_v2","Dim_Calendario","Tabla_Medidas","Dim_Hora"]
 
 ref table Tabla_Medidas
 ref table fact_energia_full_v2
@@ -20,6 +20,7 @@ ref table LocalDateTable_f3feeb2f-5a4a-4405-a8c7-7b064c1141b8
 ref table LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36
 ref table Dim_Calendario
 ref table LocalDateTable_6a3f605d-8557-4d23-b18e-80407ceca597
+ref table Dim_Hora
 
 ref cultureInfo es-ES
 
