@@ -1,0 +1,47 @@
+table Dim_Hora
+	lineageTag: ba886fe3-0c31-42c7-b3f8-cb6259737e56
+
+	column hora
+		dataType: string
+		lineageTag: 1fa84490-9668-4a48-acef-d96214ede30b
+		summarizeBy: none
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Hora Texto'
+		dataType: string
+		lineageTag: f2405a32-c550-4a33-842b-8cf3160d0836
+		summarizeBy: none
+		sourceColumn: Hora Texto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tramo
+		dataType: string
+		lineageTag: b9195338-9cf3-4a36-bc4b-c0ed0872abc0
+		summarizeBy: none
+		sourceColumn: Tramo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Hora = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full_v2.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    hora1 = Origen[hora],
+				    #"Duplicados quitados" = List.Distinct(hora1),
+				    #"Convertida en tabla" = Table.FromList(#"Duplicados quitados", Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Convertida en tabla",{{"Column1", "hora"}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Columnas con nombre cambiado", "Hora Texto", each Text.PadStart(Text.From([hora]), 2, "0") & ":00"),
+				    #"Filas ordenadas" = Table.Sort(#"Personalizada agregada",{{"hora", Order.Ascending}}),
+				    #"Columna condicional agregada" = Table.AddColumn(#"Filas ordenadas", "Tramo", each if [hora] < 6 then "Madrugada" else if [hora] < 12 then "Mañana" else if [hora] < 18 then "Tarde" else "Noche"),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna condicional agregada",{{"Tramo", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
