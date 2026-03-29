@@ -1,0 +1,74 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "Dim_Calendario",
+          "nodeLineageTag": "ebd3f9b0-18f8-4440-b28f-ec56e2567bf1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 338,
+            "y": 358
+          },
+          "nodeIndex": "fact_energia_full_v2",
+          "nodeLineageTag": "04dac658-7d7f-4749-92ff-ba9e237860d0",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 793,
+            "y": 298
+          },
+          "nodeIndex": "Tabla_Medidas",
+          "nodeLineageTag": "929f63c0-5eb9-4958-9a4c-2c35e3514f28",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 343,
+            "y": 0
+          },
+          "nodeIndex": "Dim_Hora",
+          "nodeLineageTag": "ba886fe3-0c31-42c7-b3f8-cb6259737e56",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}
