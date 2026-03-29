@@ -18,3 +18,18 @@ relationship 4ed1594d-6d70-4a38-ad87-f4c06bc06ba0
 	fromColumn: fact_energia.fecha
 	toColumn: LocalDateTable_1d4d50f1-096b-4b6f-92d3-6b709b8236c2.Date
 
+relationship ec647cd4-51d9-4896-8b47-b7a5bc2f6ce5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_energia_full.datetime
+	toColumn: LocalDateTable_8a02682c-393a-4337-a748-22d870d48bfd.Date
+
+relationship ded75ea2-82e9-4341-b5a2-447637e49968
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_energia_full.fecha
+	toColumn: LocalDateTable_4f5d8383-8d86-4f09-880b-b7d26355d979.Date
+
+relationship 555a0cbd-23de-4e88-a648-5f01c44fe8b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_energia_full.datetime_hora
+	toColumn: LocalDateTable_3e3aabd8-4dcf-4ec6-9d65-323908aff146.Date
+
