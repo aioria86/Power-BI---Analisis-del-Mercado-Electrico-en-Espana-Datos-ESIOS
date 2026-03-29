@@ -10,12 +10,15 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["fact_demanda"]
+annotation PBI_QueryOrder = ["fact_demanda","fact_energia"]
 
 ref table fact_demanda
 ref table DateTableTemplate_c70b890d-8176-4dcf-8af7-a82d83339173
 ref table LocalDateTable_78e7f2c7-d29f-4fe4-8070-bdafd8818149
 ref table LocalDateTable_041e166d-e54e-485a-b79a-0ba48cde314d
+ref table fact_energia
+ref table LocalDateTable_56d21f1a-d294-4792-8982-d4398958dea4
+ref table LocalDateTable_1d4d50f1-096b-4b6f-92d3-6b709b8236c2
 
 ref cultureInfo es-ES
 

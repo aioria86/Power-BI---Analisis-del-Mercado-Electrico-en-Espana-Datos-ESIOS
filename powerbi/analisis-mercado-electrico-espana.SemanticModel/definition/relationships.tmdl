@@ -8,3 +8,13 @@ relationship 13d27587-f0fa-440f-b619-c0d21fef02e3
 	fromColumn: fact_demanda.fecha
 	toColumn: LocalDateTable_041e166d-e54e-485a-b79a-0ba48cde314d.Date
 
+relationship 5bc9bd04-53f0-4f9b-8ed6-98ca7a6c3d06
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_energia.datetime
+	toColumn: LocalDateTable_56d21f1a-d294-4792-8982-d4398958dea4.Date
+
+relationship 4ed1594d-6d70-4a38-ad87-f4c06bc06ba0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_energia.fecha
+	toColumn: LocalDateTable_1d4d50f1-096b-4b6f-92d3-6b709b8236c2.Date
+
