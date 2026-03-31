@@ -1,18 +1,18 @@
 relationship 2a726c73-3bdf-46e7-a34e-6ee081fff3f7
 	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_energia_full_v2.datetime
+	fromColumn: Fact_Energia_ESIOS.datetime
 	toColumn: LocalDateTable_9a239cc7-7c95-4d4e-9692-6f932f832ba1.Date
 
 relationship 0bae476f-b1fb-4482-a2b6-a6326266ad04
 	joinOnDateBehavior: datePartOnly
-	fromColumn: fact_energia_full_v2.datetime_hora
+	fromColumn: Fact_Energia_ESIOS.datetime_hora
 	toColumn: LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36.Date
 
 relationship 474b1aeb-a6f0-a8e2-2340-fd459a0f0c7a
-	fromColumn: fact_energia_full_v2.fecha
+	fromColumn: Fact_Energia_ESIOS.fecha
 	toColumn: Dim_Calendario.Fecha
 
 relationship dfe3bde7-9cb7-8631-7d42-c1ec0bb1a788
-	fromColumn: fact_energia_full_v2.hora
+	fromColumn: Fact_Energia_ESIOS.hora
 	toColumn: Dim_Hora.hora
 

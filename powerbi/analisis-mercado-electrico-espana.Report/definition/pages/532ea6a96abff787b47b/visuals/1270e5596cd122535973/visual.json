@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "1270e5596cd122535973",
+  "position": {
+    "x": 75.866261398176292,
+    "y": 71.00303951367782,
+    "z": 0,
+    "height": 372.52279635258361,
+    "width": 683.76899696048633,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fact_Energia_ESIOS"
+                    }
+                  },
+                  "Property": "Tarifa_Energia"
+                }
+              },
+              "queryRef": "Fact_Energia_ESIOS.Tarifa_Energia",
+              "nativeQueryRef": "Tarifa_Energia",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Demanda Total"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Demanda Total",
+              "nativeQueryRef": "Demanda Total"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabla_Medidas"
+                  }
+                },
+                "Property": "Demanda Total"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4e3e36fcedc8d5219196",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Fact_Energia_ESIOS"
+              }
+            },
+            "Property": "Tarifa_Energia"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

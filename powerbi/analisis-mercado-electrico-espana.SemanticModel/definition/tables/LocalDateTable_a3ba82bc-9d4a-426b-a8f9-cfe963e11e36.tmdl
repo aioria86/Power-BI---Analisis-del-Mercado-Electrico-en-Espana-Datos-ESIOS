@@ -110,7 +110,7 @@ table LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36
 
 	partition LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36 = calculated
 		mode: import
-		source = Calendar(Date(Year(MIN('fact_energia_full_v2'[datetime_hora])), 1, 1), Date(Year(MAX('fact_energia_full_v2'[datetime_hora])), 12, 31))
+		source = Calendar(Date(Year(MIN('Fact_Energia_ESIOS'[datetime_hora])), 1, 1), Date(Year(MAX('Fact_Energia_ESIOS'[datetime_hora])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
 
