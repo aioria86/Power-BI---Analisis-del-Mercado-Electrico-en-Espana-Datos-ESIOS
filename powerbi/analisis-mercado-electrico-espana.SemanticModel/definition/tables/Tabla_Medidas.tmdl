@@ -1,22 +1,95 @@
 table Tabla_Medidas
 	lineageTag: 929f63c0-5eb9-4958-9a4c-2c35e3514f28
 
-	column Columna1
-		dataType: string
-		lineageTag: dea75102-e7a7-41d4-a699-d048ff7a2db4
-		summarizeBy: none
-		sourceColumn: Columna1
+	measure 'Demanda Total' = SUM(Fact_Energia_ESIOS[demanda_real])
+		formatString: #,0.00
+		lineageTag: 72ee2f63-d644-468d-b084-3d7c8696c052
 
-		annotation SummarizationSetBy = Automatic
+	measure 'Demanda P1' =
+			
+			CALCULATE(
+			    [Demanda Total],
+			    Fact_Energia_ESIOS[Tarifa_Energia] == "P1"
+			)
+		formatString: 0.00
+		lineageTag: 51f0415a-3037-4241-9b88-a8233eed3870
+
+	measure 'Demanda P2' =
+			
+			CALCULATE(
+			    [Demanda Total],
+			    Fact_Energia_ESIOS[Tarifa_Energia] == "P2"
+			)
+		formatString: 0.00
+		lineageTag: 908e0a61-db02-4d31-b738-c68c93b63277
+
+	measure 'Demanda P3' =
+			
+			CALCULATE(
+			    [Demanda Total],
+			    Fact_Energia_ESIOS[Tarifa_Energia] == "P3"
+			)
+		formatString: 0.00
+		lineageTag: 6f0f702a-3b08-4c0c-918a-852019db2ab5
+
+	measure 'Precio Promedio' = AVERAGE(Fact_Energia_ESIOS[precio_mercado])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 5a6cc350-8c58-4441-bda0-8a05dc8f9dd7
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Precio Promedio P1' =
+			
+			CALCULATE(
+			    [Precio Promedio],
+			    Fact_Energia_ESIOS[Tarifa_Energia] == "P1"
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 04f5e268-c4c9-4cb8-8a14-eb0a665a959f
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Precio Promedio P2' =
+			
+			CALCULATE(
+			    [Precio Promedio],
+			    Fact_Energia_ESIOS[Tarifa_Energia] == "P2"
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 04b912ca-0cec-4be7-b4d1-fd4a0d79f2b0
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Precio Promedio P3' =
+			
+			CALCULATE(
+			    [Precio Promedio],
+			    Fact_Energia_ESIOS[Tarifa_Energia] == "P3"
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 2a6eeeb2-0f56-4d2c-8464-507fa26136f0
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure '% Consumo Valle' =
+			
+			DIVIDE(
+			    [Demanda P3],
+			    [Demanda Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 29258858-69b1-4f91-9c77-23c7856baf7f
 
 	partition Tabla_Medidas = m
 		mode: import
 		source =
 				let
 				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}})
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
 				in
-				    #"Tipo cambiado"
+				    #"Columnas quitadas"
 
 	annotation PBI_NavigationStepName = Navegación
 

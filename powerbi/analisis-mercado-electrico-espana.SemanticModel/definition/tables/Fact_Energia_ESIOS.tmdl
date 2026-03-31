@@ -1,4 +1,4 @@
-table fact_energia_full_v2
+table Fact_Energia_ESIOS
 	lineageTag: 04dac658-7d7f-4749-92ff-ba9e237860d0
 
 	column datetime
@@ -194,7 +194,7 @@ table fact_energia_full_v2
 
 	column Tarifa_Energia =
 			
-			VAR Hora = fact_energia_full_v2[hora]
+			VAR Hora = Fact_Energia_ESIOS[hora]
 			VAR TipoDia = RELATED(Dim_Calendario[Tipo Día])
 			RETURN
 			    IF(
@@ -216,7 +216,7 @@ table fact_energia_full_v2
 
 		annotation SummarizationSetBy = Automatic
 
-	partition fact_energia_full_v2 = m
+	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
 				let

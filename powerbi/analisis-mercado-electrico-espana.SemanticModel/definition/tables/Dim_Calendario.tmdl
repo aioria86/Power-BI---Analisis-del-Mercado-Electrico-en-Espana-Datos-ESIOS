@@ -165,7 +165,7 @@ table Dim_Calendario
 				let
 				    Origen = let
 				    // 1. Fuente (usa tu fact real)
-				    Source = fact_energia_full_v2,
+				    Source = Fact_Energia_ESIOS,
 				
 				    // 2. Rango dinámico
 				    StartDate = Date.From(List.Min(Source[datetime])),
