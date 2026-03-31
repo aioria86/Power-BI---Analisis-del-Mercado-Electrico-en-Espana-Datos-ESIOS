@@ -264,6 +264,16 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column demanda_programada_total
+		dataType: double
+		lineageTag: d64d7da9-efc7-4d4f-8d41-7479a8abd27a
+		summarizeBy: sum
+		sourceColumn: demanda_programada_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =

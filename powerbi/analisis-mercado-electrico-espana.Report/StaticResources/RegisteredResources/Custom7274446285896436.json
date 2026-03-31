@@ -1,0 +1,24 @@
+{
+  "name": "Custom",
+  "textClasses": {
+    "callout": {
+      "color": "#4F4F4F"
+    },
+    "title": {
+      "color": "#2C3E50"
+    }
+  },
+  "dataColors": [
+    "#2F80ED",
+    "#12239E",
+    "#F2994A",
+    "#6B007B",
+    "#27AE60",
+    "#EB5757",
+    "#F2C94C",
+    "#828282"
+  ],
+  "minimum": "#E0E0E0",
+  "center": "#F2C94C",
+  "maximum": "#2F80ED"
+}

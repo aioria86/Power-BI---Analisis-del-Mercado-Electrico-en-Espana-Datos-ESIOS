@@ -167,6 +167,13 @@ if __name__ == "__main__":
         gas = procesar_generacion(gas, "gen_gas")
         df_base = df_base.merge(gas, on="datetime_hora", how="left")
 
+    programada_total = cargar_datos("demanda_programada_total")
+
+    # Demanda programada total
+    if programada_total is not None:
+        programada_total = procesar_generacion(programada_total, "demanda_programada_total")
+        df_base = df_base.merge(programada_total, on="datetime_hora", how="left")
+
     # =========================
     # FEATURES TEMPORALES
     # =========================

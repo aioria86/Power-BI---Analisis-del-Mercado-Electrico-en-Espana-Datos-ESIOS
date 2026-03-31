@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "01a098cfcb4514b82bb8",
   "position": {
-    "x": 381.76322418136016,
-    "y": 89.77329974811083,
+    "x": 381.3352476669059,
+    "y": 52.376166547020816,
     "z": 7,
-    "height": 307.40554156171282,
-    "width": 659.2443324937027,
+    "height": 328.95908111988513,
+    "width": 659.7559224694902,
     "tabOrder": 7
   },
   "visual": {
@@ -46,7 +46,9 @@
                 }
               },
               "queryRef": "Tabla_Medidas.Demanda Total",
-              "nativeQueryRef": "Demanda Total"
+              "nativeQueryRef": "Demanda Real",
+              "displayName": "Demanda Real",
+              "format": "0"
             },
             {
               "field": {
@@ -56,11 +58,11 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "Demanda P1"
+                  "Property": "Demanda Prevista"
                 }
               },
-              "queryRef": "Tabla_Medidas.Demanda P1",
-              "nativeQueryRef": "Demanda P1"
+              "queryRef": "Tabla_Medidas.Demanda Prevista",
+              "nativeQueryRef": "Demanda Prevista"
             },
             {
               "field": {
@@ -70,11 +72,11 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "Demanda P2"
+                  "Property": "Demanda Programada"
                 }
               },
-              "queryRef": "Tabla_Medidas.Demanda P2",
-              "nativeQueryRef": "Demanda P2"
+              "queryRef": "Tabla_Medidas.Demanda Programada",
+              "nativeQueryRef": "Demanda Programada"
             },
             {
               "field": {
@@ -84,11 +86,12 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "Demanda P3"
+                  "Property": "Demanda Programada Total Final"
                 }
               },
-              "queryRef": "Tabla_Medidas.Demanda P3",
-              "nativeQueryRef": "Demanda P3"
+              "queryRef": "Tabla_Medidas.Demanda Programada Total Final",
+              "nativeQueryRef": "Demanda Programada Total",
+              "displayName": "Demanda Programada Total"
             }
           ]
         }
@@ -111,6 +114,194 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Demanda Total"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 6,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Demanda Prevista"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Demanda Programada"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 5,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Demanda Programada Total Final"
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'MWh'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Horas'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            },
+            "interpolationSmooth": {
+              "expr": {
+                "Literal": {
+                  "Value": "'monotoneX'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Demanda Eléctrica: Real vs Prevista y Programada'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Comparativa horaria de la demanda y desviación respecto a la planificación'"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

@@ -2,7 +2,7 @@ table Tabla_Medidas
 	lineageTag: 929f63c0-5eb9-4958-9a4c-2c35e3514f28
 
 	measure 'Demanda Total' = SUM(Fact_Energia_ESIOS[demanda_real])
-		formatString: #,0
+		formatString: #,0.00
 		lineageTag: 72ee2f63-d644-468d-b084-3d7c8696c052
 
 	measure 'Demanda P1' =
@@ -151,6 +151,47 @@ table Tabla_Medidas
 			DIVIDE([Gen Limpia], [Gen Limpia] + [Gen No Limpia], 0)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 9e38b1a8-23d3-4363-b1e0-4bcaac365a60
+
+	measure 'Demanda Programada Total' = SUM(Fact_Energia_ESIOS[demanda_programada_total])
+		lineageTag: 4959d28d-5fb3-44a5-8016-3cc0851bb5cd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variacion Demanda %' =
+			
+			DIVIDE(
+			    [Demanda Total] - [Demanda Programada Total Final],
+			    [Demanda Programada Total Final],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 1d92d757-8169-4fab-9e74-dfc955e40215
+
+	measure 'Demanda Programada' = SUM(Fact_Energia_ESIOS[demanda_programada])
+		lineageTag: c718bc97-c552-4aee-9d34-5971f5fa1f98
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Demanda Prevista' = SUM(Fact_Energia_ESIOS[demanda_prevista])
+		lineageTag: ed183378-fdc7-4332-a692-e9075e7b47f5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Demanda Programada Total Final' =
+			
+			IF(
+			    ISBLANK([Demanda Programada Total]),
+			    [Demanda Programada],
+			    [Demanda Programada Total]
+			)
+		lineageTag: 0d17f76a-ebeb-4db3-b9fc-06b0da78a51a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Desviacion Absoluta MW' = [Demanda Total] - [Demanda Programada Total Final]
+		lineageTag: a1c4301d-acfa-4b12-81e3-0c89a2051973
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition Tabla_Medidas = m
 		mode: import
