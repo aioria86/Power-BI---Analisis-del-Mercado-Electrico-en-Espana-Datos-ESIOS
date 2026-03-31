@@ -1,0 +1,117 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "01a098cfcb4514b82bb8",
+  "position": {
+    "x": 381.76322418136016,
+    "y": 89.77329974811083,
+    "z": 7,
+    "height": 307.40554156171282,
+    "width": 659.2443324937027,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Hora"
+                    }
+                  },
+                  "Property": "hora"
+                }
+              },
+              "queryRef": "Dim_Hora.hora",
+              "nativeQueryRef": "hora",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Demanda Total"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Demanda Total",
+              "nativeQueryRef": "Demanda Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Demanda P1"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Demanda P1",
+              "nativeQueryRef": "Demanda P1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Demanda P2"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Demanda P2",
+              "nativeQueryRef": "Demanda P2"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Demanda P3"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Demanda P3",
+              "nativeQueryRef": "Demanda P3"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabla_Medidas"
+                  }
+                },
+                "Property": "Demanda Total"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

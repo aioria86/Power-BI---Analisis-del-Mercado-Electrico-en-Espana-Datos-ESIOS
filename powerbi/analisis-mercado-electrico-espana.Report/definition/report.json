@@ -50,6 +50,42 @@
           "type": "BaseTheme"
         }
       ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "icon-eolica398594344097413.png",
+          "path": "icon-eolica398594344097413.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-eolica6587557570321653.png",
+          "path": "icon-eolica6587557570321653.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-hidraulica007698390439930591.png",
+          "path": "icon-hidraulica007698390439930591.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-nuclear8415362241458646.png",
+          "path": "icon-nuclear8415362241458646.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-renovable4854492596813257.png",
+          "path": "icon-renovable4854492596813257.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-solar9848019848923858.png",
+          "path": "icon-solar9848019848923858.png",
+          "type": "Image"
+        }
+      ]
     }
   ],
   "settings": {

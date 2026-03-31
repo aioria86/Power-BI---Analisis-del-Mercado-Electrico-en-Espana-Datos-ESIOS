@@ -16,6 +16,18 @@ INDICADORES = {
     # RESTO (T.Real)
     "gen_eolica": 551,
     "gen_nuclear": 549,
-    "gen_hidraulica": 546,
-    "gen_ciclo_combinado": 550
+    "gen_hidraulica": 548,
+    "gen_ciclo_combinado": 550,
+
+    # GENERACIÓN NO LIMPIA
+    
+    # Carbón
+    "gen_hulla_antracita": 42,
+    "gen_hulla_subbituminosa": 43,
+
+    # Fuel
+    "gen_fuel": 45,
+
+    # Gas (turbinas)
+    "gen_gas": 46
 }

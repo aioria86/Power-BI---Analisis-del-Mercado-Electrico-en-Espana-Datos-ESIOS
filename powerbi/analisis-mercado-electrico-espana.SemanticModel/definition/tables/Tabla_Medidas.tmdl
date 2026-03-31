@@ -2,7 +2,7 @@ table Tabla_Medidas
 	lineageTag: 929f63c0-5eb9-4958-9a4c-2c35e3514f28
 
 	measure 'Demanda Total' = SUM(Fact_Energia_ESIOS[demanda_real])
-		formatString: #,0.00
+		formatString: #,0
 		lineageTag: 72ee2f63-d644-468d-b084-3d7c8696c052
 
 	measure 'Demanda P1' =
@@ -80,6 +80,77 @@ table Tabla_Medidas
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 29258858-69b1-4f91-9c77-23c7856baf7f
+
+	measure 'Gen Eolica' = SUM(Fact_Energia_ESIOS[gen_eolica])
+		formatString: #,0.0,," MWh"
+		lineageTag: faf676da-2427-41c3-8291-c74351ad841b
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Gen Hidraulica' = SUM(Fact_Energia_ESIOS[gen_hidraulica])
+		formatString: #,0.0,," MWh"
+		lineageTag: a23d4520-de71-49e2-a8d9-9d223b16c7f0
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Gen Solar' = SUM(Fact_Energia_ESIOS[gen_solar])
+		formatString: #,0.0,," MWh"
+		lineageTag: c6e10ced-6a0a-43b1-8f40-45179eef6d5f
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Gen Nuclear' = SUM(Fact_Energia_ESIOS[gen_nuclear])
+		formatString: #,0.0,," MWh"
+		lineageTag: ccf07607-ded3-4b4a-83b0-c549018a8b3e
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Gen Termica Renovable' = SUM(Fact_Energia_ESIOS[gen_ciclo_combinado])
+		formatString: " #,0.00,,"" M MWh"""
+		lineageTag: 99c680b7-146f-4e8a-83d4-52c55609f277
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Demanda Promedio' = AVERAGE(Fact_Energia_ESIOS[demanda_real])
+		formatString: 0
+		lineageTag: f4411124-22e0-422e-a268-1a783725aae6
+
+	measure 'Generacion Total' = [Gen Eolica] + [Gen Hidraulica] + [Gen Solar] + [Gen Nuclear] + [Gen Termica Renovable]
+		formatString: 0
+		lineageTag: 54d713cd-350a-4cfb-92a8-5727330ae9cd
+
+	measure 'Consumo Total' = [Demanda Total]
+		formatString: #,0
+		lineageTag: 05679bbe-5aa9-4b24-a2cc-d62e443da611
+
+	measure 'Ratio Generacion' =
+			
+			DIVIDE(
+			    [Generacion Total],
+			    [Consumo Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: b750b30b-9afe-499a-bea9-792812e16bc1
+
+	measure 'Gen Limpia' = [Gen Eolica] + [Gen Hidraulica] + [Gen Solar] + [Gen Nuclear]
+		lineageTag: 9ab048b4-2c13-48eb-9320-a17d5ad5c2db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gen No Limpia' = [Gen Termica Renovable] + [Gen Carbon]
+		lineageTag: 7c936d9b-4060-4b22-a265-dd8ec504383b
+
+	measure 'Gen Carbon' = SUM(Fact_Energia_ESIOS[Gen Carbon])
+		lineageTag: 312c803c-1e51-4185-8132-52d774fc65b6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Generacion Limpia' =
+			
+			DIVIDE([Gen Limpia], [Gen Limpia] + [Gen No Limpia], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9e38b1a8-23d3-4363-b1e0-4bcaac365a60
 
 	partition Tabla_Medidas = m
 		mode: import

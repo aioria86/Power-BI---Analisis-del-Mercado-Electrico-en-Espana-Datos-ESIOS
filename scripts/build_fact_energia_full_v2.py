@@ -100,14 +100,14 @@ if __name__ == "__main__":
     # GENERACIÓN (HÍBRIDA)
     # =========================
 
-    # Solar (antiguo - histórico)
+    # Solar (histórico correcto)
     solar = cargar_datos("generacion_solar")
 
     if solar is not None:
         solar = procesar_generacion(solar, "gen_solar")
         df_base = df_base.merge(solar, on="datetime_hora", how="left")
 
-    # Eólica (T.Real)
+    # Eólica
     eolica = cargar_datos("gen_real_eolica")
 
     if eolica is not None:
@@ -134,6 +134,38 @@ if __name__ == "__main__":
     if ciclo is not None:
         ciclo = procesar_generacion(ciclo, "gen_ciclo_combinado")
         df_base = df_base.merge(ciclo, on="datetime_hora", how="left")
+
+    # =========================
+    # NUEVOS INDICADORES (NO LIMPIOS)
+    # =========================
+
+    # Carbón - Antracita
+    carbon_a = cargar_datos("gen_hulla_antracita")
+
+    if carbon_a is not None:
+        carbon_a = procesar_generacion(carbon_a, "gen_hulla_antracita")
+        df_base = df_base.merge(carbon_a, on="datetime_hora", how="left")
+
+    # Carbón - Subbituminosa
+    carbon_b = cargar_datos("gen_hulla_subbituminosa")
+
+    if carbon_b is not None:
+        carbon_b = procesar_generacion(carbon_b, "gen_hulla_subbituminosa")
+        df_base = df_base.merge(carbon_b, on="datetime_hora", how="left")
+
+    # Fuel
+    fuel = cargar_datos("gen_fuel")
+
+    if fuel is not None:
+        fuel = procesar_generacion(fuel, "gen_fuel")
+        df_base = df_base.merge(fuel, on="datetime_hora", how="left")
+
+    # Gas
+    gas = cargar_datos("gen_gas")
+
+    if gas is not None:
+        gas = procesar_generacion(gas, "gen_gas")
+        df_base = df_base.merge(gas, on="datetime_hora", how="left")
 
     # =========================
     # FEATURES TEMPORALES

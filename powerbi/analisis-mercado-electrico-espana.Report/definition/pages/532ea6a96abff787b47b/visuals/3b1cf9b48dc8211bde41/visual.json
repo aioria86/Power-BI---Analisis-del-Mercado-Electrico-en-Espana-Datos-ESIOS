@@ -1,0 +1,127 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "3b1cf9b48dc8211bde41",
+  "position": {
+    "x": 9.9748110831234253,
+    "y": 381.76322418136016,
+    "z": 8,
+    "height": 243.92947103274557,
+    "width": 428.91687657430725,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Gen Eolica"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Gen Eolica",
+              "nativeQueryRef": "Gen Eolica"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Gen Hidraulica"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Gen Hidraulica",
+              "nativeQueryRef": "Gen Hidraulica"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Gen Nuclear"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Gen Nuclear",
+              "nativeQueryRef": "Gen Nuclear"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Gen Solar"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Gen Solar",
+              "nativeQueryRef": "Gen Solar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Gen Termica Renovable"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Gen Termica Renovable",
+              "nativeQueryRef": "Gen Termica Renovable"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabla_Medidas"
+                  }
+                },
+                "Property": "Gen Eolica"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Percent of total'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

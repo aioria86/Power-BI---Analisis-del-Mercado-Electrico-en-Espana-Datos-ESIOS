@@ -2,10 +2,13 @@ table Dim_Hora
 	lineageTag: ba886fe3-0c31-42c7-b3f8-cb6259737e56
 
 	column hora
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 1fa84490-9668-4a48-acef-d96214ede30b
 		summarizeBy: none
 		sourceColumn: hora
+
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -14,6 +17,9 @@ table Dim_Hora
 		lineageTag: f2405a32-c550-4a33-842b-8cf3160d0836
 		summarizeBy: none
 		sourceColumn: Hora Texto
+		sortByColumn: hora
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
