@@ -274,6 +274,136 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column pot_indisponible
+		dataType: double
+		lineageTag: 7bbf1f0b-acb0-47bd-a2fc-3a71877beed9
+		summarizeBy: sum
+		sourceColumn: pot_indisponible
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_nuclear
+		dataType: double
+		lineageTag: ce866952-30d3-4f24-bb0c-d61860502fd0
+		summarizeBy: sum
+		sourceColumn: pot_disp_nuclear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_carbon
+		dataType: double
+		lineageTag: b4a7d1a1-fdd9-4951-8f22-8529191f74d8
+		summarizeBy: sum
+		sourceColumn: pot_disp_carbon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_fuel
+		dataType: double
+		lineageTag: cd443329-f35f-42a5-b1ac-af9290e1f6e3
+		summarizeBy: sum
+		sourceColumn: pot_disp_fuel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_gas
+		dataType: double
+		lineageTag: c7fb7ed4-522c-4728-b274-6356813ee82d
+		summarizeBy: sum
+		sourceColumn: pot_disp_gas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_eolica
+		dataType: double
+		lineageTag: 98c2d0b3-3011-4dc5-817c-38497cf78ed1
+		summarizeBy: sum
+		sourceColumn: pot_disp_eolica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_solar
+		dataType: double
+		lineageTag: 948214ef-6630-4e10-a7e3-99f43fa977a2
+		summarizeBy: sum
+		sourceColumn: pot_disp_solar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_nuclear
+		dataType: double
+		lineageTag: 467f11cd-ec57-4ea4-bdc2-1be2f7953c5e
+		summarizeBy: sum
+		sourceColumn: pot_inst_nuclear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_carbon
+		dataType: double
+		lineageTag: fe7ad461-7139-4ade-a87a-3de32c0fa153
+		summarizeBy: sum
+		sourceColumn: pot_inst_carbon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_ciclo_combinado
+		dataType: double
+		lineageTag: 66079a83-6c4e-4499-8e7d-48a9815d81d9
+		summarizeBy: sum
+		sourceColumn: pot_inst_ciclo_combinado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_gas
+		dataType: double
+		lineageTag: a8c367db-38c2-4ff3-bf60-98cd100266b3
+		summarizeBy: sum
+		sourceColumn: pot_inst_gas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_eolica
+		dataType: double
+		lineageTag: 68dfd865-25af-4638-9d42-1a8402a353a1
+		summarizeBy: sum
+		sourceColumn: pot_inst_eolica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_solar
+		dataType: double
+		lineageTag: de497f69-277b-4b00-8ed3-45395c9d110b
+		summarizeBy: sum
+		sourceColumn: pot_inst_solar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
