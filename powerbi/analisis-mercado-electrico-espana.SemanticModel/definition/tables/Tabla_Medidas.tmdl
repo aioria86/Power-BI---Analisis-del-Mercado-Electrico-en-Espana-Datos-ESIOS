@@ -235,6 +235,31 @@ table Tabla_Medidas
 			[Insight Demanda]
 		lineageTag: e2e44bb9-179c-4b0d-aef9-f5a697d6f2f9
 
+	measure 'Potencia Disponible' =
+			
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_nuclear]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_carbon]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_fuel]),0)
+		formatString: 0
+		lineageTag: 8a7b6ef8-94a0-4502-9ff2-75692be9b1b5
+
+	measure 'Potencia Instalada' =
+			
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_inst_nuclear]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_inst_carbon]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_inst_ciclo_combinado]),0)
+		formatString: 0
+		lineageTag: 1c9f51fa-0942-4f0a-918b-cfa94aff7a3e
+
+	measure 'Potencia Indisponible' = SUM(Fact_Energia_ESIOS[pot_indisponible])
+		formatString: 0
+		lineageTag: 3fef082f-ce27-4a1c-b118-b021587ce9f7
+
+	measure 'Potencia Instalada Ajustada' = [Potencia Disponible] + [Potencia Indisponible]
+		lineageTag: 0205ec78-aa71-419c-b5cf-54d4ea7e4fd0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

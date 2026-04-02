@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "cd23c3fffc38d2dbff0e",
+  "name": "e2d733ddc70cc8e0302b",
   "position": {
-    "x": 1048.2619647355164,
-    "y": 58.0352644836272,
-    "z": 8000,
-    "height": 115.16372795969772,
-    "width": 232.14105793450881,
-    "tabOrder": 7000
+    "x": 0,
+    "y": 292.70250896057348,
+    "z": 14001,
+    "height": 67.899641577060933,
+    "width": 239.48387096774192,
+    "tabOrder": 14001
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,12 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "% Generacion Limpia"
+                  "Property": "Potencia Instalada Ajustada"
                 }
               },
-              "queryRef": "Tabla_Medidas.% Generacion Limpia",
-              "nativeQueryRef": "% Generacion Limpia"
+              "queryRef": "Tabla_Medidas.Potencia Instalada Ajustada",
+              "nativeQueryRef": "INSTALADA (MW)",
+              "displayName": "INSTALADA (MW)"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "Tabla_Medidas"
                   }
                 },
-                "Property": "% Generacion Limpia"
+                "Property": "Potencia Instalada Ajustada"
               }
             },
             "direction": "Descending"
@@ -66,13 +67,6 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -102,7 +96,7 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "5L"
                 }
               }
             },
@@ -110,13 +104,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0L"
-                }
-              }
-            },
-            "calloutSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
                 }
               }
             }
@@ -247,106 +234,6 @@
             }
           }
         }
-      ],
-      "referenceLabel": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Tabla_Medidas"
-                    }
-                  },
-                  "Property": "Gen Limpia"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "Tabla_Medidas.% Generacion Limpia",
-            "id": "field-f3676899-5943-372f-de1c-42988be0e806",
-            "order": 0
-          }
-        }
-      ],
-      "referenceLabelTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia"
-          }
-        },
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'MWh:'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia",
-            "id": "field-f3676899-5943-372f-de1c-42988be0e806"
-          }
-        }
-      ],
-      "referenceLabelDetail": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia"
-          }
-        }
-      ],
-      "referenceLabelValue": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia"
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -391,33 +278,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Generación libre de CO2'"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }

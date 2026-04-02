@@ -17,6 +17,7 @@ notes_private/
 
 # Descargas temporales
 data/raw/descargas_esios/tmp/
+data/raw
 
 # Variables de entorno
 .env

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "cd23c3fffc38d2dbff0e",
+  "name": "ad6cae46cc8c045ce59e",
   "position": {
-    "x": 1048.2619647355164,
-    "y": 58.0352644836272,
-    "z": 8000,
-    "height": 115.16372795969772,
-    "width": 232.14105793450881,
-    "tabOrder": 7000
+    "x": 0,
+    "y": 116.0705289672544,
+    "z": 12000,
+    "height": 134.2065491183879,
+    "width": 239.39546599496219,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,27 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "% Generacion Limpia"
+                  "Property": "Potencia Disponible"
                 }
               },
-              "queryRef": "Tabla_Medidas.% Generacion Limpia",
-              "nativeQueryRef": "% Generacion Limpia"
+              "queryRef": "Tabla_Medidas.Potencia Disponible",
+              "nativeQueryRef": "Potencia Disponible",
+              "format": "0.00"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Potencia Indisponible"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Potencia Indisponible",
+              "nativeQueryRef": "Potencia Indisponible",
+              "format": "0.00"
             }
           ]
         }
@@ -42,7 +58,7 @@
                     "Entity": "Tabla_Medidas"
                   }
                 },
-                "Property": "% Generacion Limpia"
+                "Property": "Potencia Disponible"
               }
             },
             "direction": "Descending"
@@ -68,17 +84,38 @@
                   "Value": "10D"
                 }
               }
-            },
-            "show": {
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'DISPONIBLE (MW)'"
                 }
               }
             }
           },
           "selector": {
-            "id": "default"
+            "metadata": "Tabla_Medidas.Potencia Disponible"
+          }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'INDISPONIBLE (MW)'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Potencia Indisponible"
           }
         }
       ],
@@ -102,7 +139,7 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "5L"
                 }
               }
             },
@@ -110,13 +147,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0L"
-                }
-              }
-            },
-            "calloutSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
                 }
               }
             }
@@ -166,7 +196,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -200,6 +230,102 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'icon-green-circle.png'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "icon-green-circle34335743433456367.png"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fit'"
+                }
+              }
+            },
+            "imageAreaSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Potencia Disponible"
+          }
+        },
+        {
+          "properties": {
+            "image": {
+              "image": {
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'icon-red-circle.png'"
+                    }
+                  }
+                },
+                "url": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "icon-red-circle1997137094072785.png"
+                    }
+                  }
+                },
+                "scaling": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'Normal'"
+                    }
+                  }
+                }
+              }
+            },
+            "imageAreaSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            },
+            "fit": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fit'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Potencia Indisponible"
           }
         }
       ],
@@ -247,106 +373,6 @@
             }
           }
         }
-      ],
-      "referenceLabel": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Tabla_Medidas"
-                    }
-                  },
-                  "Property": "Gen Limpia"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "Tabla_Medidas.% Generacion Limpia",
-            "id": "field-f3676899-5943-372f-de1c-42988be0e806",
-            "order": 0
-          }
-        }
-      ],
-      "referenceLabelTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia"
-          }
-        },
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'MWh:'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia",
-            "id": "field-f3676899-5943-372f-de1c-42988be0e806"
-          }
-        }
-      ],
-      "referenceLabelDetail": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia"
-          }
-        }
-      ],
-      "referenceLabelValue": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Tabla_Medidas.% Generacion Limpia"
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -391,33 +417,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Generación libre de CO2'"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             }
