@@ -92,6 +92,34 @@
               "queryRef": "Tabla_Medidas.Demanda Programada Total Final",
               "nativeQueryRef": "Demanda Programada Total",
               "displayName": "Demanda Programada Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Banda Superior"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Banda Superior",
+              "nativeQueryRef": "Banda Superior"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Banda Inferior"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Banda Inferior",
+              "nativeQueryRef": "Banda Inferior"
             }
           ]
         }
@@ -192,6 +220,42 @@
           "selector": {
             "metadata": "Tabla_Medidas.Demanda Programada Total Final"
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B0BEC5'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Banda Superior"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B0BEC5'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Banda Inferior"
+          }
         }
       ],
       "valueAxis": [
@@ -265,6 +329,48 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dotted'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Banda Superior"
+          }
+        },
+        {
+          "properties": {
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dotted'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Banda Inferior"
+          }
         }
       ]
     },
@@ -294,8 +400,13 @@
             },
             "text": {
               "expr": {
-                "Literal": {
-                  "Value": "'Comparativa horaria de la demanda y desviación respecto a la planificación'"
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Insight Demanda"
                 }
               }
             }

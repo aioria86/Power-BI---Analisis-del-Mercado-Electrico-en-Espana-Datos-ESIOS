@@ -193,6 +193,48 @@ table Tabla_Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Alerta Demanda' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Variacion Demanda %] > 0.02, "Alta (sobreconsumo)",
+			    [Variacion Demanda %] < -0.02, "Baja (subconsumo)",
+			    "Normal"
+			)
+		lineageTag: 6431c131-be08-46d7-8448-738e2861c906
+
+	measure 'Banda Superior' = [Demanda Programada Total Final] * 1.02
+		lineageTag: 4e6260d0-8704-491e-b3ca-d9c5a56b0ec3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Banda Inferior' = [Demanda Programada Total Final] * 0.98
+		lineageTag: e7f99dc1-c026-4426-bb81-682055e7ca0d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Insight Demanda' = ```
+			
+			SWITCH(
+			    TRUE(),
+			    [Variacion Demanda %] > 0.02, 
+			        "Demanda superior a la prevista (+ desviación)",
+			    
+			    [Variacion Demanda %] < -0.02, 
+			        "Demanda inferior a la prevista (- desviación)",
+			    
+			    "Demanda alineada con la planificación"
+			)
+			```
+		lineageTag: 15049c69-a6c0-485e-b00f-714cf6c88170
+
+	measure 'Insight Avanzado' =
+			
+			"En " & FORMAT(MAX(Dim_Calendario[fecha]), "dddd, dd MMMM") &
+			": " &
+			[Insight Demanda]
+		lineageTag: e2e44bb9-179c-4b0d-aef9-f5a697d6f2f9
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =
