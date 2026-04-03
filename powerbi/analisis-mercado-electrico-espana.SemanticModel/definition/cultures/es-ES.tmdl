@@ -3415,75 +3415,55 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "fact_energia_ESIO_datetime_hora_trimestre_has_fact_energia_ESIO_datetime_hora_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.me"
-			          }
+			    },
+			    "fact_energia_ESIO.pot_disp_hidraulica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "pot_disp_hidraulica"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
+			          "pot disp hidraulica": {
+			            "State": "Generated"
+			          }
 			        },
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres1"
+			          "pot_disp_hidraulica": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
 			        }
 			      ]
 			    },
+			    "fact_energia_ESIO.pot_inst_hidraulica": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "pot_inst_hidraulica"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pot inst hidraulica": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pot_inst_hidraulica": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "fact_energia_ESIO_datetime_hora_año_has_fact_energia_ESIO_datetime_hora_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_Energia_ESIOS"
@@ -3810,7 +3790,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me"
 			        },
 			        {
 			          "Attribute": {
@@ -3823,7 +3803,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -4167,6 +4147,72 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_calendarios_have_fact_energia_ESIOs"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_pot_inst_hidraulica": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.pot_inst_hidraulica": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.pot_inst_hidraulica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.pot_inst_hidraulica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_pot_inst_hidraulicas"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_pot_disp_hidraulica": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.pot_disp_hidraulica": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.pot_disp_hidraulica"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.pot_disp_hidraulica"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_pot_disp_hidraulicas"
 			        }
 			      ]
 			    },
@@ -7368,6 +7414,72 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_energia_ESIOs_have_demanda_total"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_trimestre_has_fact_energia_ESIO_datetime_hora_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres1"
 			        }
 			      ]
 			    },

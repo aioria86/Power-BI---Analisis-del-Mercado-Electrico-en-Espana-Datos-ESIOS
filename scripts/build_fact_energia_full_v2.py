@@ -169,32 +169,34 @@ if __name__ == "__main__":
         df_base = df_base.merge(pot_ind, on="datetime_hora", how="left")
 
     # Disponible
-    for ind, col in [
-        ("pot_disp_nuclear", "pot_disp_nuclear"),
-        ("pot_disp_carbon", "pot_disp_carbon"),
-        ("pot_disp_fuel", "pot_disp_fuel"),
-        ("pot_disp_gas", "pot_disp_gas"),
-        ("pot_disp_eolica", "pot_disp_eolica"),
-        ("pot_disp_solar", "pot_disp_solar"),
-    ]:
-        df = cargar_datos(ind)
-        if df is not None:
-            df = procesar_generacion(df, col)
-            df_base = df_base.merge(df, on="datetime_hora", how="left")
+for ind, col in [
+    ("pot_disp_nuclear", "pot_disp_nuclear"),
+    ("pot_disp_carbon", "pot_disp_carbon"),
+    ("pot_disp_fuel", "pot_disp_fuel"),
+    ("pot_disp_gas", "pot_disp_gas"),
+    ("pot_disp_eolica", "pot_disp_eolica"),
+    ("pot_disp_solar", "pot_disp_solar"),
+    ("pot_disp_hidraulica", "pot_disp_hidraulica"),
+]:
+    df = cargar_datos(ind)
+    if df is not None:
+        df = procesar_generacion(df, col)
+        df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # Instalada
-    for ind, col in [
-        ("pot_inst_nuclear", "pot_inst_nuclear"),
-        ("pot_inst_carbon", "pot_inst_carbon"),
-        ("pot_inst_ciclo_combinado", "pot_inst_ciclo_combinado"),
-        ("pot_inst_gas", "pot_inst_gas"),
-        ("pot_inst_eolica", "pot_inst_eolica"),
-        ("pot_inst_solar", "pot_inst_solar"),
-    ]:
-        df = cargar_datos(ind)
-        if df is not None:
-            df = procesar_generacion(df, col)
-            df_base = df_base.merge(df, on="datetime_hora", how="left")
+for ind, col in [
+    ("pot_inst_nuclear", "pot_inst_nuclear"),
+    ("pot_inst_carbon", "pot_inst_carbon"),
+    ("pot_inst_ciclo_combinado", "pot_inst_ciclo_combinado"),
+    ("pot_inst_gas", "pot_inst_gas"),
+    ("pot_inst_eolica", "pot_inst_eolica"),
+    ("pot_inst_solar", "pot_inst_solar"),
+    ("pot_inst_hidraulica", "pot_inst_hidraulica"),
+]:
+    df = cargar_datos(ind)
+    if df is not None:
+        df = procesar_generacion(df, col)
+        df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
     # FEATURES TEMPORALES

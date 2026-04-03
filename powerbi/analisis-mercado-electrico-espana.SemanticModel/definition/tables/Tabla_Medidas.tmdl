@@ -239,7 +239,9 @@ table Tabla_Medidas
 			
 			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_nuclear]),0) +
 			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_carbon]),0) +
-			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_fuel]),0)
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_fuel]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_gas]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_hidraulica]),0)
 		formatString: 0
 		lineageTag: 8a7b6ef8-94a0-4502-9ff2-75692be9b1b5
 

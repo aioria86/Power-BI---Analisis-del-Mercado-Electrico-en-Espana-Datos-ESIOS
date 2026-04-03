@@ -404,6 +404,26 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column pot_disp_hidraulica
+		dataType: double
+		lineageTag: 59764fe8-bb31-4133-9f9e-63e6c5a82e0e
+		summarizeBy: sum
+		sourceColumn: pot_disp_hidraulica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_hidraulica
+		dataType: double
+		lineageTag: 7447283e-afdf-4a0e-9e51-55b3b0866915
+		summarizeBy: sum
+		sourceColumn: pot_inst_hidraulica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
