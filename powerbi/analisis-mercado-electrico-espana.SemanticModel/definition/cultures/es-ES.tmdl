@@ -3547,6 +3547,210 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "tabla_medida.almacenamiento_neto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Almacenamiento Neto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "almacenamiento neto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.almacenamiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "% Almacenamiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% almacenamiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage almacenamiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "pct almacenamiento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "% sobre demanda": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.turbinacion_bombeo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Turbinacion Bombeo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "turbinacion bombeo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo_bombeo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Consumo Bombeo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo bombeo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.valor_almacenamiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Valor Almacenamiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor almacenamiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MHw": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO.bombeo_turbinacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "bombeo_turbinacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bombeo turbinacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "bombeo_turbinacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO.bombeo_consumo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "bombeo_consumo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bombeo consumo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "bombeo_consumo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_almacenamiento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Almacenamiento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tabla almacenamiento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Tabla_Almacenamiento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_almacenamiento.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Almacenamiento",
+			          "ConceptualProperty": "Tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -4365,6 +4569,303 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_calendarios_have_fact_energia_ESIOs"
+			        }
+			      ]
+			    },
+			    "tabla_almacenamiento_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla_Almacenamiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_almacenamiento": {
+			          "Target": {
+			            "Entity": "tabla_almacenamiento"
+			          }
+			        },
+			        "tabla_almacenamiento.tipo": {
+			          "Target": {
+			            "Entity": "tabla_almacenamiento.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_almacenamiento"
+			            },
+			            "Object": {
+			              "Role": "tabla_almacenamiento.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_almacenamientos_have_tipos"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_bombeo_consumo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.bombeo_consumo": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.bombeo_consumo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.bombeo_consumo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_bombeo_consumos"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_bombeo_turbinacion": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.bombeo_turbinacion": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.bombeo_turbinacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.bombeo_turbinacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_bombeo_turbinacions"
+			        }
+			      ]
+			    },
+			    "tabla_almacenamiento_has_tabla_medida_valor_almacenamiento": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla_Almacenamiento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_almacenamiento": {
+			          "Target": {
+			            "Entity": "tabla_almacenamiento"
+			          }
+			        },
+			        "tabla_medida.valor_almacenamiento": {
+			          "Target": {
+			            "Entity": "tabla_medida.valor_almacenamiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_almacenamiento"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.valor_almacenamiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_almacenamientos_have_valor_almacenamiento"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_valor_almacenamiento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.valor_almacenamiento": {
+			          "Target": {
+			            "Entity": "tabla_medida.valor_almacenamiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.valor_almacenamiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_valor_almacenamiento"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo_bombeo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo_bombeo": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_bombeo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_bombeo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_bombeo"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_turbinacion_bombeo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.turbinacion_bombeo": {
+			          "Target": {
+			            "Entity": "tabla_medida.turbinacion_bombeo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.turbinacion_bombeo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_turbinacion_bombeo"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_almacenamiento": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.almacenamiento": {
+			          "Target": {
+			            "Entity": "tabla_medida.almacenamiento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.almacenamiento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have__almacenamiento"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_almacenamiento_neto": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.almacenamiento_neto": {
+			          "Target": {
+			            "Entity": "tabla_medida.almacenamiento_neto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.almacenamiento_neto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_almacenamiento_neto"
 			        }
 			      ]
 			    },

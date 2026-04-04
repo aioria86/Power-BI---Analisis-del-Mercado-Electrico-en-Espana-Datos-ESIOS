@@ -19,6 +19,7 @@ ref table LocalDateTable_9a239cc7-7c95-4d4e-9692-6f932f832ba1
 ref table LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36
 ref table Dim_Calendario
 ref table Dim_Hora
+ref table Tabla_Almacenamiento
 
 ref cultureInfo es-ES
 

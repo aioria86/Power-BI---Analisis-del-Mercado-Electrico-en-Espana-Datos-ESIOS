@@ -1,0 +1,25 @@
+table Tabla_Almacenamiento
+	lineageTag: 9715e163-3287-41f8-a434-3238b81b0aa8
+
+	column Tipo
+		lineageTag: eefc0422-a24b-4631-bbfb-deb5252a1b54
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Tipo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tabla_Almacenamiento = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Tipo", STRING,
+				    {
+				        {"Turbinación Bombeo"},
+				        {"Consumo Bombeo"}
+				    }
+				)
+
+	annotation PBI_Id = 2eaa73eed7bc4f1ba2d6cb2d4c1c0435
+

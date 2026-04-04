@@ -373,6 +373,13 @@
                   "Value": "'GENERACIÓN'"
                 }
               }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
             }
           }
         }

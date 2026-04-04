@@ -255,6 +255,38 @@ table Tabla_Medidas
 		formatString: 0.00
 		lineageTag: 4d52b700-1d93-4967-a77b-87830da7cf29
 
+	measure 'Almacenamiento Neto' = [Turbinacion Bombeo] - ABS([Consumo Bombeo])
+		formatString: 0
+		lineageTag: 92eaf653-7554-45bf-a583-aae5b4972f03
+
+	measure '% Almacenamiento' =
+			
+			DIVIDE(
+			    [Almacenamiento Neto],
+			    [Demanda Total],
+			    0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0bf6fba6-5a9e-4a83-8a19-2eaf044ca0d9
+
+	measure 'Turbinacion Bombeo' = SUM(Fact_Energia_ESIOS[bombeo_turbinacion])
+		formatString: 0
+		lineageTag: f6c1fa51-853a-4285-a63c-3003646e55d0
+
+	measure 'Consumo Bombeo' = SUM(Fact_Energia_ESIOS[bombeo_consumo])
+		formatString: 0
+		lineageTag: 5c87c919-3647-4f00-a8e3-1a593ecb7991
+
+	measure 'Valor Almacenamiento' =
+			
+			SWITCH(
+			    SELECTEDVALUE(Tabla_Almacenamiento[Tipo]),
+			    "Turbinación Bombeo", [Turbinacion Bombeo],
+			    "Consumo Bombeo", [Consumo Bombeo]
+			)
+		lineageTag: ee423865-b264-4b94-8134-8cbe0a8e6bd3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

@@ -3,117 +3,46 @@
   "name": "ac8a156b2a92c0d37abc",
   "position": {
     "x": 323.42569269521408,
-    "y": 547.10327455919389,
+    "y": 646.85138539042816,
     "z": 14004,
-    "height": 252.89672544080602,
+    "height": 153.14861460957178,
     "width": 309.31989924433248,
     "tabOrder": 14004
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_Energia_ESIOS"
-                        }
-                      },
-                      "Property": "pot_inst_carbon"
+                    "SourceRef": {
+                      "Entity": "Tabla_Almacenamiento"
                     }
                   },
-                  "Function": 0
+                  "Property": "Tipo"
                 }
               },
-              "queryRef": "Sum(Fact_Energia_ESIOS.pot_inst_carbon)",
-              "nativeQueryRef": "Carbon",
-              "displayName": "Carbon"
+              "queryRef": "Tabla_Almacenamiento.Tipo",
+              "nativeQueryRef": "Tipo"
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_Energia_ESIOS"
-                        }
-                      },
-                      "Property": "pot_inst_nuclear"
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Valor Almacenamiento"
                 }
               },
-              "queryRef": "Sum(Fact_Energia_ESIOS.pot_inst_nuclear)",
-              "nativeQueryRef": "Nuclear",
-              "displayName": "Nuclear"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_Energia_ESIOS"
-                        }
-                      },
-                      "Property": "pot_inst_ciclo_combinado"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Fact_Energia_ESIOS.pot_inst_ciclo_combinado)",
-              "nativeQueryRef": "Ciclo Combinado",
-              "displayName": "Ciclo Combinado"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_Energia_ESIOS"
-                        }
-                      },
-                      "Property": "pot_inst_gas"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Fact_Energia_ESIOS.pot_inst_gas)",
-              "nativeQueryRef": "Gas",
-              "displayName": "Gas"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Fact_Energia_ESIOS"
-                        }
-                      },
-                      "Property": "pot_inst_hidraulica"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Fact_Energia_ESIOS.pot_inst_hidraulica)",
-              "nativeQueryRef": "Hidráulica",
-              "displayName": "Hidráulica"
+              "queryRef": "Tabla_Medidas.Valor Almacenamiento",
+              "nativeQueryRef": "MHw",
+              "displayName": "MHw"
             }
           ]
         }
@@ -122,18 +51,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Fact_Energia_ESIOS"
-                      }
-                    },
-                    "Property": "pot_inst_carbon"
+                  "SourceRef": {
+                    "Entity": "Tabla_Almacenamiento"
                   }
                 },
-                "Function": 0
+                "Property": "Tipo"
               }
             },
             "direction": "Ascending"
@@ -142,10 +66,10 @@
       }
     },
     "objects": {
-      "legend": [
+      "total": [
         {
           "properties": {
-            "show": {
+            "totals": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -155,149 +79,54 @@
           }
         }
       ],
-      "labels": [
+      "columnHeaders": [
         {
           "properties": {
-            "labelStyle": {
+            "columnAdjustment": {
               "expr": {
                 "Literal": {
-                  "Value": "'Category, percent of total'"
+                  "Value": "'growToFit'"
                 }
               }
             }
           }
         }
       ],
-      "slices": [
+      "columnFormatting": [
         {
           "properties": {
-            "startAngle": {
-              "expr": {
-                "Literal": {
-                  "Value": "45L"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#2EAD5B'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Fact_Energia_ESIOS.pot_inst_hidraulica)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#1F3A93'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Fact_Energia_ESIOS.pot_inst_nuclear)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F39C12'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Fact_Energia_ESIOS.pot_inst_ciclo_combinado)"
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#4D4D4D'"
-                    }
-                  }
-                }
-              }
-            },
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "borderColor": {
+            "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Fact_Energia_ESIOS.pot_inst_carbon)"
-          }
-        },
-        {
-          "properties": {
-            "borderShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "borderColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
+                      "ColorId": 1,
                       "Percent": 0
                     }
                   }
                 }
               }
             },
-            "borderSize": {
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "'Center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.Valor Almacenamiento"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -358,6 +187,19 @@
               "expr": {
                 "Literal": {
                   "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sparse'"
                 }
               }
             }
