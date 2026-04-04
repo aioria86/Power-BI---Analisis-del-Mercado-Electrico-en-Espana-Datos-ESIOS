@@ -87,12 +87,12 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "Gen Termica Renovable"
+                  "Property": "Gen Ciclo Combinado"
                 }
               },
               "queryRef": "Tabla_Medidas.Gen Termica Renovable",
-              "nativeQueryRef": "TÉRMICA RENOVABLE (MWh)",
-              "displayName": "TÉRMICA RENOVABLE (MWh)",
+              "nativeQueryRef": "CICLO COMBINADO MWh)",
+              "displayName": "CICLO COMBINADO MWh)",
               "format": "0"
             }
           ]

@@ -244,6 +244,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Eólica": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -263,6 +273,16 @@ cultureInfo es-ES
 			        },
 			        {
 			          "HIDRÁULICA (MWh)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Hidráulica": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -316,6 +336,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Solar": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -362,25 +392,45 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Nuclear": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "tabla_medida.gen_termica_renovable": {
+			    "tabla_medida.gen_ciclo_combinado": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Tabla_Medidas",
-			          "ConceptualProperty": "Gen Termica Renovable"
+			          "ConceptualProperty": "Gen Ciclo Combinado"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "gen termica renovable": {
+			          "gen ciclo combinado": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "TÉRMICA RENOVABLE (MWh)": {
+			          "CICLO COMBINADO MWh)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Ciclo Combinado": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1823,6 +1873,16 @@ cultureInfo es-ES
 			          "carbon": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Carbón": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -3461,9 +3521,167 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "tabla_medida.gen_termica_fosil": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Gen Termica Fosil"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gen termica fosil": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Térmica Fósil": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fact_energia_ESIO_datetime_hora_me_has_fact_energia_ESIO_datetime_hora_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.me"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.día": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.día"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_trimestre_has_fact_energia_ESIO_datetime_hora_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres1"
+			        }
+			      ]
+			    },
 			    "fact_energia_ESIO_datetime_hora_año_has_fact_energia_ESIO_datetime_hora_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_Energia_ESIOS"
@@ -3724,7 +3942,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días"
+			          "ID": "me_have_días1"
 			        },
 			        {
 			          "Attribute": {
@@ -3737,7 +3955,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me"
+			          "ID": "días_have_me1"
 			        },
 			        {
 			          "Preposition": {
@@ -3790,7 +4008,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
+			          "ID": "trimestres_have_me1"
 			        },
 			        {
 			          "Attribute": {
@@ -3803,7 +4021,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
+			          "ID": "me_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -4147,6 +4365,39 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_calendarios_have_fact_energia_ESIOs"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_gen_termica_fosil": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.gen_termica_fosil": {
+			          "Target": {
+			            "Entity": "tabla_medida.gen_termica_fosil"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.gen_termica_fosil"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_gen_termica_fosil"
 			        }
 			      ]
 			    },
@@ -6955,7 +7206,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "fact_energia_ESIO_has_tabla_medida_gen_termica_renovable": {
+			    "fact_energia_ESIO_has_tabla_medida_gen_ciclo_combinado": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_Energia_ESIOS"
 			      },
@@ -6966,9 +7217,9 @@ cultureInfo es-ES
 			            "Entity": "fact_energia_ESIO"
 			          }
 			        },
-			        "tabla_medida.gen_termica_renovable": {
+			        "tabla_medida.gen_ciclo_combinado": {
 			          "Target": {
-			            "Entity": "tabla_medida.gen_termica_renovable"
+			            "Entity": "tabla_medida.gen_ciclo_combinado"
 			          }
 			        }
 			      },
@@ -6979,12 +7230,12 @@ cultureInfo es-ES
 			              "Role": "fact_energia_ESIO"
 			            },
 			            "Object": {
-			              "Role": "tabla_medida.gen_termica_renovable"
+			              "Role": "tabla_medida.gen_ciclo_combinado"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_energia_ESIOs_have_gen_termica_renovable"
+			          "ID": "fact_energia_ESIOs_have_gen_ciclo_combinado"
 			        }
 			      ]
 			    },
@@ -7414,138 +7665,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_energia_ESIOs_have_demanda_total"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_trimestre_has_fact_energia_ESIO_datetime_hora_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres1"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_me_has_fact_energia_ESIO_datetime_hora_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.me"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.día": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.día"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me1"
 			        }
 			      ]
 			    }
