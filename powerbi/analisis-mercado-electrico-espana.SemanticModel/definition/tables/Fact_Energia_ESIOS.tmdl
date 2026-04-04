@@ -424,6 +424,26 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column bombeo_turbinacion
+		dataType: double
+		lineageTag: 0b830928-7b76-4e50-bb9e-4c232eda8bb3
+		summarizeBy: sum
+		sourceColumn: bombeo_turbinacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bombeo_consumo
+		dataType: double
+		lineageTag: 8fa4f5c1-078c-491b-a38a-157ef528b9f6
+		summarizeBy: sum
+		sourceColumn: bombeo_consumo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
