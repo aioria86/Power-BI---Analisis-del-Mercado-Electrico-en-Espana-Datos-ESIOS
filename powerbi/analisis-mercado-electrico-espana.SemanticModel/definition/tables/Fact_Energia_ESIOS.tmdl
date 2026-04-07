@@ -444,13 +444,74 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column francia_import
+		dataType: double
+		lineageTag: d32b3727-3b12-48b9-8598-c6b1efcb05e4
+		summarizeBy: sum
+		sourceColumn: francia_import
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column francia_export
+		dataType: double
+		lineageTag: 44d9672e-8845-4b0f-80e4-d264d4b5a569
+		summarizeBy: sum
+		sourceColumn: francia_export
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column portugal_import
+		dataType: double
+		lineageTag: 50eac74d-566a-49a8-928e-1e4c2bf40c93
+		summarizeBy: sum
+		sourceColumn: portugal_import
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column portugal_export
+		dataType: double
+		lineageTag: 335d6ced-d2bb-4351-940f-08dc2e219f8a
+		summarizeBy: sum
+		sourceColumn: portugal_export
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column marruecos_import
+		dataType: double
+		lineageTag: ac22b1c5-8ccc-4540-bf64-8d4dda23d33b
+		summarizeBy: sum
+		sourceColumn: marruecos_import
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column marruecos_export
+		dataType: double
+		lineageTag: 6abc7e09-fcb9-484e-9890-d73b13df89cc
+		summarizeBy: sum
+		sourceColumn: marruecos_export
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
 				let
-				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full_v2.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full_v2.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Valor reemplazado" = Table.ReplaceValue(Origen,null,0,Replacer.ReplaceValue,{"francia_import", "francia_export", "portugal_import", "portugal_export", "marruecos_import", "marruecos_export"})
 				in
-				    Origen
+				    #"Valor reemplazado"
 
 	annotation PBI_NavigationStepName = Navegación
 

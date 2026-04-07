@@ -1,9 +1,10 @@
 INDICADORES = {
-    # histórico
-    "bombeo_turbinacion_medida": 1152,
-    "bombeo_consumo_medida": 1172,
-
-    # tiempo real (reciente)
-    #"bombeo_turbinacion_real": 2066,
-    #"bombeo_consumo_real": 2065,
+    "francia_import": 556,
+    "francia_export": 560,
+    "portugal_import": 557,
+    "portugal_export": 561,
+    "marruecos_import": 559,
+    "marruecos_export": 563,
+    "andorra_import": 558,
+    "andorra_export": 562
 }

@@ -163,11 +163,27 @@ if __name__ == "__main__":
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
-    # ALMACENAMIENTO ✅ CORREGIDO
+    # ALMACENAMIENTO
     # =========================
     for ind, col in [
         ("bombeo_turbinacion_medida", "bombeo_turbinacion"),
         ("bombeo_consumo_medida", "bombeo_consumo"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # INTERCONEXIONES 🔌 NUEVO
+    # =========================
+    for ind, col in [
+        ("francia_import", "francia_import"),
+        ("francia_export", "francia_export"),
+        ("portugal_import", "portugal_import"),
+        ("portugal_export", "portugal_export"),
+        ("marruecos_import", "marruecos_import"),
+        ("marruecos_export", "marruecos_export"),
     ]:
         df = cargar_datos(ind)
         if df is not None:
