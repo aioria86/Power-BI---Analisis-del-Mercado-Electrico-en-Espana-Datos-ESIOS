@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 278,
         "y": 0
       },
       "nodes": [
@@ -65,6 +65,18 @@
             "y": 229
           },
           "nodeIndex": "Tabla_Almacenamiento",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1361,
+            "y": 229
+          },
+          "nodeIndex": "Tabla Interconexiones",
           "size": {
             "height": 200,
             "width": 234

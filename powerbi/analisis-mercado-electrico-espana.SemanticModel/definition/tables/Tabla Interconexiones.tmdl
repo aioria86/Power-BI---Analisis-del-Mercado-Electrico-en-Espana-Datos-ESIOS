@@ -1,0 +1,26 @@
+table 'Tabla Interconexiones'
+	lineageTag: 8fd652ae-e2ad-4221-bc6f-32cb6be5c5cb
+
+	column Pais
+		lineageTag: c13ff97e-d711-4c2e-889f-b5560d57df8c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Pais]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tabla Interconexiones' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Pais", STRING,
+				    {
+				        {"Portugal"},
+				        {"Francia"},
+				        {"Marruecos"}
+				    }
+				)
+
+	annotation PBI_Id = 14046e26bdbb449b81a55a244ac9d14d
+

@@ -20,6 +20,7 @@ ref table LocalDateTable_a3ba82bc-9d4a-426b-a8f9-cfe963e11e36
 ref table Dim_Calendario
 ref table Dim_Hora
 ref table Tabla_Almacenamiento
+ref table 'Tabla Interconexiones'
 
 ref cultureInfo es-ES
 
