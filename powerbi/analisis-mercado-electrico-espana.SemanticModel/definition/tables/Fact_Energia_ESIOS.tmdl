@@ -504,14 +504,55 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column consumo_mercado_libre
+		dataType: double
+		lineageTag: faf464a8-91bb-4ab1-8a6e-d4a134647cbb
+		summarizeBy: sum
+		sourceColumn: consumo_mercado_libre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consumo_mercado_regulado
+		dataType: double
+		lineageTag: d948fb98-88ea-402d-ac9b-e3c4b81f5937
+		summarizeBy: sum
+		sourceColumn: consumo_mercado_regulado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consumo_directo_mercado
+		dataType: double
+		lineageTag: b9cea182-eb61-48e7-8539-f52773139aa1
+		summarizeBy: sum
+		sourceColumn: consumo_directo_mercado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consumo_servicios_auxiliares
+		dataType: double
+		lineageTag: c3bc0c60-ee69-41bc-9de2-a7463122197e
+		summarizeBy: sum
+		sourceColumn: consumo_servicios_auxiliares
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
 				let
 				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full_v2.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
-				    #"Valor reemplazado" = Table.ReplaceValue(Origen,null,0,Replacer.ReplaceValue,{"francia_import", "francia_export", "portugal_import", "portugal_export", "marruecos_import", "marruecos_export"})
+				    #"Valor reemplazado" = Table.ReplaceValue(Origen,null,0,Replacer.ReplaceValue,{"francia_import", "francia_export", "portugal_import", "portugal_export", "marruecos_import", "marruecos_export"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado",null,0,Replacer.ReplaceValue,{"consumo_mercado_libre", "consumo_mercado_regulado", "consumo_directo_mercado", "consumo_servicios_auxiliares"})
 				in
-				    #"Valor reemplazado"
+				    #"Valor reemplazado1"
 
 	annotation PBI_NavigationStepName = Navegación
 

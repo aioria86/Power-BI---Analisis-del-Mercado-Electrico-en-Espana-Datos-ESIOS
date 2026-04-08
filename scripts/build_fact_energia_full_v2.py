@@ -57,7 +57,7 @@ def procesar_base(df):
 
 if __name__ == "__main__":
 
-    print("🚀 Construyendo fact_energia_full_v2...\n")
+    print("Construyendo fact_energia_full_v2...\n")
 
     # =========================
     # DEMANDA
@@ -175,7 +175,7 @@ if __name__ == "__main__":
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
-    # INTERCONEXIONES 🔌 NUEVO
+    # INTERCONEXIONES
     # =========================
     for ind, col in [
         ("francia_import", "francia_import"),
@@ -184,6 +184,20 @@ if __name__ == "__main__":
         ("portugal_export", "portugal_export"),
         ("marruecos_import", "marruecos_import"),
         ("marruecos_export", "marruecos_export"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # CONSUMO NUEVO
+    # =========================
+    for ind, col in [
+        ("consumo_mercado_libre", "consumo_mercado_libre"),
+        ("consumo_mercado_regulado", "consumo_mercado_regulado"),
+        ("consumo_directo_mercado", "consumo_directo_mercado"),
+        ("consumo_servicios_auxiliares", "consumo_servicios_auxiliares"),
     ]:
         df = cargar_datos(ind)
         if df is not None:
