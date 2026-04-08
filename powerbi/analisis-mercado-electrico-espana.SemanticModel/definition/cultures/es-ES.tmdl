@@ -4496,9 +4496,1802 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "tabla_medida.direccion_flujo_num": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Direccion Flujo Num"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "direccion flujo num": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "direccion flujo number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo_mercado_libre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Consumo Mercado Libre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo mercado libre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Mercado Libre": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo_mercado_regulado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Consumo Mercado Regulado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo mercado regulado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Mercado Regulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo_directo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Consumo Directo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo directo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Directo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo_servicios_auxiliares": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Consumo Servicios Auxiliares"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo servicios auxiliares": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Servicios Auxiliares": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo_total_calculado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Consumo Total Calculado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo total calculado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "consumo aggregate calculado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "consumo overall calculado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "% Consumo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% consumo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage consumo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "pct consumo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.consumo_por_tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Consumo por Tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo por tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO.consumo_mercado_libre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "consumo_mercado_libre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo mercado libre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "consumo_mercado_libre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO.consumo_mercado_regulado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "consumo_mercado_regulado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo mercado regulado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "consumo_mercado_regulado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO.consumo_directo_mercado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "consumo_directo_mercado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo directo mercado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "consumo_directo_mercado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO.consumo_servicios_auxiliare": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Fact_Energia_ESIOS",
+			          "ConceptualProperty": "consumo_servicios_auxiliares"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "consumo servicios auxiliare": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "consumo servicio auxiliare": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "consumo_servicios_auxiliares": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_consumo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Consumo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tabla consumo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_consumo.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla Consumo",
+			          "ConceptualProperty": "Tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fact_energia_ESIO_datetime_hora_me_has_fact_energia_ESIO_datetime_hora_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.me"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.día": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.día"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_trimestre_has_fact_energia_ESIO_datetime_hora_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_año_has_fact_energia_ESIO_datetime_hora_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.año": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.año"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.año"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.día": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.año": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_hora_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime_hora": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datetime_horas_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_me_has_fact_energia_ESIO_datetime_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.me"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.día": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.me"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.día"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_trimestre_has_fact_energia_ESIO_datetime_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.trimestre"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.me"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_año_has_fact_energia_ESIO_datetime_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime.año": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.año"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.año"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.día": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.trimestre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.año": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_datetime_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO.datetime": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime"
+			          }
+			        },
+			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO.datetime"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datetimes_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_dim_hora": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "dim_hora": {
+			          "Target": {
+			            "Entity": "dim_hora"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "dim_hora"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_dim_horas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_horas_have_fact_energia_ESIOs"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fact_energia_ESIOs"
+			        }
+			      ]
+			    },
+			    "tabla_consumo_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Consumo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_consumo": {
+			          "Target": {
+			            "Entity": "tabla_consumo"
+			          }
+			        },
+			        "tabla_consumo.tipo": {
+			          "Target": {
+			            "Entity": "tabla_consumo.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_consumo"
+			            },
+			            "Object": {
+			              "Role": "tabla_consumo.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_consumos_have_tipos"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_consumo_servicios_auxiliare": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.consumo_servicios_auxiliare": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.consumo_servicios_auxiliare"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.consumo_servicios_auxiliare"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_servicios_auxiliares"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_consumo_directo_mercado": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.consumo_directo_mercado": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.consumo_directo_mercado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.consumo_directo_mercado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_directo_mercado"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_consumo_mercado_regulado": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.consumo_mercado_regulado": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.consumo_mercado_regulado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.consumo_mercado_regulado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_mercado_regulados"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_consumo_mercado_libre": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.consumo_mercado_libre": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.consumo_mercado_libre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.consumo_mercado_libre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_mercado_libres"
+			        }
+			      ]
+			    },
+			    "tabla_consumo_has_tabla_medida_consumo_por_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Consumo"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_consumo": {
+			          "Target": {
+			            "Entity": "tabla_consumo"
+			          }
+			        },
+			        "tabla_medida.consumo_por_tipo": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_por_tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_consumo"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_por_tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_consumos_have_consumo_por_tipo"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo_por_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo_por_tipo": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_por_tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_por_tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_por_tipo"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have__consumo"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo_total_calculado": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo_total_calculado": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_total_calculado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_total_calculado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_total_calculado"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo_servicios_auxiliares": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo_servicios_auxiliares": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_servicios_auxiliares"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_servicios_auxiliares"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_servicios_auxiliares1"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo_directo": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo_directo": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_directo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_directo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_directo"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo_mercado_regulado": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo_mercado_regulado": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_mercado_regulado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_mercado_regulado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_mercado_regulado"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_consumo_mercado_libre": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.consumo_mercado_libre": {
+			          "Target": {
+			            "Entity": "tabla_medida.consumo_mercado_libre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.consumo_mercado_libre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_consumo_mercado_libre"
+			        }
+			      ]
+			    },
+			    "tabla_interconexione_has_tabla_medida_direccion_flujo_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Interconexiones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_interconexione": {
+			          "Target": {
+			            "Entity": "tabla_interconexione"
+			          }
+			        },
+			        "tabla_medida.direccion_flujo_num": {
+			          "Target": {
+			            "Entity": "tabla_medida.direccion_flujo_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_interconexione"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.direccion_flujo_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_interconexiones_have_direccion_flujo_num"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_direccion_flujo_num": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.direccion_flujo_num": {
+			          "Target": {
+			            "Entity": "tabla_medida.direccion_flujo_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.direccion_flujo_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_direccion_flujo_num"
+			        }
+			      ]
+			    },
+			    "tabla_interconexione_has_pais": {
+			      "Binding": {
+			        "ConceptualEntity": "Tabla Interconexiones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tabla_interconexione": {
+			          "Target": {
+			            "Entity": "tabla_interconexione"
+			          }
+			        },
+			        "tabla_interconexione.pais": {
+			          "Target": {
+			            "Entity": "tabla_interconexione.pais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tabla_interconexione"
+			            },
+			            "Object": {
+			              "Role": "tabla_interconexione.pais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tabla_interconexiones_have_paises"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_marruecos_export": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.marruecos_export": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.marruecos_export"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.marruecos_export"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_marruecos_exports"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_marruecos_import": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.marruecos_import": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.marruecos_import"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.marruecos_import"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_marruecos_imports"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_portugal_export": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "fact_energia_ESIO.portugal_export": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO.portugal_export"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "fact_energia_ESIO.portugal_export"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_portugal_exports"
+			        }
+			      ]
+			    },
 			    "fact_energia_ESIO_has_portugal_import": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_Energia_ESIOS"
@@ -8687,956 +10480,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_energia_ESIOs_have_demanda_total"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_has_portugal_export": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO"
-			          }
-			        },
-			        "fact_energia_ESIO.portugal_export": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.portugal_export"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.portugal_export"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_energia_ESIOs_have_portugal_exports"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_has_marruecos_import": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO"
-			          }
-			        },
-			        "fact_energia_ESIO.marruecos_import": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.marruecos_import"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.marruecos_import"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_energia_ESIOs_have_marruecos_imports"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_has_marruecos_export": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO"
-			          }
-			        },
-			        "fact_energia_ESIO.marruecos_export": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.marruecos_export"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.marruecos_export"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_energia_ESIOs_have_marruecos_exports"
-			        }
-			      ]
-			    },
-			    "tabla_interconexione_has_pais": {
-			      "Binding": {
-			        "ConceptualEntity": "Tabla Interconexiones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "tabla_interconexione": {
-			          "Target": {
-			            "Entity": "tabla_interconexione"
-			          }
-			        },
-			        "tabla_interconexione.pais": {
-			          "Target": {
-			            "Entity": "tabla_interconexione.pais"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "tabla_interconexione"
-			            },
-			            "Object": {
-			              "Role": "tabla_interconexione.pais"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tabla_interconexiones_have_paises"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_has_dim_calendario": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO"
-			          }
-			        },
-			        "dim_calendario": {
-			          "Target": {
-			            "Entity": "dim_calendario"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_energia_ESIOs_have_dim_calendarios"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have_fact_energia_ESIOs"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_has_dim_hora": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO"
-			          }
-			        },
-			        "dim_hora": {
-			          "Target": {
-			            "Entity": "dim_hora"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO"
-			            },
-			            "Object": {
-			              "Role": "dim_hora"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_energia_ESIOs_have_dim_horas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_hora"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_horas_have_fact_energia_ESIOs"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_has_jerarquía_de_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datetimes_have_jerarquía_de_fechas"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_año": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.año": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.año"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.día": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_año_has_fact_energia_ESIO_datetime_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime.año": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.año"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.año"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "años_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_años"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_trimestre_has_fact_energia_ESIO_datetime_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.trimestre"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.me"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_me_has_fact_energia_ESIO_datetime_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.me"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime.día": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.me"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.día"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_has_jerarquía_de_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datetime_horas_have_jerarquía_de_fechas"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_año": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.año": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.año"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años1"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres1"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me1"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_jerarquía_de_fecha_has_fact_energia_ESIO_datetime_hora_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.día": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días1"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_año_has_fact_energia_ESIO_datetime_hora_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.año": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.año"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.año"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "años_have_trimestres1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_años1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años1"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_trimestre_has_fact_energia_ESIO_datetime_hora_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.trimestre": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.trimestre"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres1"
-			        }
-			      ]
-			    },
-			    "fact_energia_ESIO_datetime_hora_me_has_fact_energia_ESIO_datetime_hora_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Fact_Energia_ESIOS"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_energia_ESIO.datetime_hora.me": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.me"
-			          }
-			        },
-			        "fact_energia_ESIO.datetime_hora.día": {
-			          "Target": {
-			            "Entity": "fact_energia_ESIO.datetime_hora.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.día"
-			            },
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_energia_ESIO.datetime_hora.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_energia_ESIO.datetime_hora.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me1"
 			        }
 			      ]
 			    }

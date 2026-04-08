@@ -363,6 +363,64 @@ table Tabla_Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Consumo Mercado Libre' = SUM(Fact_Energia_ESIOS[consumo_mercado_libre])
+		formatString: 0
+		lineageTag: 24b74e4f-01ea-42c3-83af-5af925617a65
+
+	measure 'Consumo Mercado Regulado' = SUM(Fact_Energia_ESIOS[consumo_mercado_regulado])
+		formatString: 0
+		lineageTag: 1455535e-fd54-4907-8170-8dabc92a680c
+
+	measure 'Consumo Directo' = SUM(Fact_Energia_ESIOS[consumo_directo_mercado])
+		formatString: 0
+		lineageTag: 9b8f4af1-bc74-45ac-b66a-f58330d4ea5e
+
+	measure 'Consumo Servicios Auxiliares' = SUM(Fact_Energia_ESIOS[consumo_servicios_auxiliares])
+		formatString: 0
+		lineageTag: 064b7812-6fd2-4471-b28b-a6ed49584aa9
+
+	measure 'Consumo Total Calculado' =
+			
+			[Consumo Mercado Libre] +
+			[Consumo Mercado Regulado] +
+			[Consumo Directo] +
+			[Consumo Servicios Auxiliares]
+		formatString: 0
+		lineageTag: 0009643d-b081-4110-92b0-09fa9587148b
+
+	measure '% Consumo' =
+			
+			DIVIDE(
+			    [Consumo Total],
+			    [Demanda Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 70a2c978-fe23-460e-8444-e7643c5c698f
+
+	measure 'Consumo por Tipo' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Tabla Consumo'[Tipo]),
+			    "Mercado Libre", [Consumo Mercado Libre],
+			    "Mercado Regulado", [Consumo Mercado Regulado],
+			    "Consumo Directo", [Consumo Directo],
+			    "Servicios Auxiliares", [Consumo Servicios Auxiliares]
+			)
+		lineageTag: cee7dc8a-98d4-4a82-b30b-cdfbd152900d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Generacion' =
+			
+			DIVIDE(
+			    [Generacion Total],
+			    [Demanda Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: a734af94-1d82-4e67-afde-0395a8f8b078
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

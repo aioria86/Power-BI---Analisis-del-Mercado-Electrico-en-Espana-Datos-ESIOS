@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "8053baff47820a9d57cd",
+  "name": "227d79f4820aa6055d12",
   "position": {
-    "x": 647.85894206549119,
+    "x": 0,
     "y": 605.15621935183447,
-    "z": 21000,
+    "z": 24000,
     "height": 78.589420654911834,
     "width": 309.31989924433248,
-    "tabOrder": 21000
+    "tabOrder": 24000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "Interconexiones Neto"
+                  "Property": "Generacion Total"
                 }
               },
-              "queryRef": "Tabla_Medidas.Interconexiones Neto",
-              "nativeQueryRef": "Interconexiones Neto"
+              "queryRef": "Tabla_Medidas.Generacion Total",
+              "nativeQueryRef": "Generacion Total"
             },
             {
               "field": {
@@ -37,11 +37,11 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "% Interconexiones"
+                  "Property": "% Generacion"
                 }
               },
-              "queryRef": "Tabla_Medidas.% Interconexiones",
-              "nativeQueryRef": "% Interconexiones"
+              "queryRef": "Tabla_Medidas.% Generacion",
+              "nativeQueryRef": "% Generacion"
             }
           ]
         }
@@ -56,7 +56,7 @@
                     "Entity": "Tabla_Medidas"
                   }
                 },
-                "Property": "Interconexiones Neto"
+                "Property": "Generacion Total"
               }
             },
             "direction": "Descending"
@@ -99,7 +99,7 @@
             }
           },
           "selector": {
-            "metadata": "Tabla_Medidas.Interconexiones Neto"
+            "metadata": "Tabla_Medidas.Generacion Total"
           }
         },
         {
@@ -113,7 +113,7 @@
             }
           },
           "selector": {
-            "metadata": "Tabla_Medidas.% Interconexiones"
+            "metadata": "Tabla_Medidas.% Generacion"
           }
         }
       ],
@@ -195,17 +195,24 @@
                   "Value": "2L"
                 }
               }
-            },
-            "labelDisplayUnits": {
+            }
+          },
+          "selector": {
+            "metadata": "Tabla_Medidas.% Generacion"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "2L"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Tabla_Medidas.Interconexiones Neto"
+            "metadata": "Tabla_Medidas.Generacion Total"
           }
         }
       ],
@@ -350,7 +357,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'INTERCONEXIONES'"
+                  "Value": "'GENERACION'"
                 }
               }
             },

@@ -21,6 +21,7 @@ ref table Dim_Calendario
 ref table Dim_Hora
 ref table Tabla_Almacenamiento
 ref table 'Tabla Interconexiones'
+ref table 'Tabla Consumo'
 
 ref cultureInfo es-ES
 

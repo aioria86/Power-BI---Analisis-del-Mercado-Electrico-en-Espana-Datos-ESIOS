@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "8053baff47820a9d57cd",
+  "name": "b54a293932593af07f32",
   "position": {
-    "x": 647.85894206549119,
+    "x": 970.2770780856423,
     "y": 605.15621935183447,
-    "z": 21000,
+    "z": 23000,
     "height": 78.589420654911834,
     "width": 309.31989924433248,
-    "tabOrder": 21000
+    "tabOrder": 23000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "Interconexiones Neto"
+                  "Property": "Consumo Total"
                 }
               },
-              "queryRef": "Tabla_Medidas.Interconexiones Neto",
-              "nativeQueryRef": "Interconexiones Neto"
+              "queryRef": "Tabla_Medidas.Consumo Total",
+              "nativeQueryRef": "Consumo Total"
             },
             {
               "field": {
@@ -37,11 +37,11 @@
                       "Entity": "Tabla_Medidas"
                     }
                   },
-                  "Property": "% Interconexiones"
+                  "Property": "% Consumo"
                 }
               },
-              "queryRef": "Tabla_Medidas.% Interconexiones",
-              "nativeQueryRef": "% Interconexiones"
+              "queryRef": "Tabla_Medidas.% Consumo",
+              "nativeQueryRef": "% Consumo"
             }
           ]
         }
@@ -56,7 +56,7 @@
                     "Entity": "Tabla_Medidas"
                   }
                 },
-                "Property": "Interconexiones Neto"
+                "Property": "Consumo Total"
               }
             },
             "direction": "Descending"
@@ -99,7 +99,7 @@
             }
           },
           "selector": {
-            "metadata": "Tabla_Medidas.Interconexiones Neto"
+            "metadata": "Tabla_Medidas.Consumo Total"
           }
         },
         {
@@ -113,7 +113,7 @@
             }
           },
           "selector": {
-            "metadata": "Tabla_Medidas.% Interconexiones"
+            "metadata": "Tabla_Medidas.% Consumo"
           }
         }
       ],
@@ -195,17 +195,10 @@
                   "Value": "2L"
                 }
               }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
             }
           },
           "selector": {
-            "metadata": "Tabla_Medidas.Interconexiones Neto"
+            "metadata": "Tabla_Medidas.Consumo Total"
           }
         }
       ],
@@ -350,7 +343,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'INTERCONEXIONES'"
+                  "Value": "'CONSUMO'"
                 }
               }
             },

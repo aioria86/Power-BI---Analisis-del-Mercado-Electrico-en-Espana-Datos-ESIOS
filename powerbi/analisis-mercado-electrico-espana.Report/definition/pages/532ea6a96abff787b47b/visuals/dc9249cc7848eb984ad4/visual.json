@@ -3,11 +3,11 @@
   "name": "dc9249cc7848eb984ad4",
   "position": {
     "x": 0,
-    "y": 547.10327455919389,
-    "z": 14003,
-    "height": 252.89672544080602,
-    "width": 309.31989924433248,
-    "tabOrder": 14003
+    "y": 694.83627204030222,
+    "z": 17000,
+    "height": 204.03022670025189,
+    "width": 309.44584382871534,
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "donutChart",
@@ -363,7 +363,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
