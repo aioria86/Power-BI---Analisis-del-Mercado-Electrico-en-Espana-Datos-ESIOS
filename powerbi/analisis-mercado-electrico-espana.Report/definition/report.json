@@ -9,6 +9,15 @@
         "page": "2.3.0"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Custom7274446285896436.json",
+      "reportVersionAtImport": {
+        "visual": "2.7.0",
+        "report": "3.2.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -48,6 +57,87 @@
           "name": "CY26SU02",
           "path": "BaseThemes/CY26SU02.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Custom7274446285896436.json",
+          "path": "Custom7274446285896436.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "icon-eolica398594344097413.png",
+          "path": "icon-eolica398594344097413.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-eolica6587557570321653.png",
+          "path": "icon-eolica6587557570321653.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-equal3584268187502999.png",
+          "path": "icon-equal3584268187502999.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-green-circle34335743433456367.png",
+          "path": "icon-green-circle34335743433456367.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-hidraulica007698390439930591.png",
+          "path": "icon-hidraulica007698390439930591.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-leyenda-demanda-prevista2625328879983805.png",
+          "path": "icon-leyenda-demanda-prevista2625328879983805.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-leyenda-demanda-programad3065158510493834.png",
+          "path": "icon-leyenda-demanda-programad3065158510493834.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-leyenda-demanda-programad7212970693130417.png",
+          "path": "icon-leyenda-demanda-programad7212970693130417.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-leyenda-demanda-real1281268583427273.png",
+          "path": "icon-leyenda-demanda-real1281268583427273.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-nuclear8415362241458646.png",
+          "path": "icon-nuclear8415362241458646.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-plus6345836822995892.png",
+          "path": "icon-plus6345836822995892.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-red-circle1997137094072785.png",
+          "path": "icon-red-circle1997137094072785.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-renovable4854492596813257.png",
+          "path": "icon-renovable4854492596813257.png",
+          "type": "Image"
+        },
+        {
+          "name": "icon-solar9848019848923858.png",
+          "path": "icon-solar9848019848923858.png",
+          "type": "Image"
         }
       ]
     }

@@ -57,7 +57,7 @@ def procesar_base(df):
 
 if __name__ == "__main__":
 
-    print("🚀 Construyendo fact_energia_full_v2...\n")
+    print("Construyendo fact_energia_full_v2...\n")
 
     # =========================
     # DEMANDA
@@ -97,43 +97,112 @@ if __name__ == "__main__":
     df_base = df_base.merge(precio_ajustes, on="datetime_hora", how="left")
 
     # =========================
-    # GENERACIÓN (HÍBRIDA)
+    # GENERACIÓN
+    # =========================
+    for ind, col in [
+        ("generacion_solar", "gen_solar"),
+        ("gen_real_eolica", "gen_eolica"),
+        ("gen_real_nuclear", "gen_nuclear"),
+        ("gen_real_hidraulica", "gen_hidraulica"),
+        ("gen_real_ciclo_combinado", "gen_ciclo_combinado"),
+        ("gen_hulla_antracita", "gen_hulla_antracita"),
+        ("gen_hulla_subbituminosa", "gen_hulla_subbituminosa"),
+        ("gen_fuel", "gen_fuel"),
+        ("gen_gas", "gen_gas"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # DEMANDA PROGRAMADA TOTAL
+    # =========================
+    programada_total = cargar_datos("demanda_programada_total")
+    if programada_total is not None:
+        programada_total = procesar_generacion(programada_total, "demanda_programada_total")
+        df_base = df_base.merge(programada_total, on="datetime_hora", how="left")
+
+    # =========================
+    # POTENCIA
     # =========================
 
-    # Solar (antiguo - histórico)
-    solar = cargar_datos("generacion_solar")
+    pot_ind = cargar_datos("pot_indisponible")
+    if pot_ind is not None:
+        pot_ind = procesar_generacion(pot_ind, "pot_indisponible")
+        df_base = df_base.merge(pot_ind, on="datetime_hora", how="left")
 
-    if solar is not None:
-        solar = procesar_generacion(solar, "gen_solar")
-        df_base = df_base.merge(solar, on="datetime_hora", how="left")
+    # Disponible
+    for ind, col in [
+        ("pot_disp_nuclear", "pot_disp_nuclear"),
+        ("pot_disp_carbon", "pot_disp_carbon"),
+        ("pot_disp_fuel", "pot_disp_fuel"),
+        ("pot_disp_gas", "pot_disp_gas"),
+        ("pot_disp_eolica", "pot_disp_eolica"),
+        ("pot_disp_solar", "pot_disp_solar"),
+        ("pot_disp_hidraulica", "pot_disp_hidraulica"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
 
-    # Eólica (T.Real)
-    eolica = cargar_datos("gen_real_eolica")
+    # Instalada
+    for ind, col in [
+        ("pot_inst_nuclear", "pot_inst_nuclear"),
+        ("pot_inst_carbon", "pot_inst_carbon"),
+        ("pot_inst_ciclo_combinado", "pot_inst_ciclo_combinado"),
+        ("pot_inst_gas", "pot_inst_gas"),
+        ("pot_inst_eolica", "pot_inst_eolica"),
+        ("pot_inst_solar", "pot_inst_solar"),
+        ("pot_inst_hidraulica", "pot_inst_hidraulica"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
 
-    if eolica is not None:
-        eolica = procesar_generacion(eolica, "gen_eolica")
-        df_base = df_base.merge(eolica, on="datetime_hora", how="left")
+    # =========================
+    # ALMACENAMIENTO
+    # =========================
+    for ind, col in [
+        ("bombeo_turbinacion_medida", "bombeo_turbinacion"),
+        ("bombeo_consumo_medida", "bombeo_consumo"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
 
-    # Nuclear
-    nuclear = cargar_datos("gen_real_nuclear")
+    # =========================
+    # INTERCONEXIONES
+    # =========================
+    for ind, col in [
+        ("francia_import", "francia_import"),
+        ("francia_export", "francia_export"),
+        ("portugal_import", "portugal_import"),
+        ("portugal_export", "portugal_export"),
+        ("marruecos_import", "marruecos_import"),
+        ("marruecos_export", "marruecos_export"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
 
-    if nuclear is not None:
-        nuclear = procesar_generacion(nuclear, "gen_nuclear")
-        df_base = df_base.merge(nuclear, on="datetime_hora", how="left")
-
-    # Hidráulica
-    hidraulica = cargar_datos("gen_real_hidraulica")
-
-    if hidraulica is not None:
-        hidraulica = procesar_generacion(hidraulica, "gen_hidraulica")
-        df_base = df_base.merge(hidraulica, on="datetime_hora", how="left")
-
-    # Ciclo combinado
-    ciclo = cargar_datos("gen_real_ciclo_combinado")
-
-    if ciclo is not None:
-        ciclo = procesar_generacion(ciclo, "gen_ciclo_combinado")
-        df_base = df_base.merge(ciclo, on="datetime_hora", how="left")
+    # =========================
+    # CONSUMO NUEVO
+    # =========================
+    for ind, col in [
+        ("consumo_mercado_libre", "consumo_mercado_libre"),
+        ("consumo_mercado_regulado", "consumo_mercado_regulado"),
+        ("consumo_directo_mercado", "consumo_directo_mercado"),
+        ("consumo_servicios_auxiliares", "consumo_servicios_auxiliares"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
     # FEATURES TEMPORALES
@@ -147,9 +216,7 @@ if __name__ == "__main__":
     # VALIDACIONES
     # =========================
     print("\nValidaciones:")
-
     print("Filas totales:", len(df_base))
-
     print("\nValores nulos:")
     print(df_base.isnull().sum())
 

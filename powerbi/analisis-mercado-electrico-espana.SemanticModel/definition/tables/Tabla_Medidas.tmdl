@@ -81,6 +81,346 @@ table Tabla_Medidas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 29258858-69b1-4f91-9c77-23c7856baf7f
 
+	measure 'Gen Eolica' = SUM(Fact_Energia_ESIOS[gen_eolica])
+		formatString: 0.00
+		lineageTag: faf676da-2427-41c3-8291-c74351ad841b
+
+	measure 'Gen Hidraulica' = SUM(Fact_Energia_ESIOS[gen_hidraulica])
+		formatString: 0.00
+		lineageTag: a23d4520-de71-49e2-a8d9-9d223b16c7f0
+
+	measure 'Gen Solar' = SUM(Fact_Energia_ESIOS[gen_solar])
+		formatString: 0.00
+		lineageTag: c6e10ced-6a0a-43b1-8f40-45179eef6d5f
+
+	measure 'Gen Nuclear' = SUM(Fact_Energia_ESIOS[gen_nuclear])
+		formatString: 0.00
+		lineageTag: ccf07607-ded3-4b4a-83b0-c549018a8b3e
+
+	measure 'Gen Ciclo Combinado' = SUM(Fact_Energia_ESIOS[gen_ciclo_combinado])
+		formatString: 0.00
+		lineageTag: 99c680b7-146f-4e8a-83d4-52c55609f277
+
+	measure 'Demanda Promedio' = AVERAGE(Fact_Energia_ESIOS[demanda_real])
+		formatString: 0
+		lineageTag: f4411124-22e0-422e-a268-1a783725aae6
+
+	measure 'Generacion Total' = [Gen Eolica] + [Gen Hidraulica] + [Gen Solar] + [Gen Nuclear] + [Gen Ciclo Combinado]
+		formatString: 0
+		lineageTag: 54d713cd-350a-4cfb-92a8-5727330ae9cd
+
+	measure 'Consumo Total' = [Demanda Total]
+		formatString: #,0
+		lineageTag: 05679bbe-5aa9-4b24-a2cc-d62e443da611
+
+	measure 'Ratio Generacion' =
+			
+			DIVIDE(
+			    [Generacion Total],
+			    [Consumo Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: b750b30b-9afe-499a-bea9-792812e16bc1
+
+	measure 'Gen Limpia' = [Gen Eolica] + [Gen Hidraulica] + [Gen Solar] + [Gen Nuclear]
+		lineageTag: 9ab048b4-2c13-48eb-9320-a17d5ad5c2db
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gen No Limpia' = [Gen Ciclo Combinado] + [Gen Carbon]
+		lineageTag: 7c936d9b-4060-4b22-a265-dd8ec504383b
+
+	measure 'Gen Carbon' = SUM(Fact_Energia_ESIOS[Gen Carbon])
+		formatString: 0.00
+		lineageTag: 312c803c-1e51-4185-8132-52d774fc65b6
+
+	measure '% Generacion Limpia' =
+			
+			DIVIDE([Gen Limpia], [Gen Limpia] + [Gen No Limpia], 0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9e38b1a8-23d3-4363-b1e0-4bcaac365a60
+
+	measure 'Demanda Programada Total' = SUM(Fact_Energia_ESIOS[demanda_programada_total])
+		lineageTag: 4959d28d-5fb3-44a5-8016-3cc0851bb5cd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variacion Demanda %' =
+			
+			DIVIDE(
+			    [Demanda Total] - [Demanda Programada Total Final],
+			    [Demanda Programada Total Final],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 1d92d757-8169-4fab-9e74-dfc955e40215
+
+	measure 'Demanda Programada' = SUM(Fact_Energia_ESIOS[demanda_programada])
+		lineageTag: c718bc97-c552-4aee-9d34-5971f5fa1f98
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Demanda Prevista' = SUM(Fact_Energia_ESIOS[demanda_prevista])
+		lineageTag: ed183378-fdc7-4332-a692-e9075e7b47f5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Demanda Programada Total Final' =
+			
+			IF(
+			    ISBLANK([Demanda Programada Total]),
+			    [Demanda Programada],
+			    [Demanda Programada Total]
+			)
+		lineageTag: 0d17f76a-ebeb-4db3-b9fc-06b0da78a51a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Desviacion Absoluta MW' = [Demanda Total] - [Demanda Programada Total Final]
+		lineageTag: a1c4301d-acfa-4b12-81e3-0c89a2051973
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Alerta Demanda' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Variacion Demanda %] > 0.02, "Alta (sobreconsumo)",
+			    [Variacion Demanda %] < -0.02, "Baja (subconsumo)",
+			    "Normal"
+			)
+		lineageTag: 6431c131-be08-46d7-8448-738e2861c906
+
+	measure 'Banda Superior' = [Demanda Programada Total Final] * 1.02
+		lineageTag: 4e6260d0-8704-491e-b3ca-d9c5a56b0ec3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Banda Inferior' = [Demanda Programada Total Final] * 0.98
+		lineageTag: e7f99dc1-c026-4426-bb81-682055e7ca0d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Insight Demanda' = ```
+			
+			SWITCH(
+			    TRUE(),
+			    [Variacion Demanda %] > 0.02, 
+			        "Demanda superior a la prevista (+ desviación)",
+			    
+			    [Variacion Demanda %] < -0.02, 
+			        "Demanda inferior a la prevista (- desviación)",
+			    
+			    "Demanda alineada con la planificación"
+			)
+			```
+		lineageTag: 15049c69-a6c0-485e-b00f-714cf6c88170
+
+	measure 'Insight Avanzado' =
+			
+			"En " & FORMAT(MAX(Dim_Calendario[fecha]), "dddd, dd MMMM") &
+			": " &
+			[Insight Demanda]
+		lineageTag: e2e44bb9-179c-4b0d-aef9-f5a697d6f2f9
+
+	measure 'Potencia Disponible' =
+			
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_nuclear]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_carbon]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_fuel]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_gas]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_disp_hidraulica]),0)
+		formatString: 0
+		lineageTag: 8a7b6ef8-94a0-4502-9ff2-75692be9b1b5
+
+	measure 'Potencia Instalada' =
+			
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_inst_nuclear]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_inst_carbon]),0) +
+			COALESCE(SUM(Fact_Energia_ESIOS[pot_inst_ciclo_combinado]),0)
+		formatString: 0
+		lineageTag: 1c9f51fa-0942-4f0a-918b-cfa94aff7a3e
+
+	measure 'Potencia Indisponible' = SUM(Fact_Energia_ESIOS[pot_indisponible])
+		formatString: 0
+		lineageTag: 3fef082f-ce27-4a1c-b118-b021587ce9f7
+
+	measure 'Potencia Instalada Ajustada' = [Potencia Disponible] + [Potencia Indisponible]
+		lineageTag: 0205ec78-aa71-419c-b5cf-54d4ea7e4fd0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gen Termica Fosil' = SUM(Fact_Energia_ESIOS[gen_gas]) + SUM(Fact_Energia_ESIOS[gen_fuel])
+		formatString: 0.00
+		lineageTag: 4d52b700-1d93-4967-a77b-87830da7cf29
+
+	measure 'Almacenamiento Neto' = [Turbinacion Bombeo] - ABS([Consumo Bombeo])
+		formatString: 0
+		lineageTag: 92eaf653-7554-45bf-a583-aae5b4972f03
+
+	measure '% Almacenamiento' =
+			
+			DIVIDE(
+			    [Almacenamiento Neto],
+			    [Demanda Total],
+			    0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0bf6fba6-5a9e-4a83-8a19-2eaf044ca0d9
+
+	measure 'Turbinacion Bombeo' = SUM(Fact_Energia_ESIOS[bombeo_turbinacion])
+		formatString: 0
+		lineageTag: f6c1fa51-853a-4285-a63c-3003646e55d0
+
+	measure 'Consumo Bombeo' = SUM(Fact_Energia_ESIOS[bombeo_consumo])
+		formatString: 0
+		lineageTag: 5c87c919-3647-4f00-a8e3-1a593ecb7991
+
+	measure 'Valor Almacenamiento' =
+			
+			SWITCH(
+			    SELECTEDVALUE(Tabla_Almacenamiento[Tipo]),
+			    "Turbinación Bombeo", [Turbinacion Bombeo],
+			    "Consumo Bombeo", [Consumo Bombeo]
+			)
+		lineageTag: ee423865-b264-4b94-8134-8cbe0a8e6bd3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Import Francia' = SUM(Fact_Energia_ESIOS[francia_import])
+		formatString: 0
+		lineageTag: a0ddd29c-88fa-45eb-abdd-daa76384d6a1
+
+	measure 'Import Portugal' = SUM(Fact_Energia_ESIOS[portugal_import])
+		formatString: 0
+		lineageTag: 31bfbbf5-0f89-43c4-af8a-839eeaf8101c
+
+	measure 'Import Marruecos' = SUM(Fact_Energia_ESIOS[marruecos_import])
+		formatString: 0
+		lineageTag: beda7002-6a1a-4692-adce-b6d2d78cb291
+
+	measure 'Export Francia' = SUM(Fact_Energia_ESIOS[francia_export])
+		formatString: 0
+		lineageTag: e5588cd7-e7b5-4f8c-8e23-3d34a0d5fb02
+
+	measure 'Export Portugal' = SUM(Fact_Energia_ESIOS[portugal_export])
+		formatString: 0
+		lineageTag: 753bc76e-b1ab-4f64-95a1-c4038018ea07
+
+	measure 'Export Marruecos' = SUM(Fact_Energia_ESIOS[marruecos_export])
+		formatString: 0
+		lineageTag: a2d0c744-acae-4782-be42-a4ded2ba04a3
+
+	measure 'Saldo Francia' = [Export Francia] - [Import Francia]
+		formatString: 0
+		lineageTag: f6cb876c-7336-4aba-af60-e60f5b2a27e2
+
+	measure 'Saldo Portugal' = [Export Portugal] - [Import Portugal]
+		formatString: 0
+		lineageTag: dc6284b1-84ef-47ad-a880-9dc271e340e8
+
+	measure 'Saldo Marruecos' = [Export Marruecos] - [Import Marruecos]
+		formatString: 0
+		lineageTag: 23f72dba-d7ea-4098-b41e-07625fbd6979
+
+	measure 'Interconexiones Neto' = [Saldo Francia] + [Saldo Marruecos] + [Saldo Portugal]
+		formatString: 0
+		lineageTag: bb49dd3d-d02b-466d-add8-e07b414b93e8
+
+	measure '% Interconexiones' =
+			
+			DIVIDE(
+			    [Interconexiones Neto],
+			    [Demanda Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: ce84a0d7-2bc6-4a24-9689-212692140a6b
+
+	measure 'Saldo Interconexion' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Tabla Interconexiones'[Pais]),
+			    "Portugal", [Saldo Portugal],
+			    "Francia", [Saldo Francia],
+			    "Marruecos", [Saldo Marruecos]
+			)
+		lineageTag: 376fe6ad-95e2-4972-a8f8-49ce0e6cac88
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Direccion Flujo' =
+			
+			IF(
+			    [Saldo Interconexion] > 0,
+			    "Export",
+			    "Import"
+			)
+		lineageTag: eb375dbf-77ea-411c-a73d-56c0821a207e
+
+	measure 'Direccion Flujo Num' = [Saldo Interconexion]
+		lineageTag: cae8bd7c-95ff-48ad-8629-b53fa6edf954
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Consumo Mercado Libre' = SUM(Fact_Energia_ESIOS[consumo_mercado_libre])
+		formatString: 0
+		lineageTag: 24b74e4f-01ea-42c3-83af-5af925617a65
+
+	measure 'Consumo Mercado Regulado' = SUM(Fact_Energia_ESIOS[consumo_mercado_regulado])
+		formatString: 0
+		lineageTag: 1455535e-fd54-4907-8170-8dabc92a680c
+
+	measure 'Consumo Directo' = SUM(Fact_Energia_ESIOS[consumo_directo_mercado])
+		formatString: 0
+		lineageTag: 9b8f4af1-bc74-45ac-b66a-f58330d4ea5e
+
+	measure 'Consumo Servicios Auxiliares' = SUM(Fact_Energia_ESIOS[consumo_servicios_auxiliares])
+		formatString: 0
+		lineageTag: 064b7812-6fd2-4471-b28b-a6ed49584aa9
+
+	measure 'Consumo Total Calculado' =
+			
+			[Consumo Mercado Libre] +
+			[Consumo Mercado Regulado] +
+			[Consumo Directo] +
+			[Consumo Servicios Auxiliares]
+		formatString: 0
+		lineageTag: 0009643d-b081-4110-92b0-09fa9587148b
+
+	measure '% Consumo' =
+			
+			DIVIDE(
+			    [Consumo Total],
+			    [Demanda Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 70a2c978-fe23-460e-8444-e7643c5c698f
+
+	measure 'Consumo por Tipo' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Tabla Consumo'[Tipo]),
+			    "Mercado Libre", [Consumo Mercado Libre],
+			    "Mercado Regulado", [Consumo Mercado Regulado],
+			    "Consumo Directo", [Consumo Directo],
+			    "Servicios Auxiliares", [Consumo Servicios Auxiliares]
+			)
+		lineageTag: cee7dc8a-98d4-4a82-b30b-cdfbd152900d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Generacion' =
+			
+			DIVIDE(
+			    [Generacion Total],
+			    [Demanda Total],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: a734af94-1d82-4e67-afde-0395a8f8b078
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

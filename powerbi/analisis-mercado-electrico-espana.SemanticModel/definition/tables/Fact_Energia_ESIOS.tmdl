@@ -142,16 +142,6 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column gen_solar
-		dataType: double
-		lineageTag: 8537bf5d-7708-44a2-96f0-edbe4a48cd24
-		summarizeBy: sum
-		sourceColumn: gen_solar
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column gen_eolica
 		dataType: double
 		lineageTag: 43c001af-c22c-4933-879b-3a2b93de644b
@@ -216,13 +206,353 @@ table Fact_Energia_ESIOS
 
 		annotation SummarizationSetBy = Automatic
 
+	column gen_hulla_antracita
+		dataType: double
+		lineageTag: d74b3aee-b336-4f0e-8a63-f5c2f3afe933
+		summarizeBy: sum
+		sourceColumn: gen_hulla_antracita
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_hulla_subbituminosa
+		dataType: double
+		lineageTag: d427af2b-9fb0-437e-b2a9-a7e722e0cb20
+		summarizeBy: sum
+		sourceColumn: gen_hulla_subbituminosa
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_fuel
+		dataType: double
+		lineageTag: 5bbeb278-d20e-45a5-b1f2-9681f3568b59
+		summarizeBy: sum
+		sourceColumn: gen_fuel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_gas
+		dataType: double
+		lineageTag: d6bb8201-c4c6-4c66-8818-0795fffb235e
+		summarizeBy: sum
+		sourceColumn: gen_gas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Gen Carbon' = Fact_Energia_ESIOS[gen_hulla_antracita] + Fact_Energia_ESIOS[gen_hulla_subbituminosa]
+		lineageTag: 298aef36-71d7-4ac3-88c7-6f09a0a7ceee
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gen_solar
+		dataType: double
+		lineageTag: 07d54ad3-4dc2-4fa3-8c0b-be042113efb0
+		summarizeBy: sum
+		sourceColumn: gen_solar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column demanda_programada_total
+		dataType: double
+		lineageTag: d64d7da9-efc7-4d4f-8d41-7479a8abd27a
+		summarizeBy: sum
+		sourceColumn: demanda_programada_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_indisponible
+		dataType: double
+		lineageTag: 7bbf1f0b-acb0-47bd-a2fc-3a71877beed9
+		summarizeBy: sum
+		sourceColumn: pot_indisponible
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_nuclear
+		dataType: double
+		lineageTag: ce866952-30d3-4f24-bb0c-d61860502fd0
+		summarizeBy: sum
+		sourceColumn: pot_disp_nuclear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_carbon
+		dataType: double
+		lineageTag: b4a7d1a1-fdd9-4951-8f22-8529191f74d8
+		summarizeBy: sum
+		sourceColumn: pot_disp_carbon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_fuel
+		dataType: double
+		lineageTag: cd443329-f35f-42a5-b1ac-af9290e1f6e3
+		summarizeBy: sum
+		sourceColumn: pot_disp_fuel
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_gas
+		dataType: double
+		lineageTag: c7fb7ed4-522c-4728-b274-6356813ee82d
+		summarizeBy: sum
+		sourceColumn: pot_disp_gas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_eolica
+		dataType: double
+		lineageTag: 98c2d0b3-3011-4dc5-817c-38497cf78ed1
+		summarizeBy: sum
+		sourceColumn: pot_disp_eolica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_solar
+		dataType: double
+		lineageTag: 948214ef-6630-4e10-a7e3-99f43fa977a2
+		summarizeBy: sum
+		sourceColumn: pot_disp_solar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_nuclear
+		dataType: double
+		lineageTag: 467f11cd-ec57-4ea4-bdc2-1be2f7953c5e
+		summarizeBy: sum
+		sourceColumn: pot_inst_nuclear
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_carbon
+		dataType: double
+		lineageTag: fe7ad461-7139-4ade-a87a-3de32c0fa153
+		summarizeBy: sum
+		sourceColumn: pot_inst_carbon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_ciclo_combinado
+		dataType: double
+		lineageTag: 66079a83-6c4e-4499-8e7d-48a9815d81d9
+		summarizeBy: sum
+		sourceColumn: pot_inst_ciclo_combinado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_gas
+		dataType: double
+		lineageTag: a8c367db-38c2-4ff3-bf60-98cd100266b3
+		summarizeBy: sum
+		sourceColumn: pot_inst_gas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_eolica
+		dataType: double
+		lineageTag: 68dfd865-25af-4638-9d42-1a8402a353a1
+		summarizeBy: sum
+		sourceColumn: pot_inst_eolica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_solar
+		dataType: double
+		lineageTag: de497f69-277b-4b00-8ed3-45395c9d110b
+		summarizeBy: sum
+		sourceColumn: pot_inst_solar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_disp_hidraulica
+		dataType: double
+		lineageTag: 59764fe8-bb31-4133-9f9e-63e6c5a82e0e
+		summarizeBy: sum
+		sourceColumn: pot_disp_hidraulica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pot_inst_hidraulica
+		dataType: double
+		lineageTag: 7447283e-afdf-4a0e-9e51-55b3b0866915
+		summarizeBy: sum
+		sourceColumn: pot_inst_hidraulica
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bombeo_turbinacion
+		dataType: double
+		lineageTag: 0b830928-7b76-4e50-bb9e-4c232eda8bb3
+		summarizeBy: sum
+		sourceColumn: bombeo_turbinacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bombeo_consumo
+		dataType: double
+		lineageTag: 8fa4f5c1-078c-491b-a38a-157ef528b9f6
+		summarizeBy: sum
+		sourceColumn: bombeo_consumo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column francia_import
+		dataType: double
+		lineageTag: d32b3727-3b12-48b9-8598-c6b1efcb05e4
+		summarizeBy: sum
+		sourceColumn: francia_import
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column francia_export
+		dataType: double
+		lineageTag: 44d9672e-8845-4b0f-80e4-d264d4b5a569
+		summarizeBy: sum
+		sourceColumn: francia_export
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column portugal_import
+		dataType: double
+		lineageTag: 50eac74d-566a-49a8-928e-1e4c2bf40c93
+		summarizeBy: sum
+		sourceColumn: portugal_import
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column portugal_export
+		dataType: double
+		lineageTag: 335d6ced-d2bb-4351-940f-08dc2e219f8a
+		summarizeBy: sum
+		sourceColumn: portugal_export
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column marruecos_import
+		dataType: double
+		lineageTag: ac22b1c5-8ccc-4540-bf64-8d4dda23d33b
+		summarizeBy: sum
+		sourceColumn: marruecos_import
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column marruecos_export
+		dataType: double
+		lineageTag: 6abc7e09-fcb9-484e-9890-d73b13df89cc
+		summarizeBy: sum
+		sourceColumn: marruecos_export
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consumo_mercado_libre
+		dataType: double
+		lineageTag: faf464a8-91bb-4ab1-8a6e-d4a134647cbb
+		summarizeBy: sum
+		sourceColumn: consumo_mercado_libre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consumo_mercado_regulado
+		dataType: double
+		lineageTag: d948fb98-88ea-402d-ac9b-e3c4b81f5937
+		summarizeBy: sum
+		sourceColumn: consumo_mercado_regulado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consumo_directo_mercado
+		dataType: double
+		lineageTag: b9cea182-eb61-48e7-8539-f52773139aa1
+		summarizeBy: sum
+		sourceColumn: consumo_directo_mercado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column consumo_servicios_auxiliares
+		dataType: double
+		lineageTag: c3bc0c60-ee69-41bc-9de2-a7463122197e
+		summarizeBy: sum
+		sourceColumn: consumo_servicios_auxiliares
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
 				let
-				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full_v2.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_energia_full_v2.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Valor reemplazado" = Table.ReplaceValue(Origen,null,0,Replacer.ReplaceValue,{"francia_import", "francia_export", "portugal_import", "portugal_export", "marruecos_import", "marruecos_export"}),
+				    #"Valor reemplazado1" = Table.ReplaceValue(#"Valor reemplazado",null,0,Replacer.ReplaceValue,{"consumo_mercado_libre", "consumo_mercado_regulado", "consumo_directo_mercado", "consumo_servicios_auxiliares"})
 				in
-				    Origen
+				    #"Valor reemplazado1"
 
 	annotation PBI_NavigationStepName = Navegación
 

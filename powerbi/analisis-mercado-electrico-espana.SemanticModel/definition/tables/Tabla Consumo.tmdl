@@ -1,0 +1,27 @@
+table 'Tabla Consumo'
+	lineageTag: 2eb65b45-9cbb-4eac-b0dc-345a701f98a5
+
+	column Tipo
+		lineageTag: 9c503a55-7dcf-4f90-bcc1-c2c526422977
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Tipo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tabla Consumo' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Tipo", STRING,
+				    {
+				        {"Mercado Libre"},
+				        {"Mercado Regulado"},
+				        {"Consumo Directo"},
+				        {"Servicios Auxiliares"}
+				    }
+				)
+
+	annotation PBI_Id = da2a993492014762a6916a223f5af66e
+
