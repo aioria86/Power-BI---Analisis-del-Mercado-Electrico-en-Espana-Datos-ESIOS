@@ -624,6 +624,56 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column restricciones_tr_subir
+		dataType: double
+		lineageTag: b0eb9919-ebae-4c33-ae42-1e7e0cc6e409
+		summarizeBy: sum
+		sourceColumn: restricciones_tr_subir
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_tr_bajar
+		dataType: double
+		lineageTag: ebf7e1e2-db54-4d0a-8ee2-d59a82fe1fd0
+		summarizeBy: sum
+		sourceColumn: restricciones_tr_bajar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intradiario_sesion_5
+		dataType: double
+		lineageTag: ded7981a-1471-4384-a960-d923f95349ec
+		summarizeBy: sum
+		sourceColumn: intradiario_sesion_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intradiario_sesion_6
+		dataType: double
+		lineageTag: 7e131a43-9ad2-4236-b1c5-83fbea2b1a90
+		summarizeBy: sum
+		sourceColumn: intradiario_sesion_6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intradiario_sesion_7
+		dataType: double
+		lineageTag: fd500701-2131-49b8-bb77-386e534b4eb0
+		summarizeBy: sum
+		sourceColumn: intradiario_sesion_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =

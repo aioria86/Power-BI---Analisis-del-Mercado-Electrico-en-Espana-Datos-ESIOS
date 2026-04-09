@@ -213,6 +213,13 @@ if __name__ == "__main__":
         ("regulacion_secundaria", "regulacion_secundaria"),
         ("gastos_balance", "gastos_balance"),
         ("ingresos_balance", "ingresos_balance"),
+
+        # 🔥 NUEVOS INDICADORES
+        ("restricciones_tr_subir", "restricciones_tr_subir"),
+        ("restricciones_tr_bajar", "restricciones_tr_bajar"),
+        ("intradiario_sesion_5", "intradiario_sesion_5"),
+        ("intradiario_sesion_6", "intradiario_sesion_6"),
+        ("intradiario_sesion_7", "intradiario_sesion_7"),
     ]:
         df = cargar_datos(ind)
         if df is not None:
