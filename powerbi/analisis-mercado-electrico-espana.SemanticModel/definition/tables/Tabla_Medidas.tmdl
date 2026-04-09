@@ -421,6 +421,94 @@ table Tabla_Medidas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: a734af94-1d82-4e67-afde-0395a8f8b078
 
+	measure restricciones_pbf_subir = SUM(Fact_Energia_ESIOS[restricciones_pbf_subir])
+		formatString: 0
+		lineageTag: bba1b6d4-84e9-4c1a-9e39-9b293a5367ee
+
+	measure restricciones_pbf_bajar = SUM(Fact_Energia_ESIOS[restricciones_pbf_bajar])
+		formatString: 0
+		lineageTag: e48630ec-54ac-4204-9e12-97ba8e1564cb
+
+	measure 'PBF Total' = [restricciones_pbf_subir] + [restricciones_pbf_bajar]
+		formatString: 0
+		lineageTag: 64ae81e5-c2c8-49ac-abaf-d80a9e080bc1
+
+	measure restricciones_tr = SUM(Fact_Energia_ESIOS[restricciones_tr])
+		formatString: 0
+		lineageTag: ac0ea935-312c-41a8-8df2-4c5d2fbdd212
+
+	measure regulacion_terciaria = SUM(Fact_Energia_ESIOS[regulacion_terciaria])
+		formatString: 0
+		lineageTag: 1af3d380-a4be-4b64-9188-827351a99c37
+
+	measure regulacion_secundaria = SUM(Fact_Energia_ESIOS[regulacion_secundaria])
+		formatString: 0
+		lineageTag: 6279980d-bdc4-49a7-9dac-7e2951c66958
+
+	measure balance_rr = SUM(Fact_Energia_ESIOS[balance_rr])
+		formatString: 0
+		lineageTag: ed2a7e95-819a-47e9-b829-6c41f3d01703
+
+	measure 'Servicios Ajuste Total' =
+			
+			[PBF Total] +
+			[restricciones_tr] +
+			[balance_rr] +
+			[regulacion_terciaria] +
+			[regulacion_secundaria]
+		formatString: 0
+		lineageTag: cf4508e0-4fc6-4cf8-b2fb-c04c568231ec
+
+	measure 'Mercado Total' = [Demanda Total] - [Servicios Ajuste Total]
+		formatString: 0
+		lineageTag: b0439b82-2022-4ff8-b809-7507774c10f7
+
+	measure 'Mercado Diario' = [Mercado Total]
+		formatString: 0
+		lineageTag: 7ae3a996-ad8e-44ff-92e7-2fba412bea0b
+
+	measure 'Mercado Intradiario' = 0
+		formatString: 0
+		lineageTag: 7ec9e203-816c-4684-a524-5f485242ec22
+
+	measure 'Mercado Intradiario Continuo' = 0
+		formatString: 0
+		lineageTag: c0c47f57-e4e7-4d68-b5a5-28526ddaecd5
+
+	measure 'Valor Mercado' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Tabla Mercado'[Tipo]),
+			
+			    "Mercado Diario", [Mercado Total],
+			    "Restricciones PBF", [PBF Total],
+			    "Restricciones TR", [restricciones_tr],
+			    "Balance RR", [balance_rr],
+			    "Regulación Terciaria", [regulacion_terciaria],
+			    "Regulación Secundaria", [regulacion_secundaria]
+			)
+		formatString: 0
+		lineageTag: 6c5e2b40-169f-495e-a560-34c0226451d2
+
+	measure 'Volumen Total Mercado' =
+			
+			SUMX(
+			    'Tabla Mercado',
+			    [Valor Mercado]
+			)
+		formatString: 0
+		lineageTag: 266f0b5d-074a-479d-9861-a663a5a81bb2
+
+	measure '% Mercado' =
+			
+			DIVIDE(
+			    [Valor Mercado],
+			    [Volumen Total Mercado],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3029c7af-c2f3-4db1-80e4-2c73028a0bfb
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

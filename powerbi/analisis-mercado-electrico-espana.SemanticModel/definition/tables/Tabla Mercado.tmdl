@@ -1,0 +1,29 @@
+table 'Tabla Mercado'
+	lineageTag: e75f81e7-0161-4cd9-a0d2-d9ad82a39fb5
+
+	column Tipo
+		lineageTag: f1352f68-a72c-4aaf-ac11-92de0e592f79
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Tipo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tabla Mercado' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Tipo", STRING,
+				    {
+				        {"Mercado Diario"},
+				        {"Restricciones PBF"},
+				        {"Restricciones TR"},
+				        {"Balance RR"},
+				        {"Regulación Terciaria"},
+				        {"Regulación Secundaria"}
+				    }
+				)
+
+	annotation PBI_Id = 5a35157eb1bd4f5aa24e6004b4c8143b
+

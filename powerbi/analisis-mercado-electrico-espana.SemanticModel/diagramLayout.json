@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 562,
+        "x": 793,
         "y": 0
       },
       "nodes": [
@@ -89,6 +89,18 @@
             "y": 229
           },
           "nodeIndex": "Tabla Consumo",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1929,
+            "y": 229
+          },
+          "nodeIndex": "Tabla Mercado",
           "size": {
             "height": 200,
             "width": 234
