@@ -509,6 +509,67 @@ table Tabla_Medidas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 3029c7af-c2f3-4db1-80e4-2c73028a0bfb
 
+	measure 'Precio Mercado Diario' =
+			
+			AVERAGEX(
+			    VALUES(Fact_Energia_ESIOS[fecha]),
+			    CALCULATE(MAX(Fact_Energia_ESIOS[precio_mercado]))
+			)
+		lineageTag: 86772f76-253e-488c-af4f-e920f5587690
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Precio Ajustes' =
+			
+			AVERAGEX(
+			    VALUES(Fact_Energia_ESIOS[fecha]),
+			    CALCULATE(MAX(Fact_Energia_ESIOS[precio_ajustes]))
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: c3479c67-baec-4dc7-b835-a6839083d44e
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Precio Final' = [Precio Mercado Diario] + [Precio Ajustes]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: bc6dfcc5-e75e-44c6-9bd0-458dd27e25b8
+
+	measure 'Precio Comercializador Libre' = [Precio Final]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 4113a8fa-a017-4088-b8f5-56946a3e2d67
+
+	measure 'Precio Comercializador Referencia' = [Precio Final]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d42aaa70-16c5-4d4b-b6a2-c0a4d236f54c
+
+	measure 'Valor Precio' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Tabla Precio'[Tipo]),
+			    "Mercado diario", [Precio Mercado Diario],
+			    "Ajustes sistema", [Precio Ajustes]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: bf17cd4c-e10b-41b7-8e64-42f9bd9f2a06
+
+	measure 'Precio Mercado Mediana' = MEDIAN(Fact_Energia_ESIOS[precio_mercado])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 4b13576b-000a-4c3b-86f1-e5d58b06f841
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Precio Mercado Limpio' =
+			
+			AVERAGEX(
+			    FILTER(
+			        Fact_Energia_ESIOS,
+			        Fact_Energia_ESIOS[precio_mercado] < 500
+			    ),
+			    Fact_Energia_ESIOS[precio_mercado]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 2e93d792-34b0-46a0-9017-0b3b871c8520
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

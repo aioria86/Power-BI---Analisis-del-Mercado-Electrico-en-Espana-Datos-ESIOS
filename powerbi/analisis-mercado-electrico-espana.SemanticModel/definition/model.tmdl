@@ -23,6 +23,7 @@ ref table Tabla_Almacenamiento
 ref table 'Tabla Interconexiones'
 ref table 'Tabla Consumo'
 ref table 'Tabla Mercado'
+ref table 'Tabla Precio'
 
 ref cultureInfo es-ES
 
