@@ -126,13 +126,11 @@ if __name__ == "__main__":
     # =========================
     # POTENCIA
     # =========================
-
     pot_ind = cargar_datos("pot_indisponible")
     if pot_ind is not None:
         pot_ind = procesar_generacion(pot_ind, "pot_indisponible")
         df_base = df_base.merge(pot_ind, on="datetime_hora", how="left")
 
-    # Disponible
     for ind, col in [
         ("pot_disp_nuclear", "pot_disp_nuclear"),
         ("pot_disp_carbon", "pot_disp_carbon"),
@@ -147,7 +145,6 @@ if __name__ == "__main__":
             df = procesar_generacion(df, col)
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
-    # Instalada
     for ind, col in [
         ("pot_inst_nuclear", "pot_inst_nuclear"),
         ("pot_inst_carbon", "pot_inst_carbon"),
@@ -191,13 +188,31 @@ if __name__ == "__main__":
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
-    # CONSUMO NUEVO
+    # CONSUMO
     # =========================
     for ind, col in [
         ("consumo_mercado_libre", "consumo_mercado_libre"),
         ("consumo_mercado_regulado", "consumo_mercado_regulado"),
         ("consumo_directo_mercado", "consumo_directo_mercado"),
         ("consumo_servicios_auxiliares", "consumo_servicios_auxiliares"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # NUEVO 🔥 MERCADO Y SERVICIOS DE AJUSTE
+    # =========================
+    for ind, col in [
+        ("restricciones_pbf_subir", "restricciones_pbf_subir"),
+        ("restricciones_pbf_bajar", "restricciones_pbf_bajar"),
+        ("restricciones_tr", "restricciones_tr"),
+        ("balance_rr", "balance_rr"),
+        ("regulacion_terciaria", "regulacion_terciaria"),
+        ("regulacion_secundaria", "regulacion_secundaria"),
+        ("gastos_balance", "gastos_balance"),
+        ("ingresos_balance", "ingresos_balance"),
     ]:
         df = cargar_datos(ind)
         if df is not None:

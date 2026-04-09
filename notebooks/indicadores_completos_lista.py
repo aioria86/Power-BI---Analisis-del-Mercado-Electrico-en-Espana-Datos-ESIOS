@@ -23,7 +23,7 @@ INDICADORES = {
 
     # Renovables principales
     "gen_eolica": 551,
-    "gen_hidraulica": 548,
+    "gen_hidraulica": 546,
 
     # No renovables
     "gen_nuclear": 549,
@@ -81,7 +81,60 @@ INDICADORES = {
     "marruecos_import": 559,
     "marruecos_export": 563,
     "andorra_import": 558,
-    "andorra_export": 562
+    "andorra_export": 562,
+
+    "consumo_mercado_libre": 365,
+    "consumo_mercado_regulado": 366,
+    "consumo_directo_mercado": 367,
+    "consumo_servicios_auxiliares": 368,
+
+    # =========================
+    # 🟩 MERCADOS (BASE)
+    # =========================
+    # ⚠️ Estos NO existen directos → se construyen
+    # "mercado_diario": None,
+    # "mercado_intradiario": None,
+
+
+    # =========================
+    # 🟨 RESTRICCIONES PBF
+    # =========================
+    "restricciones_pbf_subir": 1790,
+    "restricciones_pbf_bajar": 1791,
+    # puedes añadir más variantes si quieres mayor precisión
+    # "restricciones_pbf_subir_sca": XXXX,
+    # "restricciones_pbf_bajar_sca": XXXX,
+
+
+    # =========================
+    # 🟥 RESTRICCIONES TIEMPO REAL
+    # =========================
+    "restricciones_tr": 10052,
+
+
+    # =========================
+    # 🟪 BALANCE DEL SISTEMA
+    # =========================
+    "balance_rr": 10054,          # Energías de balance RR
+    "regulacion_terciaria": 10055, # mFRR
+
+
+    # =========================
+    # 🟧 REGULACIÓN SECUNDARIA
+    # =========================
+    # ⚠️ Este es mixto → incluye varias cosas
+    "regulacion_secundaria": 10323,
+
+
+    # =========================
+    # 🟦 EXTRA (RECOMENDADOS PARA ESCALAR)
+    # =========================
+    # Estos no son obligatorios para el donut, pero te sirven
+    # para enriquecer el modelo y futuros dashboards
+
+    # Costes de balance
+    "gastos_balance": 1037,
+    "ingresos_balance": 1038,
 }
 
 }

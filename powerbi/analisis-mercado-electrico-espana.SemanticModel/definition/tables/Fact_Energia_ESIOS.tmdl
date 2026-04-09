@@ -544,6 +544,86 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column restricciones_pbf_subir
+		dataType: double
+		lineageTag: 4caa7078-4bd2-4cff-bba3-585e344aced7
+		summarizeBy: sum
+		sourceColumn: restricciones_pbf_subir
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_pbf_bajar
+		dataType: double
+		lineageTag: c42aba9c-19b0-4211-b971-1ca3b2d11510
+		summarizeBy: sum
+		sourceColumn: restricciones_pbf_bajar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_tr
+		dataType: double
+		lineageTag: 06cfa8b2-6c37-4739-baad-54e1357aa8b7
+		summarizeBy: sum
+		sourceColumn: restricciones_tr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column balance_rr
+		dataType: double
+		lineageTag: 8db94d4e-5367-4fa9-9c3e-650f9d8d1594
+		summarizeBy: sum
+		sourceColumn: balance_rr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column regulacion_terciaria
+		dataType: double
+		lineageTag: 6e9f4b64-fcef-4ce0-b6c4-ee1d77ecc69e
+		summarizeBy: sum
+		sourceColumn: regulacion_terciaria
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column regulacion_secundaria
+		dataType: double
+		lineageTag: d92b6eda-abb1-473b-9c3a-374bfbba9330
+		summarizeBy: sum
+		sourceColumn: regulacion_secundaria
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gastos_balance
+		dataType: double
+		lineageTag: bac5df44-4e58-4cf2-a15c-1b1399510473
+		summarizeBy: sum
+		sourceColumn: gastos_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ingresos_balance
+		dataType: double
+		lineageTag: 14e3df56-3260-4f66-9c69-f90e64d51c83
+		summarizeBy: sum
+		sourceColumn: ingresos_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =
