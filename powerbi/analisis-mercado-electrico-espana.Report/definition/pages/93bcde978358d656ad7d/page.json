@@ -4,5 +4,17 @@
   "displayName": "Mercado y Precios",
   "displayOption": "FitToPage",
   "height": 900,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "fe91837be544e478445b",
+      "target": "92b898e72eed6a78053c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d337249b96efebc18dc9",
+      "target": "92b898e72eed6a78053c",
+      "type": "NoFilter"
+    }
+  ]
 }

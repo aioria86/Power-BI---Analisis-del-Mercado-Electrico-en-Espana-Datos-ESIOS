@@ -574,6 +574,22 @@ table Tabla_Medidas
 		formatString: #,0
 		lineageTag: 97e9d714-71ad-420f-9c23-205e4abaca2c
 
+	measure '% ERNI RTT' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_rtt_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0df63ac3-3413-4d68-950a-30a868447d38
+
+	measure '% ERNI RTD' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_rtd_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 4e80bdc6-6804-41b9-b4f3-62ba3b665df7
+
+	measure '% ERNI TOTAL' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_total_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8c664639-2193-4980-9e63-24fc4c7a07b6
+
+	measure '% ERNI TIEMPO REAL' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_tiempo_real_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 133acb59-8c06-433a-aee5-c2848c87c8df
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

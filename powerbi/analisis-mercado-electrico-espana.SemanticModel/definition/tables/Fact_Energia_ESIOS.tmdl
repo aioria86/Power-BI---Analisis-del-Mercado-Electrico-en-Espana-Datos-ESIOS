@@ -704,6 +704,46 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column energia_no_integrable_total_pct
+		dataType: double
+		lineageTag: b007b509-416f-4f00-9331-2b5437fdf055
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_total_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_no_integrable_rtt_pct
+		dataType: double
+		lineageTag: 5f1f035c-0861-4849-8a59-c7c106b872d9
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_rtt_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_no_integrable_rtd_pct
+		dataType: double
+		lineageTag: 12f9427e-f2b3-4287-9a51-9dc8efb68ea5
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_rtd_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_no_integrable_tiempo_real_pct
+		dataType: double
+		lineageTag: 8a31d83c-f7be-4975-a5d4-9027127f0277
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_tiempo_real_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Fact_Energia_ESIOS = m
 		mode: import
 		source =

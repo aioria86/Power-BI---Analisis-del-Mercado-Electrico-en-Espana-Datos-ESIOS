@@ -45,7 +45,6 @@ def procesar_generacion(df, nombre_col):
     return df_grouped
 
 
-# 🔥 SOLO PARA PRECIOS
 def procesar_precio(df, nombre_col):
 
     df["datetime"] = pd.to_datetime(df["datetime"], utc=True)
@@ -216,7 +215,7 @@ if __name__ == "__main__":
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
-    # NUEVO 🔥 MERCADO Y SERVICIOS DE AJUSTE
+    # MERCADO Y SERVICIOS
     # =========================
     for ind, col in [
         ("restricciones_pbf_subir", "restricciones_pbf_subir"),
@@ -239,7 +238,7 @@ if __name__ == "__main__":
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
-    # 🔴 DESVÍOS Y BALANCE (NUEVO BLOQUE)
+    # DESVÍOS Y BALANCE
     # =========================
     for ind, col in [
         ("desvios_subir", "desvios_subir"),
@@ -249,6 +248,20 @@ if __name__ == "__main__":
         df = cargar_datos(ind)
         if df is not None:
             df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # 🟣 ENERGÍA NO INTEGRABLE (NUEVO)
+    # =========================
+    for ind, col in [
+        ("energia_no_integrable_total_pct", "energia_no_integrable_total_pct"),
+        ("energia_no_integrable_rtt_pct", "energia_no_integrable_rtt_pct"),
+        ("energia_no_integrable_rtd_pct", "energia_no_integrable_rtd_pct"),
+        ("energia_no_integrable_tiempo_real_pct", "energia_no_integrable_tiempo_real_pct"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_precio(df, col)
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
