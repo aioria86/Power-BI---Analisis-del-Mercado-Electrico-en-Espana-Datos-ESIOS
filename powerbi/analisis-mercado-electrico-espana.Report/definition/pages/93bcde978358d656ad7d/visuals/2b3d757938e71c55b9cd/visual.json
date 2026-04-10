@@ -1,0 +1,141 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "2b3d757938e71c55b9cd",
+  "position": {
+    "x": 0,
+    "y": 341.183879093199,
+    "z": 6003,
+    "height": 267.50629722921911,
+    "width": 640.42821158690174,
+    "tabOrder": 6003
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Hora"
+                    }
+                  },
+                  "Property": "hora"
+                }
+              },
+              "queryRef": "Dim_Hora.hora",
+              "nativeQueryRef": "hora",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Precio Mercado Diario"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Precio Mercado Diario",
+              "nativeQueryRef": "Precio Mercado Diario",
+              "format": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\""
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Tabla_Medidas"
+                    }
+                  },
+                  "Property": "Precio Ajustes"
+                }
+              },
+              "queryRef": "Tabla_Medidas.Precio Ajustes",
+              "nativeQueryRef": "Precio Ajustes",
+              "format": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\""
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Tabla_Medidas"
+                  }
+                },
+                "Property": "Precio Mercado Diario"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Precio del mercado vs servicios de ajuste'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,25 @@
+table 'Tabla Precio'
+	lineageTag: a17d625a-39ba-4625-97a7-99f9b8c77371
+
+	column Tipo
+		lineageTag: f1020867-25ae-44ac-97b3-10aa58f8e54e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Tipo]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tabla Precio' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Tipo", STRING,
+				    {
+				        {"Mercado diario"},
+				        {"Ajustes sistema"}
+				    }
+				)
+
+	annotation PBI_Id = 1ca40d3a26c945178463bc6ea2b4d8fe
+

@@ -23,7 +23,7 @@ INDICADORES = {
 
     # Renovables principales
     "gen_eolica": 551,
-    "gen_hidraulica": 548,
+    "gen_hidraulica": 546,
 
     # No renovables
     "gen_nuclear": 549,
@@ -81,7 +81,86 @@ INDICADORES = {
     "marruecos_import": 559,
     "marruecos_export": 563,
     "andorra_import": 558,
-    "andorra_export": 562
-}
+    "andorra_export": 562,
+
+    "consumo_mercado_libre": 365,
+    "consumo_mercado_regulado": 366,
+    "consumo_directo_mercado": 367,
+    "consumo_servicios_auxiliares": 368,
+
+    # =========================
+    # 🟩 MERCADOS (BASE)
+    # =========================
+    # ⚠️ Estos NO existen directos → se construyen
+    # "mercado_diario": None,
+    # "mercado_intradiario": None,
+
+
+    # =========================
+    # 🟨 RESTRICCIONES PBF
+    # =========================
+    "restricciones_pbf_subir": 1790,
+    "restricciones_pbf_bajar": 1791,
+    # puedes añadir más variantes si quieres mayor precisión
+    # "restricciones_pbf_subir_sca": XXXX,
+    # "restricciones_pbf_bajar_sca": XXXX,
+
+
+    # =========================
+    # 🟥 RESTRICCIONES TIEMPO REAL
+    # =========================
+    "restricciones_tr": 10052,
+
+
+    # =========================
+    # 🟪 BALANCE DEL SISTEMA
+    # =========================
+    "balance_rr": 10054,          # Energías de balance RR
+    "regulacion_terciaria": 10055, # mFRR
+
+
+    # =========================
+    # 🟧 REGULACIÓN SECUNDARIA
+    # =========================
+    # ⚠️ Este es mixto → incluye varias cosas
+    "regulacion_secundaria": 10323,
+
+
+    # =========================
+    # 🟦 EXTRA (RECOMENDADOS PARA ESCALAR)
+    # =========================
+    # Estos no son obligatorios para el donut, pero te sirven
+    # para enriquecer el modelo y futuros dashboards
+
+    # Costes de balance
+    "gastos_balance": 1037,
+    "ingresos_balance": 1038,
+
+        # RESTRICCIONES (sumar luego)
+    "restricciones_tr_subir": 10340,
+    "restricciones_tr_bajar": 10341,
+
+    # INTRADIARIO (opcional, avanzado)
+    "intradiario_sesion_5": 616,
+    "intradiario_sesion_6": 617,
+    "intradiario_sesion_7": 618,
+
+    # =========================
+    # 🔴 DESVÍOS (TIEMPO REAL)
+    # =========================
+    "desvios_subir": 763,
+    "desvios_bajar": 764,
+
+    # =========================
+    # 🔵 BALANCE DEL SISTEMA
+    # =========================
+    "energia_balance": 762,
+
+        "energia_no_integrable_total_pct": 10462,
+
+    # DESGLOSE
+    "energia_no_integrable_rtt_pct": 10460,
+    "energia_no_integrable_rtd_pct": 10461,
+    "energia_no_integrable_tiempo_real_pct": 10459,
 
 }

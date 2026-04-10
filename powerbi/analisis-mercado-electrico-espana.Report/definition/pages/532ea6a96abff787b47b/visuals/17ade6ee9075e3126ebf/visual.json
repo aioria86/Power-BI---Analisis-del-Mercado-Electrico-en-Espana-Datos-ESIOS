@@ -123,6 +123,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Año",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   }
 }

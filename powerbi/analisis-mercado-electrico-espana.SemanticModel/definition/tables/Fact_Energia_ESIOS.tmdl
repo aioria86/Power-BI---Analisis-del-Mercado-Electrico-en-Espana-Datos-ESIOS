@@ -424,26 +424,6 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column bombeo_turbinacion
-		dataType: double
-		lineageTag: 0b830928-7b76-4e50-bb9e-4c232eda8bb3
-		summarizeBy: sum
-		sourceColumn: bombeo_turbinacion
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column bombeo_consumo
-		dataType: double
-		lineageTag: 8fa4f5c1-078c-491b-a38a-157ef528b9f6
-		summarizeBy: sum
-		sourceColumn: bombeo_consumo
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column francia_import
 		dataType: double
 		lineageTag: d32b3727-3b12-48b9-8598-c6b1efcb05e4
@@ -539,6 +519,226 @@ table Fact_Energia_ESIOS
 		lineageTag: c3bc0c60-ee69-41bc-9de2-a7463122197e
 		summarizeBy: sum
 		sourceColumn: consumo_servicios_auxiliares
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bombeo_turbinacion
+		dataType: double
+		lineageTag: 04a8660f-14db-401a-8574-2e5bd6c07817
+		summarizeBy: sum
+		sourceColumn: bombeo_turbinacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bombeo_consumo
+		dataType: double
+		lineageTag: dea5ac7d-7dfb-424f-9168-67c8fd51ebe9
+		summarizeBy: sum
+		sourceColumn: bombeo_consumo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_pbf_subir
+		dataType: double
+		lineageTag: 7e4ac48a-4c73-44fa-9e51-7344f0fa0e87
+		summarizeBy: sum
+		sourceColumn: restricciones_pbf_subir
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_pbf_bajar
+		dataType: double
+		lineageTag: 9fb1a426-48c6-4198-9c4a-13b606567d51
+		summarizeBy: sum
+		sourceColumn: restricciones_pbf_bajar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_tr
+		dataType: double
+		lineageTag: 92c38749-9db4-4661-9b5e-9b63a1defc47
+		summarizeBy: sum
+		sourceColumn: restricciones_tr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column balance_rr
+		dataType: double
+		lineageTag: 70e052e1-8419-4b02-9d2d-d5f5de511dc5
+		summarizeBy: sum
+		sourceColumn: balance_rr
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column regulacion_terciaria
+		dataType: double
+		lineageTag: 485674a6-c8d1-4cdb-9ad1-9feaea281dea
+		summarizeBy: sum
+		sourceColumn: regulacion_terciaria
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column regulacion_secundaria
+		dataType: double
+		lineageTag: ebbff4e0-509a-4ee7-a788-be99616da610
+		summarizeBy: sum
+		sourceColumn: regulacion_secundaria
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column gastos_balance
+		dataType: double
+		lineageTag: c52678a8-042e-421e-916d-a52509933903
+		summarizeBy: sum
+		sourceColumn: gastos_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ingresos_balance
+		dataType: double
+		lineageTag: 5445ba5e-f00a-4e76-8ac1-1255eb38410f
+		summarizeBy: sum
+		sourceColumn: ingresos_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_tr_subir
+		dataType: double
+		lineageTag: 939a399e-5af2-41e6-9661-e9d58a45718e
+		summarizeBy: sum
+		sourceColumn: restricciones_tr_subir
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column restricciones_tr_bajar
+		dataType: double
+		lineageTag: 4d1f0e92-610c-4904-b6c4-aef1763c32d3
+		summarizeBy: sum
+		sourceColumn: restricciones_tr_bajar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intradiario_sesion_5
+		dataType: double
+		lineageTag: 3b263742-b6bd-4810-8565-83eed91b2955
+		summarizeBy: sum
+		sourceColumn: intradiario_sesion_5
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intradiario_sesion_6
+		dataType: double
+		lineageTag: 74541d62-b8e8-47c4-bd61-b06a09a2fe22
+		summarizeBy: sum
+		sourceColumn: intradiario_sesion_6
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column intradiario_sesion_7
+		dataType: double
+		lineageTag: 2273b65c-d8f6-45c2-ae11-58cc13bc46d8
+		summarizeBy: sum
+		sourceColumn: intradiario_sesion_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column desvios_subir
+		dataType: double
+		lineageTag: d4f532bd-b9ee-43ed-ad73-a977b65e1ff0
+		summarizeBy: sum
+		sourceColumn: desvios_subir
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column desvios_bajar
+		dataType: double
+		lineageTag: 33633dab-0f56-441f-8ef6-44fc811e0f56
+		summarizeBy: sum
+		sourceColumn: desvios_bajar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_balance
+		dataType: double
+		lineageTag: 61829afa-bb35-4e75-8677-8ee26dad0f22
+		summarizeBy: sum
+		sourceColumn: energia_balance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_no_integrable_total_pct
+		dataType: double
+		lineageTag: b007b509-416f-4f00-9331-2b5437fdf055
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_total_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_no_integrable_rtt_pct
+		dataType: double
+		lineageTag: 5f1f035c-0861-4849-8a59-c7c106b872d9
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_rtt_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_no_integrable_rtd_pct
+		dataType: double
+		lineageTag: 12f9427e-f2b3-4287-9a51-9dc8efb68ea5
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_rtd_pct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_no_integrable_tiempo_real_pct
+		dataType: double
+		lineageTag: 8a31d83c-f7be-4975-a5d4-9027127f0277
+		summarizeBy: sum
+		sourceColumn: energia_no_integrable_tiempo_real_pct
 
 		annotation SummarizationSetBy = Automatic
 

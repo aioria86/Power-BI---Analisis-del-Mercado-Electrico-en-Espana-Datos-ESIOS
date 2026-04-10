@@ -421,6 +421,175 @@ table Tabla_Medidas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: a734af94-1d82-4e67-afde-0395a8f8b078
 
+	measure restricciones_pbf_subir = SUM(Fact_Energia_ESIOS[restricciones_pbf_subir])
+		formatString: 0
+		lineageTag: bba1b6d4-84e9-4c1a-9e39-9b293a5367ee
+
+	measure restricciones_pbf_bajar = SUM(Fact_Energia_ESIOS[restricciones_pbf_bajar])
+		formatString: 0
+		lineageTag: e48630ec-54ac-4204-9e12-97ba8e1564cb
+
+	measure 'PBF Total' = [restricciones_pbf_subir] + [restricciones_pbf_bajar]
+		formatString: 0
+		lineageTag: 64ae81e5-c2c8-49ac-abaf-d80a9e080bc1
+
+	measure restricciones_tr = SUM(Fact_Energia_ESIOS[restricciones_tr])
+		formatString: 0
+		lineageTag: ac0ea935-312c-41a8-8df2-4c5d2fbdd212
+
+	measure regulacion_terciaria = SUM(Fact_Energia_ESIOS[regulacion_terciaria])
+		formatString: 0
+		lineageTag: 1af3d380-a4be-4b64-9188-827351a99c37
+
+	measure regulacion_secundaria = SUM(Fact_Energia_ESIOS[regulacion_secundaria])
+		formatString: 0
+		lineageTag: 6279980d-bdc4-49a7-9dac-7e2951c66958
+
+	measure balance_rr = SUM(Fact_Energia_ESIOS[balance_rr])
+		formatString: 0
+		lineageTag: ed2a7e95-819a-47e9-b829-6c41f3d01703
+
+	measure 'Servicios Ajuste Total' =
+			
+			[PBF Total] +
+			[restricciones_tr] +
+			[balance_rr] +
+			[regulacion_terciaria] +
+			[regulacion_secundaria]
+		formatString: 0
+		lineageTag: cf4508e0-4fc6-4cf8-b2fb-c04c568231ec
+
+	measure 'Mercado Total' = [Demanda Total] - [Servicios Ajuste Total]
+		formatString: 0
+		lineageTag: b0439b82-2022-4ff8-b809-7507774c10f7
+
+	measure 'Mercado Diario' = [Mercado Total]
+		formatString: 0
+		lineageTag: 7ae3a996-ad8e-44ff-92e7-2fba412bea0b
+
+	measure 'Mercado Intradiario' = 0
+		formatString: 0
+		lineageTag: 7ec9e203-816c-4684-a524-5f485242ec22
+
+	measure 'Mercado Intradiario Continuo' = 0
+		formatString: 0
+		lineageTag: c0c47f57-e4e7-4d68-b5a5-28526ddaecd5
+
+	measure 'Valor Mercado' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Tabla Mercado'[Tipo]),
+			
+			    "Mercado Diario", [Mercado Total],
+			    "Restricciones PBF", [PBF Total],
+			    "Restricciones TR", [restricciones_tr],
+			    "Balance RR", [balance_rr],
+			    "Regulación Terciaria", [regulacion_terciaria],
+			    "Regulación Secundaria", [regulacion_secundaria]
+			)
+		formatString: 0
+		lineageTag: 6c5e2b40-169f-495e-a560-34c0226451d2
+
+	measure 'Volumen Total Mercado' =
+			
+			SUMX(
+			    'Tabla Mercado',
+			    [Valor Mercado]
+			)
+		formatString: 0
+		lineageTag: 266f0b5d-074a-479d-9861-a663a5a81bb2
+
+	measure '% Mercado' =
+			
+			DIVIDE(
+			    [Valor Mercado],
+			    [Volumen Total Mercado],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3029c7af-c2f3-4db1-80e4-2c73028a0bfb
+
+	measure 'Precio Mercado Diario' =
+			
+			AVERAGEX(
+			    VALUES(Fact_Energia_ESIOS[fecha]),
+			    CALCULATE(MAX(Fact_Energia_ESIOS[precio_mercado]))
+			)
+		lineageTag: 86772f76-253e-488c-af4f-e920f5587690
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Precio Ajustes' =
+			
+			AVERAGEX(
+			    VALUES(Fact_Energia_ESIOS[fecha]),
+			    CALCULATE(MAX(Fact_Energia_ESIOS[precio_ajustes]))
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: c3479c67-baec-4dc7-b835-a6839083d44e
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Precio Final' = [Precio Mercado Diario] + [Precio Ajustes]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: bc6dfcc5-e75e-44c6-9bd0-458dd27e25b8
+
+	measure 'Precio Comercializador Libre' = [Precio Final]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 4113a8fa-a017-4088-b8f5-56946a3e2d67
+
+	measure 'Precio Comercializador Referencia' = [Precio Final]
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d42aaa70-16c5-4d4b-b6a2-c0a4d236f54c
+
+	measure 'Valor Precio' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Tabla Precio'[Tipo]),
+			    "Mercado diario", [Precio Mercado Diario],
+			    "Ajustes sistema", [Precio Ajustes]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: bf17cd4c-e10b-41b7-8e64-42f9bd9f2a06
+
+	measure 'Precio Mercado Mediana' = MEDIAN(Fact_Energia_ESIOS[precio_mercado])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 4b13576b-000a-4c3b-86f1-e5d58b06f841
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Precio Mercado Limpio' =
+			
+			AVERAGEX(
+			    FILTER(
+			        Fact_Energia_ESIOS,
+			        Fact_Energia_ESIOS[precio_mercado] < 500
+			    ),
+			    Fact_Energia_ESIOS[precio_mercado]
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 2e93d792-34b0-46a0-9017-0b3b871c8520
+
+	measure 'Energía Balance (MWh)' = AVERAGE(Fact_Energia_ESIOS[energia_balance])
+		formatString: #,0
+		lineageTag: 97e9d714-71ad-420f-9c23-205e4abaca2c
+
+	measure '% ERNI RTT' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_rtt_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0df63ac3-3413-4d68-950a-30a868447d38
+
+	measure '% ERNI RTD' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_rtd_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 4e80bdc6-6804-41b9-b4f3-62ba3b665df7
+
+	measure '% ERNI TOTAL' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_total_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8c664639-2193-4980-9e63-24fc4c7a07b6
+
+	measure '% ERNI TIEMPO REAL' = AVERAGE(Fact_Energia_ESIOS[energia_no_integrable_tiempo_real_pct])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 133acb59-8c06-433a-aee5-c2848c87c8df
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

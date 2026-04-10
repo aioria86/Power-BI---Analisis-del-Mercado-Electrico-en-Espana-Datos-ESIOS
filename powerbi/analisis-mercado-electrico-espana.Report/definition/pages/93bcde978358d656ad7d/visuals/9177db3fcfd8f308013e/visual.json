@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "b1223adbefbc3646a5de",
+  "name": "9177db3fcfd8f308013e",
   "position": {
-    "x": 1005.6423173803526,
-    "y": 0,
-    "z": 4000,
-    "height": 45.340050377833748,
-    "width": 274.7607052896725,
-    "tabOrder": 3000
+    "x": 720.90680100755662,
+    "y": 1.1335012594458438,
+    "z": 2000,
+    "height": 47.607052896725442,
+    "width": 116.75062972292191,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,39 +23,28 @@
                       "Entity": "Dim_Calendario"
                     }
                   },
-                  "Property": "Fecha"
+                  "Property": "Año"
                 }
               },
-              "queryRef": "Dim_Calendario.Fecha",
-              "nativeQueryRef": "Fecha",
+              "queryRef": "Dim_Calendario.Año",
+              "nativeQueryRef": "Año",
               "active": true
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Dim_Calendario"
-                  }
-                },
-                "Property": "Fecha"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
       "data": [
         {
           "properties": {
+            "numericStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "2025D"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -98,7 +87,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "Fecha"
+                              "Property": "Año"
                             }
                           }
                         ],
@@ -106,7 +95,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "datetime'2025-12-22T00:00:00'"
+                                "Value": "2025L"
                               }
                             }
                           ]
@@ -135,7 +124,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "Fecha",
+      "groupName": "Año",
       "fieldChanges": true,
       "filterChanges": true
     },

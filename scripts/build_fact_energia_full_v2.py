@@ -33,7 +33,6 @@ def cargar_datos(indicador):
 def procesar_generacion(df, nombre_col):
 
     df["datetime"] = pd.to_datetime(df["datetime"], utc=True)
-
     df["datetime_hora"] = df["datetime"].dt.floor("h")
 
     df_grouped = (
@@ -46,10 +45,24 @@ def procesar_generacion(df, nombre_col):
     return df_grouped
 
 
+def procesar_precio(df, nombre_col):
+
+    df["datetime"] = pd.to_datetime(df["datetime"], utc=True)
+    df["datetime_hora"] = df["datetime"].dt.floor("h")
+
+    df_grouped = (
+        df.groupby("datetime_hora")["value"]
+        .mean()
+        .reset_index()
+        .rename(columns={"value": nombre_col})
+    )
+
+    return df_grouped
+
+
 def procesar_base(df):
 
     df["datetime"] = pd.to_datetime(df["datetime"], utc=True)
-
     df = df.sort_values("datetime")
 
     return df
@@ -88,8 +101,8 @@ if __name__ == "__main__":
     precio_mercado = cargar_datos("precio_mercado")
     precio_ajustes = cargar_datos("precio_ajustes")
 
-    precio_mercado = procesar_generacion(precio_mercado, "precio_mercado")
-    precio_ajustes = procesar_generacion(precio_ajustes, "precio_ajustes")
+    precio_mercado = procesar_precio(precio_mercado, "precio_mercado")
+    precio_ajustes = procesar_precio(precio_ajustes, "precio_ajustes")
 
     df_base["datetime_hora"] = df_base["datetime"].dt.floor("h")
 
@@ -126,13 +139,11 @@ if __name__ == "__main__":
     # =========================
     # POTENCIA
     # =========================
-
     pot_ind = cargar_datos("pot_indisponible")
     if pot_ind is not None:
         pot_ind = procesar_generacion(pot_ind, "pot_indisponible")
         df_base = df_base.merge(pot_ind, on="datetime_hora", how="left")
 
-    # Disponible
     for ind, col in [
         ("pot_disp_nuclear", "pot_disp_nuclear"),
         ("pot_disp_carbon", "pot_disp_carbon"),
@@ -147,7 +158,6 @@ if __name__ == "__main__":
             df = procesar_generacion(df, col)
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
-    # Instalada
     for ind, col in [
         ("pot_inst_nuclear", "pot_inst_nuclear"),
         ("pot_inst_carbon", "pot_inst_carbon"),
@@ -191,7 +201,7 @@ if __name__ == "__main__":
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================
-    # CONSUMO NUEVO
+    # CONSUMO
     # =========================
     for ind, col in [
         ("consumo_mercado_libre", "consumo_mercado_libre"),
@@ -202,6 +212,56 @@ if __name__ == "__main__":
         df = cargar_datos(ind)
         if df is not None:
             df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # MERCADO Y SERVICIOS
+    # =========================
+    for ind, col in [
+        ("restricciones_pbf_subir", "restricciones_pbf_subir"),
+        ("restricciones_pbf_bajar", "restricciones_pbf_bajar"),
+        ("restricciones_tr", "restricciones_tr"),
+        ("balance_rr", "balance_rr"),
+        ("regulacion_terciaria", "regulacion_terciaria"),
+        ("regulacion_secundaria", "regulacion_secundaria"),
+        ("gastos_balance", "gastos_balance"),
+        ("ingresos_balance", "ingresos_balance"),
+        ("restricciones_tr_subir", "restricciones_tr_subir"),
+        ("restricciones_tr_bajar", "restricciones_tr_bajar"),
+        ("intradiario_sesion_5", "intradiario_sesion_5"),
+        ("intradiario_sesion_6", "intradiario_sesion_6"),
+        ("intradiario_sesion_7", "intradiario_sesion_7"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # DESVÍOS Y BALANCE
+    # =========================
+    for ind, col in [
+        ("desvios_subir", "desvios_subir"),
+        ("desvios_bajar", "desvios_bajar"),
+        ("energia_balance", "energia_balance"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # 🟣 ENERGÍA NO INTEGRABLE (NUEVO)
+    # =========================
+    for ind, col in [
+        ("energia_no_integrable_total_pct", "energia_no_integrable_total_pct"),
+        ("energia_no_integrable_rtt_pct", "energia_no_integrable_rtt_pct"),
+        ("energia_no_integrable_rtd_pct", "energia_no_integrable_rtd_pct"),
+        ("energia_no_integrable_tiempo_real_pct", "energia_no_integrable_tiempo_real_pct"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_precio(df, col)
             df_base = df_base.merge(df, on="datetime_hora", how="left")
 
     # =========================

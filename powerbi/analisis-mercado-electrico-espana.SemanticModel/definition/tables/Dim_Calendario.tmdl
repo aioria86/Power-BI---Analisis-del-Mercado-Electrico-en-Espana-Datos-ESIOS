@@ -37,6 +37,9 @@ table Dim_Calendario
 		lineageTag: ecb7dacc-c030-4ae1-8bd4-ca0425683311
 		summarizeBy: none
 		sourceColumn: Mes
+		sortByColumn: 'Mes Número'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
