@@ -570,6 +570,10 @@ table Tabla_Medidas
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 2e93d792-34b0-46a0-9017-0b3b871c8520
 
+	measure 'Energía Balance (MWh)' = AVERAGE(Fact_Energia_ESIOS[energia_balance])
+		formatString: #,0
+		lineageTag: 97e9d714-71ad-420f-9c23-205e4abaca2c
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

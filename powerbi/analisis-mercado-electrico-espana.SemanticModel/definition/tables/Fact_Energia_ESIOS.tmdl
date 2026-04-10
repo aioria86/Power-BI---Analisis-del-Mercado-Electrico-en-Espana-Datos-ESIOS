@@ -424,26 +424,6 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column bombeo_turbinacion
-		dataType: double
-		lineageTag: 0b830928-7b76-4e50-bb9e-4c232eda8bb3
-		summarizeBy: sum
-		sourceColumn: bombeo_turbinacion
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column bombeo_consumo
-		dataType: double
-		lineageTag: 8fa4f5c1-078c-491b-a38a-157ef528b9f6
-		summarizeBy: sum
-		sourceColumn: bombeo_consumo
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column francia_import
 		dataType: double
 		lineageTag: d32b3727-3b12-48b9-8598-c6b1efcb05e4
@@ -544,9 +524,29 @@ table Fact_Energia_ESIOS
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column bombeo_turbinacion
+		dataType: double
+		lineageTag: 04a8660f-14db-401a-8574-2e5bd6c07817
+		summarizeBy: sum
+		sourceColumn: bombeo_turbinacion
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bombeo_consumo
+		dataType: double
+		lineageTag: dea5ac7d-7dfb-424f-9168-67c8fd51ebe9
+		summarizeBy: sum
+		sourceColumn: bombeo_consumo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column restricciones_pbf_subir
 		dataType: double
-		lineageTag: 4caa7078-4bd2-4cff-bba3-585e344aced7
+		lineageTag: 7e4ac48a-4c73-44fa-9e51-7344f0fa0e87
 		summarizeBy: sum
 		sourceColumn: restricciones_pbf_subir
 
@@ -556,7 +556,7 @@ table Fact_Energia_ESIOS
 
 	column restricciones_pbf_bajar
 		dataType: double
-		lineageTag: c42aba9c-19b0-4211-b971-1ca3b2d11510
+		lineageTag: 9fb1a426-48c6-4198-9c4a-13b606567d51
 		summarizeBy: sum
 		sourceColumn: restricciones_pbf_bajar
 
@@ -566,7 +566,7 @@ table Fact_Energia_ESIOS
 
 	column restricciones_tr
 		dataType: double
-		lineageTag: 06cfa8b2-6c37-4739-baad-54e1357aa8b7
+		lineageTag: 92c38749-9db4-4661-9b5e-9b63a1defc47
 		summarizeBy: sum
 		sourceColumn: restricciones_tr
 
@@ -576,7 +576,7 @@ table Fact_Energia_ESIOS
 
 	column balance_rr
 		dataType: double
-		lineageTag: 8db94d4e-5367-4fa9-9c3e-650f9d8d1594
+		lineageTag: 70e052e1-8419-4b02-9d2d-d5f5de511dc5
 		summarizeBy: sum
 		sourceColumn: balance_rr
 
@@ -586,7 +586,7 @@ table Fact_Energia_ESIOS
 
 	column regulacion_terciaria
 		dataType: double
-		lineageTag: 6e9f4b64-fcef-4ce0-b6c4-ee1d77ecc69e
+		lineageTag: 485674a6-c8d1-4cdb-9ad1-9feaea281dea
 		summarizeBy: sum
 		sourceColumn: regulacion_terciaria
 
@@ -596,7 +596,7 @@ table Fact_Energia_ESIOS
 
 	column regulacion_secundaria
 		dataType: double
-		lineageTag: d92b6eda-abb1-473b-9c3a-374bfbba9330
+		lineageTag: ebbff4e0-509a-4ee7-a788-be99616da610
 		summarizeBy: sum
 		sourceColumn: regulacion_secundaria
 
@@ -606,7 +606,7 @@ table Fact_Energia_ESIOS
 
 	column gastos_balance
 		dataType: double
-		lineageTag: bac5df44-4e58-4cf2-a15c-1b1399510473
+		lineageTag: c52678a8-042e-421e-916d-a52509933903
 		summarizeBy: sum
 		sourceColumn: gastos_balance
 
@@ -616,7 +616,7 @@ table Fact_Energia_ESIOS
 
 	column ingresos_balance
 		dataType: double
-		lineageTag: 14e3df56-3260-4f66-9c69-f90e64d51c83
+		lineageTag: 5445ba5e-f00a-4e76-8ac1-1255eb38410f
 		summarizeBy: sum
 		sourceColumn: ingresos_balance
 
@@ -626,7 +626,7 @@ table Fact_Energia_ESIOS
 
 	column restricciones_tr_subir
 		dataType: double
-		lineageTag: b0eb9919-ebae-4c33-ae42-1e7e0cc6e409
+		lineageTag: 939a399e-5af2-41e6-9661-e9d58a45718e
 		summarizeBy: sum
 		sourceColumn: restricciones_tr_subir
 
@@ -636,7 +636,7 @@ table Fact_Energia_ESIOS
 
 	column restricciones_tr_bajar
 		dataType: double
-		lineageTag: ebf7e1e2-db54-4d0a-8ee2-d59a82fe1fd0
+		lineageTag: 4d1f0e92-610c-4904-b6c4-aef1763c32d3
 		summarizeBy: sum
 		sourceColumn: restricciones_tr_bajar
 
@@ -646,7 +646,7 @@ table Fact_Energia_ESIOS
 
 	column intradiario_sesion_5
 		dataType: double
-		lineageTag: ded7981a-1471-4384-a960-d923f95349ec
+		lineageTag: 3b263742-b6bd-4810-8565-83eed91b2955
 		summarizeBy: sum
 		sourceColumn: intradiario_sesion_5
 
@@ -656,7 +656,7 @@ table Fact_Energia_ESIOS
 
 	column intradiario_sesion_6
 		dataType: double
-		lineageTag: 7e131a43-9ad2-4236-b1c5-83fbea2b1a90
+		lineageTag: 74541d62-b8e8-47c4-bd61-b06a09a2fe22
 		summarizeBy: sum
 		sourceColumn: intradiario_sesion_6
 
@@ -666,9 +666,39 @@ table Fact_Energia_ESIOS
 
 	column intradiario_sesion_7
 		dataType: double
-		lineageTag: fd500701-2131-49b8-bb77-386e534b4eb0
+		lineageTag: 2273b65c-d8f6-45c2-ae11-58cc13bc46d8
 		summarizeBy: sum
 		sourceColumn: intradiario_sesion_7
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column desvios_subir
+		dataType: double
+		lineageTag: d4f532bd-b9ee-43ed-ad73-a977b65e1ff0
+		summarizeBy: sum
+		sourceColumn: desvios_subir
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column desvios_bajar
+		dataType: double
+		lineageTag: 33633dab-0f56-441f-8ef6-44fc811e0f56
+		summarizeBy: sum
+		sourceColumn: desvios_bajar
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column energia_balance
+		dataType: double
+		lineageTag: 61829afa-bb35-4e75-8677-8ee26dad0f22
+		summarizeBy: sum
+		sourceColumn: energia_balance
 
 		annotation SummarizationSetBy = Automatic
 

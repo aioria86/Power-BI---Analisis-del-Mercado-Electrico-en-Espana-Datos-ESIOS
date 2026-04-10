@@ -33,7 +33,6 @@ def cargar_datos(indicador):
 def procesar_generacion(df, nombre_col):
 
     df["datetime"] = pd.to_datetime(df["datetime"], utc=True)
-
     df["datetime_hora"] = df["datetime"].dt.floor("h")
 
     df_grouped = (
@@ -46,10 +45,25 @@ def procesar_generacion(df, nombre_col):
     return df_grouped
 
 
+# 🔥 SOLO PARA PRECIOS
+def procesar_precio(df, nombre_col):
+
+    df["datetime"] = pd.to_datetime(df["datetime"], utc=True)
+    df["datetime_hora"] = df["datetime"].dt.floor("h")
+
+    df_grouped = (
+        df.groupby("datetime_hora")["value"]
+        .mean()
+        .reset_index()
+        .rename(columns={"value": nombre_col})
+    )
+
+    return df_grouped
+
+
 def procesar_base(df):
 
     df["datetime"] = pd.to_datetime(df["datetime"], utc=True)
-
     df = df.sort_values("datetime")
 
     return df
@@ -88,8 +102,8 @@ if __name__ == "__main__":
     precio_mercado = cargar_datos("precio_mercado")
     precio_ajustes = cargar_datos("precio_ajustes")
 
-    precio_mercado = procesar_generacion(precio_mercado, "precio_mercado")
-    precio_ajustes = procesar_generacion(precio_ajustes, "precio_ajustes")
+    precio_mercado = procesar_precio(precio_mercado, "precio_mercado")
+    precio_ajustes = procesar_precio(precio_ajustes, "precio_ajustes")
 
     df_base["datetime_hora"] = df_base["datetime"].dt.floor("h")
 
@@ -213,13 +227,24 @@ if __name__ == "__main__":
         ("regulacion_secundaria", "regulacion_secundaria"),
         ("gastos_balance", "gastos_balance"),
         ("ingresos_balance", "ingresos_balance"),
-
-        # 🔥 NUEVOS INDICADORES
         ("restricciones_tr_subir", "restricciones_tr_subir"),
         ("restricciones_tr_bajar", "restricciones_tr_bajar"),
         ("intradiario_sesion_5", "intradiario_sesion_5"),
         ("intradiario_sesion_6", "intradiario_sesion_6"),
         ("intradiario_sesion_7", "intradiario_sesion_7"),
+    ]:
+        df = cargar_datos(ind)
+        if df is not None:
+            df = procesar_generacion(df, col)
+            df_base = df_base.merge(df, on="datetime_hora", how="left")
+
+    # =========================
+    # 🔴 DESVÍOS Y BALANCE (NUEVO BLOQUE)
+    # =========================
+    for ind, col in [
+        ("desvios_subir", "desvios_subir"),
+        ("desvios_bajar", "desvios_bajar"),
+        ("energia_balance", "energia_balance"),
     ]:
         df = cargar_datos(ind)
         if df is not None:
