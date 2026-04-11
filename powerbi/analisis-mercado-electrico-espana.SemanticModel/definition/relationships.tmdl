@@ -29,3 +29,7 @@ relationship a7126dd8-bd19-d911-5006-b4af8279b75f
 	fromColumn: fact_precio_spot.fecha
 	toColumn: Dim_Calendario.Fecha
 
+relationship 4896055a-80f6-f533-d088-02bece62d64e
+	fromColumn: fact_precio_spot.pais
+	toColumn: Dim_Pais.pais
+

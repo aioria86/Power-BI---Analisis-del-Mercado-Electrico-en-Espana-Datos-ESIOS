@@ -1,0 +1,50 @@
+table Dim_Pais
+	lineageTag: 7eaf3d17-357a-442b-b6f5-a0a5e0b54187
+
+	column pais
+		lineageTag: b3966cd8-2e5a-43a9-b5a2-23813a28d1e5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [pais]
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column icono
+		lineageTag: 7f4ad120-b8e7-4bd9-a803-6c476d28a078
+		dataCategory: ImageUrl
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [icono]
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		formatString: 0
+		lineageTag: d4fb5bb7-02ab-4a50-8a46-10c58b991b92
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Pais = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "pais", STRING,
+				    "icono", STRING,
+				    "orden", INTEGER,
+				    {
+				        {"España", "https://i.ibb.co/FbJKGZ2L/icon-eye-orange.png", 1},
+				        {"Francia", "https://i.ibb.co/sTQSTGv/icon-eye-purple.png", 2},
+				        {"Portugal", "https://i.ibb.co/21CjbK6Z/icon-eye-red.png", 3},
+				        {"Alemania", "https://i.ibb.co/4wWxvfPK/icon-eye-blue.png", 4},
+				        {"Bélgica", "https://i.ibb.co/fdqwZNK2/icon-eye-dark-blue.png", 5},
+				        {"Países Bajos", "https://i.ibb.co/RktX5M1H/icon-eye-green.png", 6}
+				    }
+				)
+
+	annotation PBI_Id = cbff6d2471ed45bebc0518803e693add
+
