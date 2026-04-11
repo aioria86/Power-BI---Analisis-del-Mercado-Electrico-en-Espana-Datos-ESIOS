@@ -1,0 +1,85 @@
+table fact_precio_spot
+	lineageTag: da96082b-0411-4272-89fc-4001df454a26
+
+	column datetime
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c431c057-0e83-482e-9b35-2fb1e2216ed3
+		summarizeBy: none
+		sourceColumn: datetime
+
+		variation Variación
+			isDefault
+			relationship: c9483e5a-084a-4f71-972b-f77cda782543
+			defaultHierarchy: LocalDateTable_ae1f3a55-0853-4634-ab6f-a45710c7706b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column pais
+		dataType: string
+		lineageTag: 142cdaa3-a390-4f45-a81d-7a512fbc4d4d
+		summarizeBy: none
+		sourceColumn: pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio
+		dataType: double
+		lineageTag: aaf39352-2b52-4a9c-89b9-4b7d2b790c7e
+		summarizeBy: sum
+		sourceColumn: precio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f0118aff-4ded-4a9c-90db-8bb425543938
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column hora
+		dataType: int64
+		formatString: 0
+		lineageTag: 4fafa00e-fe47-4de0-b5e3-e29ad7f3e02f
+		summarizeBy: none
+		sourceColumn: hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column año
+		dataType: int64
+		formatString: 0
+		lineageTag: f2bf97f1-8166-48a5-be9a-a3bd33806ee1
+		summarizeBy: sum
+		sourceColumn: año
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 11c0f1a3-c677-4199-85c2-2890c4b9235b
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_precio_spot = m
+		mode: import
+		source =
+				let
+				    Origen = Parquet.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---An-lisis-del-Mercado-El-ctrico-en-Espa-a-Datos-ESIOS\data\processed\fact_precio_spot.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null])
+				in
+				    Origen
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

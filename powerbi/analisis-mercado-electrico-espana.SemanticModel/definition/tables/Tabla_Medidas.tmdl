@@ -590,6 +590,32 @@ table Tabla_Medidas
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 133acb59-8c06-433a-aee5-c2848c87c8df
 
+	measure 'Precio Spot' = AVERAGE(fact_precio_spot[precio])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: caa6d3ca-908a-48c1-afc2-ff3b21ad39f1
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Saldo Total' =
+			
+			[Saldo Francia] +
+			[Saldo Portugal] +
+			[Saldo Marruecos]
+		formatString: 0
+		lineageTag: 341b02a8-dee8-4922-b500-1180a5b255fd
+
+	measure 'Saldo Interconexion Pais' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Dim_Pais'[pais]),
+			    "Portugal", [Saldo Portugal],
+			    "Francia", [Saldo Francia],
+			    "Marruecos", [Saldo Marruecos]
+			)
+		lineageTag: 6349eed3-50d2-4a41-8a85-87afd677d93c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

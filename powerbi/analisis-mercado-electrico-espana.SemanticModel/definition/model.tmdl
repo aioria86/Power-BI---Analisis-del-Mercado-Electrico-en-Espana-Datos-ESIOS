@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["fact_demanda","fact_energia","fact_energia_full","Fact_Energia_ESIOS","Dim_Calendario","Tabla_Medidas","Dim_Hora"]
+annotation PBI_QueryOrder = ["fact_demanda","fact_energia","fact_energia_full","Fact_Energia_ESIOS","Dim_Calendario","Tabla_Medidas","Dim_Hora","fact_precio_spot"]
 
 ref table Tabla_Medidas
 ref table Fact_Energia_ESIOS
@@ -24,6 +24,9 @@ ref table 'Tabla Interconexiones'
 ref table 'Tabla Consumo'
 ref table 'Tabla Mercado'
 ref table 'Tabla Precio'
+ref table fact_precio_spot
+ref table LocalDateTable_ae1f3a55-0853-4634-ab6f-a45710c7706b
+ref table Dim_Pais
 
 ref cultureInfo es-ES
 

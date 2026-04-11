@@ -18,7 +18,7 @@ table Dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 7a478c72-387d-4298-bb7f-ee1a3a0b90af
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Año
 
 		annotation SummarizationSetBy = Automatic
@@ -27,7 +27,7 @@ table Dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: adfbcf35-c5d9-4942-a604-d88b4ec6177c
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Mes Número
 
 		annotation SummarizationSetBy = Automatic
@@ -71,7 +71,7 @@ table Dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 639f2802-f786-4d78-aabc-b2604734f4dc
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Trimestre Número
 
 		annotation SummarizationSetBy = Automatic
@@ -96,7 +96,7 @@ table Dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 3a570bb8-c1d7-4937-9348-383c222ab2a8
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Semana del Año
 
 		annotation SummarizationSetBy = Automatic
@@ -105,7 +105,7 @@ table Dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 680f3e3f-7ad7-4db3-82c4-a592898d3f8e
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Día
 
 		annotation SummarizationSetBy = Automatic
@@ -114,7 +114,7 @@ table Dim_Calendario
 		dataType: int64
 		formatString: 0
 		lineageTag: 8db4c25d-85c9-4857-933f-881d16a376f7
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: Día Semana Nº
 
 		annotation SummarizationSetBy = Automatic
