@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 331,
+        "x": 163,
         "y": 0
       },
       "nodes": [
@@ -19,12 +19,12 @@
             "height": 184,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 1414,
-            "y": 0
+            "x": 1038,
+            "y": 530
           },
           "nodeIndex": "Tabla_Medidas",
           "nodeLineageTag": "929f63c0-5eb9-4958-9a4c-2c35e3514f28",
@@ -32,7 +32,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
@@ -45,7 +45,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         },
         {
           "location": {
@@ -58,67 +58,72 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 1077,
-            "y": 229
+            "x": 1366,
+            "y": 558
           },
           "nodeIndex": "Tabla_Almacenamiento",
+          "nodeLineageTag": "9715e163-3287-41f8-a434-3238b81b0aa8",
           "size": {
-            "height": 200,
+            "height": 145,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 11
         },
         {
           "location": {
-            "x": 1361,
-            "y": 229
+            "x": 1367,
+            "y": 396
           },
           "nodeIndex": "Tabla Interconexiones",
+          "nodeLineageTag": "8fd652ae-e2ad-4221-bc6f-32cb6be5c5cb",
           "size": {
-            "height": 200,
+            "height": 145,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 1645,
-            "y": 229
+            "x": 1367,
+            "y": 236
           },
           "nodeIndex": "Tabla Consumo",
+          "nodeLineageTag": "2eb65b45-9cbb-4eac-b0dc-345a701f98a5",
           "size": {
-            "height": 200,
+            "height": 145,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 1929,
-            "y": 229
+            "x": 1367,
+            "y": 76
           },
           "nodeIndex": "Tabla Mercado",
+          "nodeLineageTag": "e75f81e7-0161-4cd9-a0d2-d9ad82a39fb5",
           "size": {
-            "height": 200,
+            "height": 145,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 2213,
-            "y": 229
+            "x": 1367,
+            "y": 720
           },
           "nodeIndex": "Tabla Precio",
+          "nodeLineageTag": "a17d625a-39ba-4625-97a7-99f9b8c77371",
           "size": {
-            "height": 200,
+            "height": 145,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 8
         },
         {
           "location": {
@@ -131,7 +136,7 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 9
         },
         {
           "location": {
@@ -144,7 +149,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 10
         }
       ],
       "name": "Todas las tablas",
