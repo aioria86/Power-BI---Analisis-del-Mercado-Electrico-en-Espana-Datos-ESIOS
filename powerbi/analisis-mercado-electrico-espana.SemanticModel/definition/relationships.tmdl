@@ -16,3 +16,16 @@ relationship dfe3bde7-9cb7-8631-7d42-c1ec0bb1a788
 	fromColumn: Fact_Energia_ESIOS.hora
 	toColumn: Dim_Hora.hora
 
+relationship c9483e5a-084a-4f71-972b-f77cda782543
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_precio_spot.datetime
+	toColumn: LocalDateTable_ae1f3a55-0853-4634-ab6f-a45710c7706b.Date
+
+relationship AutoDetected_8478124e-dd3c-493a-b6ca-99c7629a239c
+	fromColumn: fact_precio_spot.hora
+	toColumn: Dim_Hora.hora
+
+relationship a7126dd8-bd19-d911-5006-b4af8279b75f
+	fromColumn: fact_precio_spot.fecha
+	toColumn: Dim_Calendario.Fecha
+
