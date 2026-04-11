@@ -3735,12 +3735,6 @@ cultureInfo es-ES
 			          "import portugal": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "portugal": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
 			        }
 			      ]
 			    },
@@ -3789,12 +3783,6 @@ cultureInfo es-ES
 			          "export portugal": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "portugal": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
 			        }
 			      ]
 			    },
@@ -3827,6 +3815,16 @@ cultureInfo es-ES
 			          "saldo francia": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Francia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3843,6 +3841,16 @@ cultureInfo es-ES
 			          "saldo portugal": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Portugal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3858,6 +3866,16 @@ cultureInfo es-ES
 			        {
 			          "saldo marruecos": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Marruecos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5766,7 +5784,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Precio Promedio (€/MWh)": {
+			          "€/MWh": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6985,25 +7003,97 @@ cultureInfo es-ES
 			          "pais": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "País": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "dim_pais.icono": {
+			    "tabla_medida.saldo_total": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Dim_Pais",
-			          "ConceptualProperty": "icono"
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Saldo Total"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "icono": {
+			          "saldo total": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          ".": {
+			          "saldo aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "saldo overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_pais.orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Pais",
+			          "ConceptualProperty": "orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orden": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tabla_medida.saldo_interconexion_pais": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "Saldo Interconexion Pais"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo interconexion pais": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Intercambio Neto Diario (MWh)": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7016,6 +7106,138 @@ cultureInfo es-ES
 			    }
 			  },
 			  "Relationships": {
+			    "fact_precio_spot_datetime_me_has_fact_precio_spot_datetime_día": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.me"
+			          }
+			        },
+			        "fact_precio_spot.datetime.día": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.día"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me2"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_trimestre_has_fact_precio_spot_datetime_me": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.trimestre": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.trimestre"
+			          }
+			        },
+			        "fact_precio_spot.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres2"
+			        }
+			      ]
+			    },
 			    "fact_precio_spot_datetime_año_has_fact_precio_spot_datetime_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_precio_spot"
@@ -7276,7 +7498,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días"
+			          "ID": "me_have_días1"
 			        },
 			        {
 			          "Attribute": {
@@ -7289,7 +7511,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me"
+			          "ID": "días_have_me1"
 			        },
 			        {
 			          "Preposition": {
@@ -7342,7 +7564,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
+			          "ID": "trimestres_have_me1"
 			        },
 			        {
 			          "Attribute": {
@@ -7355,7 +7577,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
+			          "ID": "me_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -7639,7 +7861,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días1"
+			          "ID": "me_have_días2"
 			        },
 			        {
 			          "Attribute": {
@@ -7652,7 +7874,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me1"
+			          "ID": "días_have_me2"
 			        },
 			        {
 			          "Preposition": {
@@ -7705,7 +7927,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me2"
 			        },
 			        {
 			          "Attribute": {
@@ -7718,7 +7940,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -7987,14 +8209,7 @@ cultureInfo es-ES
 			        "dim_pais": {
 			          "Target": {
 			            "Entity": "dim_pais"
-			          },
-			          "Nouns": [
-			            {
-			              "País": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			          }
 			        }
 			      },
 			      "Phrasings": [
@@ -8210,7 +8425,40 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "dim_pais_has_icono": {
+			    "fact_energia_ESIO_has_tabla_medida_saldo_interconexion_pais": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.saldo_interconexion_pais": {
+			          "Target": {
+			            "Entity": "tabla_medida.saldo_interconexion_pais"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.saldo_interconexion_pais"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_saldo_interconexion_pais"
+			        }
+			      ]
+			    },
+			    "dim_pais_has_tabla_medida_saldo_interconexion_pais": {
 			      "Binding": {
 			        "ConceptualEntity": "Dim_Pais"
 			      },
@@ -8221,9 +8469,9 @@ cultureInfo es-ES
 			            "Entity": "dim_pais"
 			          }
 			        },
-			        "dim_pais.icono": {
+			        "tabla_medida.saldo_interconexion_pais": {
 			          "Target": {
-			            "Entity": "dim_pais.icono"
+			            "Entity": "tabla_medida.saldo_interconexion_pais"
 			          }
 			        }
 			      },
@@ -8234,12 +8482,78 @@ cultureInfo es-ES
 			              "Role": "dim_pais"
 			            },
 			            "Object": {
-			              "Role": "dim_pais.icono"
+			              "Role": "tabla_medida.saldo_interconexion_pais"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_paises_have_iconos"
+			          "ID": "dim_paises_have_saldo_interconexion_pais"
+			        }
+			      ]
+			    },
+			    "dim_pais_has_orden": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Pais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_pais": {
+			          "Target": {
+			            "Entity": "dim_pais"
+			          }
+			        },
+			        "dim_pais.orden": {
+			          "Target": {
+			            "Entity": "dim_pais.orden"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_pais"
+			            },
+			            "Object": {
+			              "Role": "dim_pais.orden"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_paises_have_ordens"
+			        }
+			      ]
+			    },
+			    "fact_energia_ESIO_has_tabla_medida_saldo_total": {
+			      "Binding": {
+			        "ConceptualEntity": "Fact_Energia_ESIOS"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_energia_ESIO": {
+			          "Target": {
+			            "Entity": "fact_energia_ESIO"
+			          }
+			        },
+			        "tabla_medida.saldo_total": {
+			          "Target": {
+			            "Entity": "tabla_medida.saldo_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_energia_ESIO"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.saldo_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_energia_ESIOs_have_saldo_total"
 			        }
 			      ]
 			    },
@@ -15104,138 +15418,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_energia_ESIOs_have_demanda_total"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_trimestre_has_fact_precio_spot_datetime_me": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.trimestre": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.trimestre"
-			          }
-			        },
-			        "fact_precio_spot.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me2"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres2"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres2"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_me_has_fact_precio_spot_datetime_día": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.me"
-			          }
-			        },
-			        "fact_precio_spot.datetime.día": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días2"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.día"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me2"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me2"
 			        }
 			      ]
 			    }

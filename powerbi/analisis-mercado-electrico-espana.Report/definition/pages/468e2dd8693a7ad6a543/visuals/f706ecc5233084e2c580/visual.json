@@ -23,12 +23,11 @@
                       "Entity": "Dim_Pais"
                     }
                   },
-                  "Property": "icono"
+                  "Property": " "
                 }
               },
-              "queryRef": "Dim_Pais.icono",
-              "nativeQueryRef": ".",
-              "displayName": "."
+              "queryRef": "Dim_Pais. ",
+              "nativeQueryRef": " "
             },
             {
               "field": {
@@ -42,7 +41,8 @@
                 }
               },
               "queryRef": "Dim_Pais.pais",
-              "nativeQueryRef": "pais"
+              "nativeQueryRef": "País",
+              "displayName": "País"
             },
             {
               "field": {
@@ -56,9 +56,9 @@
                 }
               },
               "queryRef": "Tabla_Medidas.Precio Spot",
-              "nativeQueryRef": "Precio Promedio (€/MWh)",
-              "displayName": "Precio Promedio (€/MWh)",
-              "format": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\""
+              "nativeQueryRef": "€/MWh",
+              "displayName": "€/MWh",
+              "format": "#,0.00"
             }
           ]
         }
@@ -149,7 +149,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "229.24969993631254D"
+                  "Value": "162.41018341862505D"
                 }
               }
             }

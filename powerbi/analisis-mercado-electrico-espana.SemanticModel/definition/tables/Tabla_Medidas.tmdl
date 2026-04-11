@@ -596,6 +596,26 @@ table Tabla_Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
+	measure 'Saldo Total' =
+			
+			[Saldo Francia] +
+			[Saldo Portugal] +
+			[Saldo Marruecos]
+		formatString: 0
+		lineageTag: 341b02a8-dee8-4922-b500-1180a5b255fd
+
+	measure 'Saldo Interconexion Pais' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Dim_Pais'[pais]),
+			    "Portugal", [Saldo Portugal],
+			    "Francia", [Saldo Francia],
+			    "Marruecos", [Saldo Marruecos]
+			)
+		lineageTag: 6349eed3-50d2-4a41-8a85-87afd677d93c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

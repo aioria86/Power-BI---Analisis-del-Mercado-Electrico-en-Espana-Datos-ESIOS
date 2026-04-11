@@ -66,7 +66,7 @@
               },
               "queryRef": "Tabla_Medidas.Precio Spot",
               "nativeQueryRef": "Precio Spot",
-              "format": "#,0.00 \"€\";-#,0.00 \"€\";#,0.00 \"€\""
+              "format": "#,0.00"
             }
           ]
         }
@@ -97,7 +97,27 @@
             "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'€/MWh'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "lineChartType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'smooth'"
                 }
               }
             }

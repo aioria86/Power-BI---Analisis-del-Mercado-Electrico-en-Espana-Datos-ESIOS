@@ -10,15 +10,6 @@ table Dim_Pais
 
 		annotation SummarizationSetBy = Automatic
 
-	column icono
-		lineageTag: 7f4ad120-b8e7-4bd9-a803-6c476d28a078
-		dataCategory: ImageUrl
-		summarizeBy: none
-		isNameInferred
-		sourceColumn: [icono]
-
-		annotation SummarizationSetBy = Automatic
-
 	column orden
 		formatString: 0
 		lineageTag: d4fb5bb7-02ab-4a50-8a46-10c58b991b92
@@ -28,13 +19,22 @@ table Dim_Pais
 
 		annotation SummarizationSetBy = Automatic
 
+	column ' '
+		lineageTag: e3eb02ce-d709-4b5a-a2c8-169f676d95a3
+		dataCategory: ImageUrl
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ ]
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Dim_Pais = calculated
 		mode: import
 		source =
 				
 				DATATABLE(
 				    "pais", STRING,
-				    "icono", STRING,
+				    " ", STRING,
 				    "orden", INTEGER,
 				    {
 				        {"España", "https://i.ibb.co/FbJKGZ2L/icon-eye-orange.png", 1},
@@ -42,7 +42,8 @@ table Dim_Pais
 				        {"Portugal", "https://i.ibb.co/21CjbK6Z/icon-eye-red.png", 3},
 				        {"Alemania", "https://i.ibb.co/4wWxvfPK/icon-eye-blue.png", 4},
 				        {"Bélgica", "https://i.ibb.co/fdqwZNK2/icon-eye-dark-blue.png", 5},
-				        {"Países Bajos", "https://i.ibb.co/RktX5M1H/icon-eye-green.png", 6}
+				        {"Países Bajos", "https://i.ibb.co/RktX5M1H/icon-eye-green.png", 6},
+				        {"Marruecos", "https://i.ibb.co/kgCs2YyK/icon-eye-pink.png", 7}
 				    }
 				)
 
