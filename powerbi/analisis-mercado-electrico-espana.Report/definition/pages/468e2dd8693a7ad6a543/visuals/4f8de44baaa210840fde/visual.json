@@ -4,7 +4,7 @@
   "position": {
     "x": 0,
     "y": 484.00503778337531,
-    "z": 8,
+    "z": 8000,
     "height": 415.99496221662469,
     "width": 848.992443324937,
     "tabOrder": 8
@@ -232,6 +232,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'smooth'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

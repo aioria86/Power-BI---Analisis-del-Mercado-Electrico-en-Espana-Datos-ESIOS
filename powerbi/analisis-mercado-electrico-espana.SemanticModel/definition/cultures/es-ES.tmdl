@@ -7013,6 +7013,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Mercado Spot": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7106,72 +7116,6 @@ cultureInfo es-ES
 			    }
 			  },
 			  "Relationships": {
-			    "fact_precio_spot_datetime_me_has_fact_precio_spot_datetime_día": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.me"
-			          }
-			        },
-			        "fact_precio_spot.datetime.día": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.día"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me2"
-			        }
-			      ]
-			    },
 			    "fact_precio_spot_datetime_trimestre_has_fact_precio_spot_datetime_me": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_precio_spot"
@@ -7498,7 +7442,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días1"
+			          "ID": "me_have_días"
 			        },
 			        {
 			          "Attribute": {
@@ -7511,7 +7455,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me1"
+			          "ID": "días_have_me"
 			        },
 			        {
 			          "Preposition": {
@@ -7861,7 +7805,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días2"
+			          "ID": "me_have_días1"
 			        },
 			        {
 			          "Attribute": {
@@ -7874,7 +7818,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me2"
+			          "ID": "días_have_me1"
 			        },
 			        {
 			          "Preposition": {
@@ -15418,6 +15362,72 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_energia_ESIOs_have_demanda_total"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_me_has_fact_precio_spot_datetime_día": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.me"
+			          }
+			        },
+			        "fact_precio_spot.datetime.día": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.día"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me2"
 			        }
 			      ]
 			    }

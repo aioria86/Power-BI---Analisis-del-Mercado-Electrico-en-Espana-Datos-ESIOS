@@ -70,6 +70,11 @@
           "type": "CustomTheme"
         },
         {
+          "name": "icon-close8205518583802641.png",
+          "path": "icon-close8205518583802641.png",
+          "type": "Image"
+        },
+        {
           "name": "icon-eolica398594344097413.png",
           "path": "icon-eolica398594344097413.png",
           "type": "Image"
@@ -115,6 +120,11 @@
           "type": "Image"
         },
         {
+          "name": "icon-menu6830537027814353.png",
+          "path": "icon-menu6830537027814353.png",
+          "type": "Image"
+        },
+        {
           "name": "icon-nuclear8415362241458646.png",
           "path": "icon-nuclear8415362241458646.png",
           "type": "Image"
@@ -137,6 +147,11 @@
         {
           "name": "icon-solar9848019848923858.png",
           "path": "icon-solar9848019848923858.png",
+          "type": "Image"
+        },
+        {
+          "name": "logo-red-electrica48978112146301445.png",
+          "path": "logo-red-electrica48978112146301445.png",
           "type": "Image"
         }
       ]
