@@ -1,0 +1,1703 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "Menú Desplegado - Genracion",
+  "name": "3b518a6ebd4eb7275663",
+  "options": {
+    "targetVisualNames": []
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "532ea6a96abff787b47b",
+    "sections": {
+      "532ea6a96abff787b47b": {
+        "visualContainers": {
+          "00e4d453c2e0255b097f": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1cb4104b53b01c1b086c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Alerta Demanda"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {}
+            }
+          },
+          "01a098cfcb4514b82bb8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d2c7fb594186781c396c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Hora"
+                        }
+                      },
+                      "Property": "hora"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f76c67a0d590cc79e8ed",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a86ad9e67d1b0be42aa1",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Prevista"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "32ba155d7693704ded00",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Programada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "fc86d8c0203a5c56c52a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Programada Total Final"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "28950b90db9451195b49",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Banda Superior"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "3a0d6465b30049a958b7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Banda Inferior"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "lineChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Total"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Hora"
+                        }
+                      },
+                      "Property": "hora"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "0449a2798c3b63b18404": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "056e8734c75adc63ca49": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "51808659e32e5a9aebe0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Almacenamiento Neto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2e7570908e4adb8488a0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "% Almacenamiento"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Almacenamiento Neto"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "17ade6ee9075e3126ebf": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ba1e3f2b9c6063e115b0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Calendario"
+                        }
+                      },
+                      "Property": "Año"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Dim_Calendario",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "Año"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "2025L"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "numericStart": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "2025D"
+                            }
+                          }
+                        },
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Calendario"
+                        }
+                      },
+                      "Property": "Año"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "19ced3658b5d89f374d8": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "833262c415d422665d0b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_Energia_ESIOS"
+                            }
+                          },
+                          "Property": "pot_inst_carbon"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "518a0529a1cb13dc8096",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_Energia_ESIOS"
+                            }
+                          },
+                          "Property": "pot_inst_nuclear"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "04dc308c9312bc45b87b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_Energia_ESIOS"
+                            }
+                          },
+                          "Property": "pot_inst_ciclo_combinado"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "30cfdcf66914590dc27c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_Energia_ESIOS"
+                            }
+                          },
+                          "Property": "pot_inst_gas"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e0b6e7ee57207d768bd4",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_Energia_ESIOS"
+                            }
+                          },
+                          "Property": "pot_inst_hidraulica"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "pieChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Fact_Energia_ESIOS"
+                            }
+                          },
+                          "Property": "pot_inst_carbon"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "227d79f4820aa6055d12": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "353fe7bc43a5d5062c57",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Generacion Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "209e86003a02bb765e3d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "% Generacion"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Generacion Total"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "342db6ba1ae834305c8b": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "3af68be3a34c6d682815": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "44c0ad396769c9c299bf": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "50b29e8a64ecd55bd206": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ae29e85541cd86c19607",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Calendario"
+                        }
+                      },
+                      "Property": "Mes"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Dim_Calendario",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "Mes"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'Diciembre'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "numericStart": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "2025D"
+                            }
+                          }
+                        },
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Calendario"
+                        }
+                      },
+                      "Property": "Mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "580bcf3c42bd77ff7510": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3ec077ea7c4e15813d00",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Consumo Directo"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "736e2563c6a90429eaa8",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Consumo Mercado Libre"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "760ab95ba34d73d9b042",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Consumo Mercado Regulado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dfe65b2725ac2b456842",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Consumo Servicios Auxiliares"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Consumo Directo"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "5a2eb81df90dcbb958a4": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "627834ff166c9cc57989": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "574bf86060101d0409eb",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Disponible"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8f152b46b98a8a056939",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Indisponible"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "barChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Disponible"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "791fda0f81945fd031d3": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a1a0b9ce8dbe014bbcb7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Eolica"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a3d7775e85a742e90a90",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Hidraulica"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "80b0666ab1d60ee8cd58",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Solar"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1b67966f0dc7ca80308b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Nuclear"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a15c29d981ab7120c776",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Ciclo Combinado"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Eolica"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "8053baff47820a9d57cd": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "17004edab9d3a193a647",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Interconexiones Neto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "db0d69c1010c3b9b9704",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "% Interconexiones"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Interconexiones Neto"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "8fd99e5dbfe9b584bb38": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "9efb25499a1c70e8521e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a5d6aad7e0a8718147c3",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d8853b39045a0b134079",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Prevista"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6172f9e60ca6507d02b0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Programada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "92902e62a01dd3608208",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Programada Total Final"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Demanda Total"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "a130f63b60118b168d1f": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "123e604026872d1620b7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Variacion Demanda %"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Variacion Demanda %"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "a4730df31996b6a86b4b": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "ac8a156b2a92c0d37abc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "cded44f0059e74407d9a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Almacenamiento"
+                        }
+                      },
+                      "Property": "Tipo"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a8de70e5000c6850b630",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Valor Almacenamiento"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Almacenamiento"
+                        }
+                      },
+                      "Property": "Tipo"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "ad6cae46cc8c045ce59e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "2fb5ac6a1ade39bd6748",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Disponible"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5f7d792a43690b6e8560",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Indisponible"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Disponible"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "b1223adbefbc3646a5de": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "b3431853bdd721c02ec8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "d",
+                                "Entity": "Dim_Calendario",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "d"
+                                            }
+                                          },
+                                          "Property": "Fecha"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "datetime'2025-12-22T00:00:00'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Dim_Calendario"
+                        }
+                      },
+                      "Property": "Fecha"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "b54a293932593af07f32": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d153ce5b9e20e6862c72",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Consumo Total"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f4d70c8258254adae585",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "% Consumo"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Consumo Total"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "c642c959464628c65127": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "cd23c3fffc38d2dbff0e": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8196a15d0470503b50d5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "% Generacion Limpia"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "% Generacion Limpia"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "dc9249cc7848eb984ad4": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "8f9d91a6564c5c9e0762",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Hidraulica"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c6df00507acc0aa60a70",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Carbon"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8b114e790460163ae482",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Eolica"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "16f865be02d4a07497d5",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Nuclear"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "710bc4f9679396e385c0",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Solar"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b0d2550153410562d0ee",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Ciclo Combinado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9ac46f4bc5565a473750",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Termica Fosil"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "donutChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Gen Hidraulica"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "e1b4db4ac46c68f92ae3": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "e2d733ddc70cc8e0302b": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6b31515623c39a7ce487",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Instalada Ajustada"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "cardVisual",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Potencia Instalada Ajustada"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "efe0c5d52b546a7b87c6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "9cece9c70030678eee67",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla Interconexiones"
+                        }
+                      },
+                      "Property": "Pais"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "070095ea7350672ae065",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Tabla_Medidas"
+                        }
+                      },
+                      "Property": "Saldo Interconexion"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "7b11061c1617290797c7": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "c18274c55cc8813c48ab": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "104f33d90b3c994cc340": {
+            "singleVisual": {
+              "visualType": "pageNavigator",
+              "objects": {}
+            }
+          },
+          "cf23dbe999d3e9ec07e6": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "0d4d7e9900be0e97c850": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          }
+        },
+        "visualContainerGroups": {
+          "c64532610c974c6c3a01": {
+            "isHidden": false
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

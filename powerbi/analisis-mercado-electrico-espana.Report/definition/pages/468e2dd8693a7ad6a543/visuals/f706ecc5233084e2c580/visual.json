@@ -4,7 +4,7 @@
   "position": {
     "x": 856.92695214105788,
     "y": 57.808564231738032,
-    "z": 6,
+    "z": 6000,
     "height": 413.727959697733,
     "width": 422.79596977329976,
     "tabOrder": 6
@@ -41,8 +41,8 @@
                 }
               },
               "queryRef": "Dim_Pais.pais",
-              "nativeQueryRef": "País",
-              "displayName": "País"
+              "nativeQueryRef": "Mercado Spot",
+              "displayName": "Mercado Spot"
             },
             {
               "field": {
