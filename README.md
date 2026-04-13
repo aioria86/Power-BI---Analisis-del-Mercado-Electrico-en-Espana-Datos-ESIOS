@@ -27,38 +27,70 @@ El resultado es un **dashboard interactivo profesional** orientado a la toma de 
 
 ## Alcance analítico
 
-El proyecto cubre las siguientes áreas del sistema eléctrico:
+El proyecto cubre las principales áreas del sistema eléctrico español, integrando visualizaciones interactivas que permiten analizar la operación, el mercado y el balance energético.
 
-### Demanda eléctrica
-- Demanda real vs prevista vs programada
-- Desviaciones y alertas
-- Patrones horarios
+---
 
-### Generación energética
-- Mix de generación por tecnología
-- Energía limpia vs no limpia
-- Ratio generación vs consumo
+### Generación y Consumo
 
-### Mercado y precios
-- Precio mercado diario
-- Precio de ajustes
-- Precio final de la energía
-- Energía de balance
+![Generación y Consumo](./assets/images/captures/generacion-y-consumo.png)
 
-### Intercambios internacionales
-- Flujos con Francia, Portugal y Marruecos
-- Saldos de interconexión
-- Comercio eléctrico neto
+Incluye el análisis integral de la demanda eléctrica y la generación energética:
 
-### Energías renovables
-- Generación renovable
-- Energía no integrable (ERNI)
-- Restricciones técnicas del sistema
+- Demanda real vs prevista vs programada  
+- Identificación de desviaciones y alertas de consumo  
+- Mix de generación por tecnología (renovable y no renovable)  
+- Indicadores clave de generación libre de CO₂  
+- Balance eléctrico: generación + almacenamiento + interconexiones = consumo  
 
-### Operación del sistema
-- Servicios de ajuste
-- Regulación secundaria y terciaria
-- Balance del sistema eléctrico
+---
+
+### Intercambios Internacionales
+
+![Intercambios Internacionales](./assets/images/captures/intercambios-internacionales.png)
+
+Permite analizar el comportamiento del sistema eléctrico en el contexto europeo:
+
+- Flujos de energía con Francia, Portugal y Marruecos  
+- Saldos horarios de interconexión  
+- Comparativa de precios spot entre países  
+- Identificación de importaciones/exportaciones netas  
+
+---
+
+### Mercado y Precios
+
+![Mercado y Precios](./assets/images/captures/mercado-y-precios.png)
+
+Se enfoca en el análisis económico del sistema eléctrico:
+
+- Precio del mercado diario y servicios de ajuste  
+- Precio final de la energía  
+- Relación entre precio y energía de balance  
+- Programación del mercado de producción  
+- Energía renovable no integrable (ERNI) y restricciones técnicas  
+
+---
+
+### Enfoque del análisis
+
+El dashboard permite:
+
+- Navegación dinámica por fecha mediante selector tipo *date picker*  
+- Análisis horario detallado del sistema eléctrico  
+- Identificación de patrones operativos y anomalías  
+- Visualización integrada de generación, consumo, mercado e interconexiones  
+
+---
+
+### 📊 Valor del proyecto
+
+Este análisis proporciona una visión completa del sistema eléctrico, permitiendo:
+
+- Comprender el equilibrio entre oferta y demanda  
+- Analizar el impacto de las energías renovables  
+- Evaluar el comportamiento del mercado eléctrico  
+- Detectar oportunidades de optimización y eficiencia energética  
 
 ---
 
@@ -67,21 +99,31 @@ El proyecto cubre las siguientes áreas del sistema eléctrico:
 ### 🔄 Pipeline de datos
 
 ESIOS API
+
 ↓
+
 Descarga (Python)
+
 ↓
+
 Procesamiento (Pandas)
+
 ↓
+
 Parquet (Data Lake local)
+
 ↓
+
 Modelo Power BI
+
 ↓
+
 Dashboard
 
 
 ---
 
-## 📦 Estructura del proyecto
+## Estructura del proyecto
 
 ├── config/
 
@@ -248,16 +290,6 @@ Este proyecto integra:
 
 ---
 
-## 👤 Autor
-
-Juan Manuel Pérez  
-Analista de Datos | Business Intelligence | Ciencia de Datos  
-
-🔗 LinkedIn:  
-https://www.linkedin.com/in/juan-manuel-p%C3%A9rez-garc%C3%ADa-bigdata/
-
----
-
 ## 📚 Fuente de datos
 
 ESIOS — Red Eléctrica de España  
@@ -269,6 +301,18 @@ Los datos no son propiedad del autor y su uso está sujeto a las condiciones de 
 https://www.esios.ree.es
 
 Este repositorio contiene únicamente el código y la lógica de procesamiento.
+
+---
+
+## 👤 Autor
+
+Juan Manuel Pérez  
+Analista de Datos | Business Intelligence | Ciencia de Datos  
+
+🔗 LinkedIn:  
+https://www.linkedin.com/in/juan-manuel-p%C3%A9rez-garc%C3%ADa-bigdata/
+
+
 
 ---
 
