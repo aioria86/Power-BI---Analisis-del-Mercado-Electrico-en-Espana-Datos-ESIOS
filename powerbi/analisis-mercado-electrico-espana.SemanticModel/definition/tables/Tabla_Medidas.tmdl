@@ -712,6 +712,46 @@ table Tabla_Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure DiaVisual = SELECTEDVALUE(Dim_Calendario[Día])
+		formatString: 0
+		lineageTag: ed469bdb-d874-45fd-ac6d-3dde3670ac58
+
+	measure TituloMes = FORMAT(MAX(Dim_Calendario[Fecha]), "MMMM yyyy")
+		lineageTag: cbbb5fe5-87b8-42b2-9ea6-616a4438220e
+
+	measure FiltroMes =
+			
+			VAR MesSeleccionado = SELECTEDVALUE(Dim_Calendario[MesAñoOrden])
+			RETURN
+			IF(
+			    MAX(Dim_Calendario[MesAñoOrden]) = MesSeleccionado,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 1d825852-06f5-404c-901a-e22b3fd5061c
+
+	measure MesSeleccionado = SELECTEDVALUE(Dim_Calendario[MesAñoOrden])
+		formatString: 0
+		lineageTag: d4604d1e-4bd2-4adc-a400-a995710b516d
+
+	measure MesAnterior = [MesSeleccionado] - 1
+		formatString: 0
+		lineageTag: cf71773d-747e-4fb6-a6c4-b6b46eed407e
+
+	measure MesSiguiente = [MesSeleccionado] + 1
+		formatString: 0
+		lineageTag: 0af1bfcf-ed39-46aa-b98e-613b22793275
+
+	measure DiaNumero = DAY(SELECTEDVALUE(Dim_Calendario[Fecha]))
+		formatString: 0
+		lineageTag: dbef1ed5-84f3-4735-99d0-3f0a09952628
+
+	measure FechaSeleccionada = MAX(Dim_Calendario[FechaID])
+		lineageTag: bdee0b51-4936-497d-a51b-8ead6a83c5c0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Tabla_Medidas = m
 		mode: import
 		source =

@@ -150,6 +150,18 @@
             "width": 234
           },
           "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 1651,
+            "y": 332.5
+          },
+          "nodeIndex": "SelectorMes",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas las tablas",

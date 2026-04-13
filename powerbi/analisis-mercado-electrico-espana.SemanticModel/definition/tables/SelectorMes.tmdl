@@ -1,0 +1,18 @@
+table SelectorMes
+	lineageTag: 4bd4d325-3403-4afd-bdac-716a469b5ba3
+
+	column MesAñoOrden
+		formatString: 0
+		lineageTag: ffee88c1-08d9-4a53-8e45-08349fd97a2e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: Dim_Calendario[MesAñoOrden]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SelectorMes = calculated
+		mode: import
+		source = DISTINCT(Dim_Calendario[MesAñoOrden])
+
+	annotation PBI_Id = 26a026dc2b2e42d4b221e3872da57d53
+

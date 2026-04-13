@@ -186,5 +186,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fe0737710d0e659a041d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Calendario"
+              }
+            },
+            "Property": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "04e2d12a7d87e349414b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tabla_Medidas"
+              }
+            },
+            "Property": "% ERNI RTT"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "500183a1e680ab810032",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tabla_Medidas"
+              }
+            },
+            "Property": "% ERNI RTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c374743ce1d659d6e258",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Tabla_Medidas"
+              }
+            },
+            "Property": "% ERNI TOTAL"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

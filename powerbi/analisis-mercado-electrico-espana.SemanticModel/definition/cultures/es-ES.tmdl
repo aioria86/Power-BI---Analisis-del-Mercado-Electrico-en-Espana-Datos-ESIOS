@@ -7113,306 +7113,203 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "tabla_medida.dia_visual": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tabla_Medidas",
+			          "ConceptualProperty": "DiaVisual"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia visual": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaVisual": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.evento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendario",
+			          "ConceptualProperty": "Evento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "evento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.semana_del_me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendario",
+			          "ConceptualProperty": "SemanaDelMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "semana del me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SemanaDelMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.inicio_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendario",
+			          "ConceptualProperty": "InicioSemana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "inicio semana": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "InicioSemana": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.dia_corto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendario",
+			          "ConceptualProperty": "DiaCorto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia corto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiaCorto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_año_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendario",
+			          "ConceptualProperty": "MesAñoLabel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes año label": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me año label": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAñoLabel": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "me año sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "me año tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "me año decal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "me año name tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.604
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.semanadelmes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "SemanaDelMes"
+			        }
+			      },
+			      "State": "Generated"
 			    }
 			  },
 			  "Relationships": {
-			    "fact_precio_spot_datetime_trimestre_has_fact_precio_spot_datetime_me": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.trimestre": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.trimestre"
-			          }
-			        },
-			        "fact_precio_spot.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres2"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_año_has_fact_precio_spot_datetime_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.año": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.año"
-			          }
-			        },
-			        "fact_precio_spot.datetime.trimestre": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.año"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "años_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_años"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años2"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_día": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_precio_spot.datetime.día": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_me": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_precio_spot.datetime.me": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_precio_spot.datetime.trimestre": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_año": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			          }
-			        },
-			        "fact_precio_spot.datetime.año": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.año"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
-			        }
-			      ]
-			    },
-			    "fact_precio_spot_datetime_has_jerarquía_de_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_precio_spot"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_precio_spot.datetime": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime"
-			          }
-			        },
-			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_precio_spot.datetime"
-			            },
-			            "Object": {
-			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datetimes_have_jerarquía_de_fechas"
-			        }
-			      ]
-			    },
 			    "fact_energia_ESIO_datetime_hora_me_has_fact_energia_ESIO_datetime_hora_día": {
 			      "Binding": {
 			        "ConceptualEntity": "Fact_Energia_ESIOS"
@@ -7508,7 +7405,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me"
 			        },
 			        {
 			          "Attribute": {
@@ -7521,7 +7418,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -7574,7 +7471,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres1"
+			          "ID": "años_have_trimestres"
 			        },
 			        {
 			          "Attribute": {
@@ -7587,7 +7484,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años1"
+			          "ID": "trimestres_have_años"
 			        },
 			        {
 			          "Preposition": {
@@ -7640,7 +7537,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días1"
+			          "ID": "jerarquía_de_fechas_have_días"
 			        }
 			      ]
 			    },
@@ -7673,7 +7570,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me1"
+			          "ID": "jerarquía_de_fechas_have_me"
 			        }
 			      ]
 			    },
@@ -7706,7 +7603,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			          "ID": "jerarquía_de_fechas_have_trimestres"
 			        }
 			      ]
 			    },
@@ -7739,7 +7636,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años1"
+			          "ID": "jerarquía_de_fechas_have_años"
 			        }
 			      ]
 			    },
@@ -7871,7 +7768,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me2"
+			          "ID": "trimestres_have_me1"
 			        },
 			        {
 			          "Attribute": {
@@ -7884,7 +7781,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres2"
+			          "ID": "me_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -7937,7 +7834,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres2"
+			          "ID": "años_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -7950,7 +7847,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años2"
+			          "ID": "trimestres_have_años1"
 			        },
 			        {
 			          "Preposition": {
@@ -8003,7 +7900,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días2"
+			          "ID": "jerarquía_de_fechas_have_días1"
 			        }
 			      ]
 			    },
@@ -8036,7 +7933,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me2"
+			          "ID": "jerarquía_de_fechas_have_me1"
 			        }
 			      ]
 			    },
@@ -8069,7 +7966,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres2"
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -8102,7 +7999,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años2"
+			          "ID": "jerarquía_de_fechas_have_años1"
 			        }
 			      ]
 			    },
@@ -8135,7 +8032,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datetimes_have_jerarquía_de_fechas1"
+			          "ID": "datetimes_have_jerarquía_de_fechas"
 			        }
 			      ]
 			    },
@@ -8366,6 +8263,237 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_calendarios_have_fact_energia_ESIOs"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_año_label": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_año_label": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_año_label"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_año_label"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_año_labels"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_dia_corto": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.dia_corto": {
+			          "Target": {
+			            "Entity": "dim_calendario.dia_corto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.dia_corto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_cortos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_inicio_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.inicio_semana": {
+			          "Target": {
+			            "Entity": "dim_calendario.inicio_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.inicio_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_inicio_semanas"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_semana_del_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.semana_del_me": {
+			          "Target": {
+			            "Entity": "dim_calendario.semana_del_me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.semana_del_me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_semana_del_me"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_columna": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.columna": {
+			          "Target": {
+			            "Entity": "dim_calendario.columna"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.columna"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_columnas"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_evento": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.evento": {
+			          "Target": {
+			            "Entity": "dim_calendario.evento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.evento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_eventos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_tabla_medida_dia_visual": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "tabla_medida.dia_visual": {
+			          "Target": {
+			            "Entity": "tabla_medida.dia_visual"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "tabla_medida.dia_visual"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dia_visual"
 			        }
 			      ]
 			    },
@@ -15362,6 +15490,303 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_energia_ESIOs_have_demanda_total"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime"
+			          }
+			        },
+			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datetimes_have_jerarquía_de_fechas1"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_año": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_precio_spot.datetime.año": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años2"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_precio_spot.datetime.trimestre": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_me": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_precio_spot.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me2"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_jerarquía_de_fecha_has_fact_precio_spot_datetime_día": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			          }
+			        },
+			        "fact_precio_spot.datetime.día": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días2"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_año_has_fact_precio_spot_datetime_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.año": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.año"
+			          }
+			        },
+			        "fact_precio_spot.datetime.trimestre": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.año"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años2"
+			        }
+			      ]
+			    },
+			    "fact_precio_spot_datetime_trimestre_has_fact_precio_spot_datetime_me": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_precio_spot"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_precio_spot.datetime.trimestre": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.trimestre"
+			          }
+			        },
+			        "fact_precio_spot.datetime.me": {
+			          "Target": {
+			            "Entity": "fact_precio_spot.datetime.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            },
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fact_precio_spot.datetime.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fact_precio_spot.datetime.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres2"
 			        }
 			      ]
 			    },
