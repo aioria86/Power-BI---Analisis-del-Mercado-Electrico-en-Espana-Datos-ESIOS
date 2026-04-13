@@ -3,7 +3,8 @@
   "displayName": "Menú Cerrado - Intercambios",
   "name": "054cfba5e685089d761a",
   "options": {
-    "targetVisualNames": []
+    "targetVisualNames": [],
+    "suppressData": true
   },
   "explorationState": {
     "version": "1.3",

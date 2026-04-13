@@ -9,7 +9,8 @@
       "b600fb20360d05b4176b",
       "1d55def60186ca3a275d",
       "f7200d82148e62c18700"
-    ]
+    ],
+    "suppressData": true
   },
   "explorationState": {
     "version": "1.3",

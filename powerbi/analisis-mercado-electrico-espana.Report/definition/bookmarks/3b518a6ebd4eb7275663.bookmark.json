@@ -3,7 +3,8 @@
   "displayName": "Menú Desplegado - Genracion",
   "name": "3b518a6ebd4eb7275663",
   "options": {
-    "targetVisualNames": []
+    "targetVisualNames": [],
+    "suppressData": true
   },
   "explorationState": {
     "version": "1.3",

@@ -3,7 +3,8 @@
   "displayName": "Menú Desplegado - Mercado",
   "name": "d37517c1aa579eb0b5a3",
   "options": {
-    "targetVisualNames": []
+    "targetVisualNames": [],
+    "suppressData": true
   },
   "explorationState": {
     "version": "1.3",
