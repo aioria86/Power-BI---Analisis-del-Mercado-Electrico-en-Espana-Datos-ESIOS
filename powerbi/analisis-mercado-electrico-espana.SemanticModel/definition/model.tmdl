@@ -27,6 +27,7 @@ ref table 'Tabla Precio'
 ref table fact_precio_spot
 ref table LocalDateTable_ae1f3a55-0853-4634-ab6f-a45710c7706b
 ref table Dim_Pais
+ref table SelectorMes
 
 ref cultureInfo es-ES
 

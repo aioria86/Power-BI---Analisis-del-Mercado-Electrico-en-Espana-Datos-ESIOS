@@ -5,7 +5,7 @@ table Dim_Calendario
 	column Fecha
 		dataType: dateTime
 		isKey
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: a33ac73c-5e33-4436-a255-263d33d6b8ba
 		summarizeBy: none
 		sourceColumn: Fecha
@@ -159,6 +159,95 @@ table Dim_Calendario
 		lineageTag: 9028cae0-faa4-44e8-8cd5-62c1bdb7b947
 		summarizeBy: none
 		sourceColumn: Es Año Actual
+
+		annotation SummarizationSetBy = Automatic
+
+	column Evento = "Fecha"
+		lineageTag: 3fc2025a-6e4c-4e67-b27a-8cc0e34d3a30
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column SemanaDelMes = ```
+			
+			VAR PrimerDiaMes = STARTOFMONTH(Dim_Calendario[Fecha])
+			VAR PrimerLunes = PrimerDiaMes - WEEKDAY(PrimerDiaMes, 2) + 1
+			RETURN 
+			INT(
+			    (Dim_Calendario[Fecha] - PrimerLunes) / 7
+			) + 1
+			```
+		formatString: 0
+		lineageTag: 5a442af8-d22f-4943-bda5-bd5e5dd8ac00
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column InicioSemana = ```
+			
+			Dim_Calendario[Fecha] 
+			- WEEKDAY(Dim_Calendario[Fecha], 2) + 1
+			```
+		formatString: General Date
+		lineageTag: 5e6001d4-1fc5-4f2a-9158-b0293c32a164
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaCorto = FORMAT(Dim_Calendario[Fecha], "ddd")
+		lineageTag: 58f7682e-8c8a-406f-9b6a-45ceb20b52ec
+		summarizeBy: none
+		sortByColumn: 'Día Semana Nº'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAñoLabel = FORMAT(Dim_Calendario[Fecha], "MMMM yyyy")
+		lineageTag: a7415f34-bee3-4f3c-b1d4-beeb1d346a03
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAño = FORMAT(Dim_Calendario[Fecha], "MMMM yyyy")
+		lineageTag: 66ac1c23-5da8-4500-890d-0bf67dedec4f
+		summarizeBy: none
+		sortByColumn: MesAñoOrden
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAñoOrden = YEAR(Dim_Calendario[Fecha]) * 100 + MONTH(Dim_Calendario[Fecha])
+		formatString: 0
+		lineageTag: 66edc4a5-5566-4136-a2f0-974ab702bcee
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaKey = Dim_Calendario[Fecha]
+		formatString: General Date
+		lineageTag: e7aa00f8-f6c4-4275-9984-fadcda3ae0b5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaID = VALUE(FORMAT(Dim_Calendario[Fecha], "YYYYMMDD"))
+		lineageTag: b1441dba-cbea-453a-a083-ed7ce7ede20f
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FechaOrden =
+			
+			YEAR(Dim_Calendario[Fecha]) * 10000 +
+			MONTH(Dim_Calendario[Fecha]) * 100 +
+			DAY(Dim_Calendario[Fecha])
+		formatString: 0
+		lineageTag: d0909de0-46b3-4adc-89b1-1806fbc480b7
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 

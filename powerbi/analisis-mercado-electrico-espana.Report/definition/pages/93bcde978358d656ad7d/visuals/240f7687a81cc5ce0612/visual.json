@@ -11,5 +11,6 @@
   "visualGroup": {
     "displayName": "Grupo Menu",
     "groupMode": "ScaleMode"
-  }
+  },
+  "isHidden": true
 }

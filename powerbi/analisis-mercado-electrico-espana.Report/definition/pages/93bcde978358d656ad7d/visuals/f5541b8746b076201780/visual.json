@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "f5541b8746b076201780",
+  "position": {
+    "x": 1019.0176322418135,
+    "y": 0,
+    "z": 15001,
+    "height": 47.607052896725442,
+    "width": 235.7682619647355
+  },
+  "visualGroup": {
+    "displayName": "Grupo Date Picker",
+    "groupMode": "ScaleMode"
+  }
+}
